@@ -1,0 +1,28 @@
+* ToDo's
+RATT public transport system
+
+
+** Alex
+*** basic setup/docker environment (10 days)
+*** XML document and structure (10 days)
+** Jean
+*** asking for permission from RATT forums to use the data
+** Zouel
+*** basic services (XML manipulation, CRUD) -> XPath & XSLT mandatory
+**** Implement some parser that has XPath and XSLT capabilities (possibly DOM)
+
+* Goals:
+** Web application/interface
+*** use google maps/something similar -> openlayers
+
+* API's:
+** REST API -> get/create stations, schedules, routes
+** WDSL -> get real-time information for traffic
+** Apache Camel (akka)
+
+* Testing:
+** REST/WS - SoapUI
+** XForms (Orbeon)
+
+** Camel integration patterns - http://camel.apache.org/enterprise-integration-patterns.html
+
