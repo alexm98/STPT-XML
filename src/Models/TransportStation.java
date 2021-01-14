@@ -2,36 +2,36 @@ package Models;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name="TransportStation")
+@XmlRootElement(name = "TransportStation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TransportStation {
-    @XmlAttribute(name="id")
+    @XmlElement(name = "LineID")
     public int lineID;
-    @XmlElement
-    public String lineName;
-    @XmlElement
+    @XmlAttribute(name = "id")
     public int stationID;
-    @XmlElement
+    @XmlElement(name = "LineName")
+    public String lineName;
+    @XmlElement(name="RawStationName")
     public String rawStationName;
-    @XmlElement
+    @XmlElement(name = "FriendlyStationName")
     public String friendlyStationName;
-    @XmlElement
+    @XmlElement(name = "ShortStationName")
     public String shortStationName;
-    @XmlElement
+    @XmlElement(name = "JunctionName")
     public String junctionName;
-    @XmlElement
+    @XmlElement(name = "Lat")
     public double lat;
-    @XmlElement
+    @XmlElement(name = "Long")
     public double longitude;
-    @XmlElement
+    @XmlElement(name = "Invalid")
     public Boolean is_invalid;
-    @XmlElement
+    @XmlElement(name = "Verified")
     public String verified;
-    @XmlElement
+    @XmlElement(name = "VerificationDate")
     public String verification_date;
-    @XmlElement
+    @XmlElement(name = "GMapsLink")
     public String gmaps_links;
-    @XmlElement
+    @XmlElement(name = "InfoComments")
     public String info_comments;
 
     public TransportStation(){

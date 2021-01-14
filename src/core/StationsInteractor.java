@@ -24,13 +24,11 @@ public class StationsInteractor {
     }
 
     public NodeList getAllStations() throws XPathExpressionException {
-        try{
-            return xputils.QueryXPath("/root/TransportStations/TransportStation");
-        }
-        catch(XPathExpressionException e){
-            System.out.println(e.getMessage());
-            return null;
-        }
+        return xputils.QueryXPath("/root/TransportStations/TransportStation");
+    }
+
+    public NodeList getStation(Integer station_id) throws XPathExpressionException {
+        return xputils.QueryXPath(String.format("//TransportStation[@id=%s]", station_id));
     }
 
     public Document getDocument(){

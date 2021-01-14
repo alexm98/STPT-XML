@@ -1,4 +1,6 @@
+import CamelComponents.CamelREST;
 import core.StationsInteractor;
+import org.apache.camel.main.Main;
 import org.w3c.dom.NodeList;
 
 public class STPTMain {
@@ -14,12 +16,12 @@ public class STPTMain {
 //        ParserUtils putils = new ParserUtils("data/statii-ratt-format.xml");
 //        Document doc = putils.parseJAXB();
         StationsInteractor s = new StationsInteractor("data/statii-ratt-format.xml");
-        IterateNodeList(s.getAllStations());
+        //IterateNodeList(s.getAllStations());
+        System.out.println(s.getStation(4680));
 
-//        Main main = new Main();
-//        main.configure().addRoutesBuilder(new CamelRoutes());
-//        main.configure().addRoutesBuilder(new CamelREST());
-//        main.configure().addRoutesBuilder(new CamelXSLT());
-//        main.run(args);
+
+        Main main = new Main();
+        main.configure().addRoutesBuilder(new CamelREST());
+        main.run(args);
     }
 }

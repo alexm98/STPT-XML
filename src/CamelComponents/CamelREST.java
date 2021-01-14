@@ -17,7 +17,7 @@ public class CamelREST extends RouteBuilder {
 
     public CamelREST() throws JAXBException, ParserConfigurationException, SAXException {
         this.stations_interactor = new StationsInteractor("data/statii-ratt-format.xml");
-        this.putils = new ParserUtils("doc.xml");
+        this.putils = new ParserUtils("data/statii-ratt-format.xml");
     }
 
     @Override
@@ -26,6 +26,13 @@ public class CamelREST extends RouteBuilder {
                 .host("localhost")
                 .port("9091")
                 .bindingMode(RestBindingMode.auto);
+
+        rest("/api")
+                .get("/stations")
+                .produces("application/xml")
+                .route()
+                .bean(stations_interactor, "getAllStations")
+                .endRest();
 
 //        rest("/api")
 //                .get("/authors")
