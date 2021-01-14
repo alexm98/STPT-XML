@@ -3,7 +3,6 @@ package parsers;
 import Models.TransportStation;
 import Models.Wrapper;
 import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -22,25 +21,6 @@ public class ParserUtils {
 
     public ParserUtils(String path_to_doc){
         this.path_to_doc = path_to_doc;
-    }
-
-    public static void parseSax(String path_to_file) throws ParserConfigurationException, SAXException {
-//        BibliographyHandler bh = new BibliographyHandler();
-//        File xml_document = new File(path_to_file);
-//
-//        SAXParserFactory factory = SAXParserFactory.newInstance();
-//        SAXParser parser = factory.newSAXParser();
-//
-//        try{
-//            parser.parse(xml_document, bh);
-//        }
-//        catch (Exception e){
-//            System.out.println(e.getMessage());
-//        }
-//
-//        for(Article a: bh.searchByAuthorName("Dana Petcu")){
-//            System.out.println(a);
-//        }
     }
 
     public Document parseJAXB() throws JAXBException, ParserConfigurationException {
