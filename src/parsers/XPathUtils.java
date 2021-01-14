@@ -1,6 +1,6 @@
 package parsers;
 
-import bibliography.Wrapper;
+import Models.Wrapper;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 

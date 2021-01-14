@@ -1,56 +1,57 @@
 package parsers;
 
-import bibliography.*;
+import Models.TransportStation;
+import Models.Wrapper;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.parsers.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
 import java.io.File;
 
 public class ParserUtils {
-    public ParserUtils(){
+    public String path_to_doc;
 
+    public ParserUtils(String path_to_doc){
+        this.path_to_doc = path_to_doc;
     }
 
     public static void parseSax(String path_to_file) throws ParserConfigurationException, SAXException {
-        BibliographyHandler bh = new BibliographyHandler();
-        File xml_document = new File(path_to_file);
-
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser = factory.newSAXParser();
-
-        try{
-            parser.parse(xml_document, bh);
-        }
-        catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        for(Article a: bh.searchByAuthorName("Dana Petcu")){
-            System.out.println(a);
-        }
+//        BibliographyHandler bh = new BibliographyHandler();
+//        File xml_document = new File(path_to_file);
+//
+//        SAXParserFactory factory = SAXParserFactory.newInstance();
+//        SAXParser parser = factory.newSAXParser();
+//
+//        try{
+//            parser.parse(xml_document, bh);
+//        }
+//        catch (Exception e){
+//            System.out.println(e.getMessage());
+//        }
+//
+//        for(Article a: bh.searchByAuthorName("Dana Petcu")){
+//            System.out.println(a);
+//        }
     }
 
-    public static Document parseJAXB(String path_to_file) throws JAXBException, SAXException, ParserConfigurationException {
-        File doc = new File(path_to_file);
-        JAXBContext jc = JAXBContext.newInstance(Wrapper.class, Author.class, Affiliation.class,
-                Articles.class, Article.class, Journal.class, Person.class);
+    public Document parseJAXB() throws JAXBException, ParserConfigurationException {
+        File doc = new File(this.path_to_doc);
+        JAXBContext jc = JAXBContext.newInstance(Wrapper.class, TransportStation.class);
 
-        SchemaFactory f = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-        Schema schema = f.newSchema(new File("schema.xsd"));
+//        SchemaFactory f = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+//        Schema schema = f.newSchema(new File("schema.xsd"));
 
         Unmarshaller unmarshaller = jc.createUnmarshaller();
-        unmarshaller.setSchema(schema);
+//        unmarshaller.setSchema(schema);
         Object root = (Object) unmarshaller.unmarshal(doc);
 
         // Marshal into the returned Document
