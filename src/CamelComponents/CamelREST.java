@@ -1,6 +1,6 @@
 package CamelComponents;
 
-import core.XMLInteractor;
+import core.StationsInteractor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
@@ -12,11 +12,11 @@ import javax.xml.parsers.ParserConfigurationException;
 
 @Component
 public class CamelREST extends RouteBuilder {
-    private final XMLInteractor xml_interactor;
+    private final StationsInteractor stations_interactor;
     private final ParserUtils putils;
 
     public CamelREST() throws JAXBException, ParserConfigurationException, SAXException {
-        this.xml_interactor = new XMLInteractor("doc.xml");
+        this.stations_interactor = new StationsInteractor("data/statii-ratt-format.xml");
         this.putils = new ParserUtils("doc.xml");
     }
 

@@ -55,7 +55,7 @@ public class XPathUtils {
 
             return results;
         }
-        catch (Exception e){
+        catch (XPathExpressionException e){
             System.out.println(e.getMessage());
         }
 
@@ -74,7 +74,7 @@ public class XPathUtils {
 
             return node_list;
         }
-        catch (Exception e){
+        catch (XPathExpressionException e){
             System.out.println(e.getMessage());
         }
 

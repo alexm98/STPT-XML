@@ -1,6 +1,5 @@
-import org.w3c.dom.Document;
+import core.StationsInteractor;
 import org.w3c.dom.NodeList;
-import parsers.ParserUtils;
 
 public class STPTMain {
     public static void IterateNodeList(NodeList query_res){
@@ -12,8 +11,11 @@ public class STPTMain {
     }
 
     public static void main(String args[]) throws Exception {
-        ParserUtils putils = new ParserUtils("data/statii-ratt.xml");
-        Document doc = putils.parseJAXB();
+//        ParserUtils putils = new ParserUtils("data/statii-ratt-format.xml");
+//        Document doc = putils.parseJAXB();
+        StationsInteractor s = new StationsInteractor("data/statii-ratt-format.xml");
+        IterateNodeList(s.getAllStations());
+
 //        Main main = new Main();
 //        main.configure().addRoutesBuilder(new CamelRoutes());
 //        main.configure().addRoutesBuilder(new CamelREST());
