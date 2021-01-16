@@ -32,14 +32,13 @@ public class CamelREST extends RouteBuilder {
                 .produces("application/xml")
                 .route()
                 .bean(stations_interactor, "getAllStations")
-                .endRest();
+                .endRest()
 
-//        rest("/api")
-//                .get("/authors")
-//                .produces("application/xml")
-//                .route()
-//                .bean(xml_interactor, "getAllAuthors")
-//                .endRest()
+                .get("/station/{id}")
+                .produces("application/xml")
+                .route()
+                .bean(stations_interactor, "getStation(${header.id})")
+                .endRest();
 //
 //                .get("/publications")
 //                .produces("application/xml")
