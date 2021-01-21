@@ -17,7 +17,7 @@ It is supposed that your implementation from #2 does not depend on the used API,
   * Hint: Orbeon, as an XForms player, is capable to invoke/consume both REST and WS/CXF endpoints. However, there will be a light penalty (at most 25% for this component) if your implementation is not using XForms, and you replace it with an AJAX solution.
 * Also, it will be necessary to implement some complex scenarios (exposed via APIs, of course), to integrate some of the basic services. Find the most appropriate integration patterns and use them in order to offer an implementation of this requirement (http://camel.apache.org/enterprise-integration-patterns.html). Your project documentation should emphasize how these EIPs were used, and the context of their use.
 
---- 
+---- 
 
 * In your project documentation you must show how and where the various XML-based technologies were used. Also, any EIP (even the simple ones) must be documented (see above).
 * Also, it is strongly suggested the use of some message queues (JMS, ActiveMQ -- which may offer you additional points) to support the management of services messages. See, for example,  http://servicemix.apache.org/docs/5.x/quickstart/activemq.html
