@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicles>
+    <vehicle id="1106">
+        <vehicle-name>1</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="1126">
+        <vehicle-name>2</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="1266">
+        <vehicle-name>4</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="2686">
+        <vehicle-name>6a</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="2706">
+        <vehicle-name>6b</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="2846">
+        <vehicle-name>7</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="158">
+        <vehicle-name>8</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="2406">
+        <vehicle-name>9</vehicle-name>
+        <vehicle-type>Tram</vehicle-type>
+    </vehicle>
+    <vehicle id="990">
+        <vehicle-name>11</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="2786">
+        <vehicle-name>M11</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="1006">
+        <vehicle-name>14</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="2766">
+        <vehicle-name>M14</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="989">
+        <vehicle-name>15</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="1206">
+        <vehicle-name>16</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="1086">
+        <vehicle-name>17</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="1166">
+        <vehicle-name>18</vehicle-name>
+        <vehicle-type>Trolley</vehicle-type>
+    </vehicle>
+    <vehicle id="1207">
+        <vehicle-name>3</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2426">
+        <vehicle-name>5a</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2446">
+        <vehicle-name>5b</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3446">
+        <vehicle-name>5c</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1066">
+        <vehicle-name>13</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1146">
+        <vehicle-name>21</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1226">
+        <vehicle-name>28</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1546">
+        <vehicle-name>32</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1046">
+        <vehicle-name>33</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="886">
+        <vehicle-name>40</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1406">
+        <vehicle-name>46</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1550">
+        <vehicle-name>E1</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1551">
+        <vehicle-name>E2</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1552">
+        <vehicle-name>E3</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1926">
+        <vehicle-name>E4</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1928">
+        <vehicle-name>E6</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2026">
+        <vehicle-name>E7</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1547">
+        <vehicle-name>E8</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2906">
+        <vehicle-name>M22</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3086">
+        <vehicle-name>M29</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1746">
+        <vehicle-name>M30</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="1986">
+        <vehicle-name>M35</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2006">
+        <vehicle-name>M36</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3306">
+        <vehicle-name>M41</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3307">
+        <vehicle-name>M42</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2646">
+        <vehicle-name>M43</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2506">
+        <vehicle-name>M44</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="2606">
+        <vehicle-name>M45</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3326">
+        <vehicle-name>M46</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3560">
+        <vehicle-name>M47</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3406">
+        <vehicle-name>M48</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3426">
+        <vehicle-name>M49</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3486">
+        <vehicle-name>M50</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3466">
+        <vehicle-name>M51</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+    <vehicle id="3546">
+        <vehicle-name>M52</vehicle-name>
+        <vehicle-type>Bus</vehicle-type>
+    </vehicle>
+</vehicles>

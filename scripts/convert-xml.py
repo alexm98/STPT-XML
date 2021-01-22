@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-tree = ET.parse('../data/statii-ratt.xml')
+tree = ET.parse('../data/statii-ratt-oldformat.xml')
 root = tree.getroot()
 
 for tag in root.findall('TransportStations/TransportStation'):
