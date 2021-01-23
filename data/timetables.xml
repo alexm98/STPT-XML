@@ -1,0 +1,5413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timetables>
+    <timetable vehicle_id="1207">
+        <direction1>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2883">Crizantemelor</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Dambovita 3a</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="2921">Opre Gogu</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="2820">Pacii</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="2922">Canton C.F.R.</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="5965">Liceul Auto</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="5963">Podgoriei</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station>C.I. Nottara</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="2929">Rascoala din 1907</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station>Kromberg</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="7160">Elba</station>
+                <time>15:39</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="7160">Elba</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station>Kromberg_</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="2945">Polona</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2929">Rascoala din 1907</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station>C.I. Nottara</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="5963">Podgoriei</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="5965">Liceul Auto</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2922">Canton C.F.R.</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="2820">Pacii</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="2921">Opre Gogu</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>16:05</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2426">
+        <direction1>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Zalau</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10185">A. Lapusneanu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Madona</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3650">Razboieni</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3650">Razboieni</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3648">A. Guttenbrun</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Madona</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10185">A. Lapusneanu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Zalau</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2446">
+        <direction1>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station>Zalau</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="10185">A. Lapusneanu</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Madona</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="3648">A. Guttenbrun</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="3650">Razboieni</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3653">Ronat</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="3041">Ciresului_1</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station>C.A.Rosseti</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station>Banul Severinului</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station>Grigore Ureche</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="3244">Rarau</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="9863">Ciocarliei</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station>I.M.L.</station>
+                <time>15:37</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>I.M.L.</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="3041">Ciresului_2</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="3653">Ronat</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3650">Razboieni</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3648">A. Guttenbrun</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Madona</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="10185">A. Lapusneanu</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station>Zalau</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:51</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3446">
+        <direction1>
+            <arrival>
+                <station station_id="3547">Gh.Lazar</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Zalau</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10185">A. Lapusneanu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Madona</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3650">Razboieni</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3650">Razboieni</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Barierei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Pasarela</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Parc_Blascovici</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Stadion CFR</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Generala 19</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3012">Timis</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3547">Gh.Lazar</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1066">
+        <direction1>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>19 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3362">Cimitirul Eroilor</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3012">Timis</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9440">P-ta A. Iancu</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3017">Vuk Karadjic</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3022">P-ta de Gros</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5200">Pasaj C.F.</station>
+                <time>15:54</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="5200">Pasaj C.F.</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3022">P-ta de Gros</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3017">Vuk Karadjic</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9440">P-ta A. Iancu</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3012">Timis</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>17 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>19 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1146">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="2828">Iepurelui</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2735">Printul Turcesc</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="6960">Iosif Vucan</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="6943">V. Carlova</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3402">Rudolf Walter</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Albastrelelor</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3406">Iokai Mor</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2740">C. Popescu</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcului</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="9863">Cocorilor</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="8061">Calistrat Hogas</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3420">Scoala Plopi</station>
+                <time>15:36</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3420">Scoala Plopi</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Albastrelelor</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="3402">Rudolf Walter</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="6943">V. Carlova</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="6960">Iosif Vulcan</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>Baba Dochia</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2828">Iepurelui</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>15:50</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1226">
+        <direction1>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Matasarilor</station>
+                <time>16:07</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Uzinei</station>
+                <time>16:09</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Uzina de Apa</station>
+                <time>16:10</time>
+            </arrival>
+            <arrival>
+                <station station_id="2754">Cometei</station>
+                <time>16:12</time>
+            </arrival>
+            <arrival>
+                <station station_id="3503">Valisoara</station>
+                <time>16:14</time>
+            </arrival>
+            <arrival>
+                <station station_id="8821">Luncani</station>
+                <time>16:15</time>
+            </arrival>
+            <arrival>
+                <station station_id="5460">Ismail</station>
+                <time>16:16</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Titeica</station>
+                <time>16:06</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="8801">Titeica</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="3503">Valisoara</station>
+                <time>16:07</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Uzina de Apa</station>
+                <time>16:11</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Uzinei</station>
+                <time>16:12</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>16:06</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1546">
+        <direction1>
+            <arrival>
+                <station station_id="4483">Gara de Sud</station>
+                <time>15:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="2723">Eternitatii</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="8422">E. Zola</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="3565">Prefatim</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="6144">Hateganu</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="5081">Chisodei</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2733">Herculane</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>Victor Hugo</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures1</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="5041">Porumbescu</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:53</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="2703">Snagov</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station>Victor Hugo</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2733">Herculane</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="5081">Chisodei</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station>Hateganu_</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3565">Prefatim</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Bujorilor</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2723">Eternitatii</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Sud</station>
+                <time>15:53</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1046">
+        <direction1>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station>Shopping City</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Cl. Sagului</station>
+                <time>15:37</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="7061">Pod Cl. Sagului</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station>Shopping City</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu_</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>2 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="886">
+        <direction1>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3224">Popa Sapca</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3244">Galeria 1</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station>Complex Terra</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Est</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8261">Stuparilor</station>
+                <time>15:46</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="8261">Stuparilor</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="3248">Holdelor</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="4428">Ap. Petru si Pavel</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Pomiculturii</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2966">Iulius Mall</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3224">Popa Sapca</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>10 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1406">
+        <direction1>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:28</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>16:17</time>
+            </arrival>
+            <arrival>
+                <station station_id="8840">Telegrafului</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Est</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station>U.M.T.</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Cvartal U.M.T.</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station>Muzeul Satului</station>
+                <time>8 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>Muzeul Satului</station>
+                <time>16:15</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Cvartal U.M.T.</station>
+                <time>16:16</time>
+            </arrival>
+            <arrival>
+                <station>U.M.T.</station>
+                <time>16:18</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Est</station>
+                <time>16:21</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>16:23</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>16:25</time>
+            </arrival>
+            <arrival>
+                <station>A. Popovici</station>
+                <time>16:26</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:28</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1550">
+        <direction1>
+            <arrival>
+                <station station_id="7061">Pod Cl. Sagului</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station>Shopping City</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu_</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>16:05</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="3547">Ghe. Lazar</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station>Ab_C.Europei 2</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station>U.T.T.</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4462">Selgros</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="10186">Tzara</station>
+                <time>15:54</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="10186">Tzara</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station>U.T.T.</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="6141">P-ta Verde</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>16:07</time>
+            </arrival>
+            <arrival>
+                <station station_id="3547">Gh.Lazar</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station>Shopping City</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Cl. Sagului</station>
+                <time>17 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1551">
+        <direction1>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Bd. Sudului (bucla)</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Cvartal Sudului</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul Judetean</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Casa Tineretului</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="3224">Sala Olimpia</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="10380">Comp.Stud_3Tb</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcul Copiilor</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Pomiculturii</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="4428">Ap. Petru si Pavel</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="3248">Holdelor_ab</station>
+                <time>15:35</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3248">Holdelor_ab</station>
+                <time>15:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="8261">Stuparilor</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Est</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="3585">Dedeman</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcul Copiilor</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="10380">Complex Studentesc</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="3681">Cluj</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul Judetean</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Cvartal Sudului</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="7900">Venus</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>16:08</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1552">
+        <direction1>
+            <arrival>
+                <station station_id="5700">Apicultorilor</station>
+                <time>16:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures2</station>
+                <time>16:31</time>
+            </arrival>
+            <arrival>
+                <station station_id="2728">M-sal C-tin Prezan</station>
+                <time>16:32</time>
+            </arrival>
+            <arrival>
+                <station station_id="2724">Martir I. Stanciu</station>
+                <time>16:33</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Cl. Martirilor</station>
+                <time>16:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Casa Tineretului</station>
+                <time>16:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="3224">Sala Olimpia</station>
+                <time>16:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2833">Pasaj Michelangelo</station>
+                <time>16:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>16:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Mit. Saguna</station>
+                <time>16:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>16:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">N.Titulescu</station>
+                <time>16:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>2 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>16:29</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>16:31</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>16:32</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>16:33</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>16:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="10380">Complex Studentesc</station>
+                <time>16:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="3681">Cluj</station>
+                <time>16:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Cl. Martirilor</station>
+                <time>16:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2724">Martir I. Stanciu</station>
+                <time>16:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures</station>
+                <time>16:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="5700">Apicultorilor</station>
+                <time>16:47</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1926">
+        <direction1>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:33</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="10200">Arena Aqua</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station>DN6</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="6241">Jumbo</station>
+                <time>16:10</time>
+            </arrival>
+            <arrival>
+                <station station_id="7160">Hella</station>
+                <time>16:12</time>
+            </arrival>
+            <arrival>
+                <station station_id="2831">VGP Park</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="3860">UM Aeroport</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Cartier Aeroport II</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="6021">Swoboda</station>
+                <time>16:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="3860">Aeroport Civil II</station>
+                <time>15:46</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3860">Aeroport Civil II</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station>Dura</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="6021">Swoboda_</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3860">UM Aeroport</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Cartier Aeroport II</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="2831">VGP Park</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="6241">Jumbo</station>
+                <time>16:09</time>
+            </arrival>
+            <arrival>
+                <station>DN6</station>
+                <time>16:13</time>
+            </arrival>
+            <arrival>
+                <station station_id="7560">Camping</station>
+                <time>16:23</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>16:25</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>16:29</time>
+            </arrival>
+            <arrival>
+                <station>A. Popovici</station>
+                <time>16:32</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:33</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1928">
+        <direction1>
+            <arrival>
+                <station>Oituz</station>
+                <time>16:28</time>
+            </arrival>
+            <arrival>
+                <station>Ab_C.Europei 2</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="2831">Vox Park</station>
+                <time>16:09</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>16:10</time>
+            </arrival>
+            <arrival>
+                <station station_id="2754">Metro</station>
+                <time>16:20</time>
+            </arrival>
+            <arrival>
+                <station station_id="6001">PITT</station>
+                <time>16:02</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="6001">PITT</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="2754">Metro</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="7560">Scalini</station>
+                <time>16:15</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>16:19</time>
+            </arrival>
+            <arrival>
+                <station>Vox Park_</station>
+                <time>16:19</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>16:20</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>16:22</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>16:25</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>16:26</time>
+            </arrival>
+            <arrival>
+                <station>Oituz</station>
+                <time>16:28</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2026">
+        <direction1>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcul Copiilor</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="2833">Pasaj Michelangelo</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Mit. Saguna</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2883">Crizantemelor</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="2921">Opre Gogu</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="2820">Pacii</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="2975">V. Simionescu</station>
+                <time>16:09</time>
+            </arrival>
+            <arrival>
+                <station station_id="5965">Liceul Auto</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5963">Podgoriei</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station>C.I. Nottara</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2929">Rascoala din 1907</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2945">Polona</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station>F.Z.B.</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8921">Comtim s</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8921">Comtim p</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station>F.Z.B.</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2945">Polona</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2929">Rascoala din 1907</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station>C.I. Nottara</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="5963">Podgoriei</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="5965">Liceul Auto</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2975">V. Simionescu</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2820">Pacii</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2921">Opre Gogu</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5400">Fac. de Electrotehnica</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>18 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcul Copiilor</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>3 min.</time>
+            </arrival>
+        </direction1>
+        <direction2 />
+    </timetable>
+    <timetable vehicle_id="1547">
+        <direction1>
+            <arrival>
+                <station station_id="3420">Scoala Plopi</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2975">T.Demetrescu</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Albastrelelor</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="8980">Plastique Forme</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="7241">Apateu</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="2842">Levantica</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Caprioarei</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="6943">V. Carlova</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="6960">Iosif Vulcan</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station>Baba Dochia</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="2828">Iepurelui</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="2829">Lic. Calderon</station>
+                <time>16:11</time>
+            </arrival>
+            <arrival>
+                <station station_id="2838">Pestalozzi</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2833">Pasaj Michelangelo</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9180">Mihai Viteazu</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5400">Fac. de Mecanica</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3041">Corbului</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>17 min.</time>
+            </arrival>
+            <arrival>
+                <station>Shopping City</station>
+                <time>19 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Cl. Sagului</station>
+                <time>15:46</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="7061">Pod Cl. Sagului</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="5061">Izlaz</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Bujorilor</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu_</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">C.Brancoveanu</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5041">Porumbescu</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5400">Fac. de Mecanica</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5400">Fac. de Electrotehnica</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2833">Pasaj Michelangelo</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2831">Bd. V. Parvan</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2829">Lic. Calderon</station>
+                <time>17 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2828">Iepurelui</station>
+                <time>19 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2735">Printul Turcesc</station>
+                <time>20 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6960">Iosif Vucan</station>
+                <time>21 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6943">V. Carlova</station>
+                <time>23 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Caprioarei</station>
+                <time>24 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2842">Levantica</station>
+                <time>25 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7241">Apateu</station>
+                <time>27 min.</time>
+            </arrival>
+            <arrival>
+                <station>Azur</station>
+                <time>28 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8980">Plastique Forme</station>
+                <time>29 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Albastrelelor</station>
+                <time>32 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2975">T.Demetrescu</station>
+                <time>33 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Albastrelelor</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3406">Iokai Mor</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2740">C. Popescu</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3420">Scoala Plopi</station>
+                <time>6 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2906">
+        <direction1>
+            <arrival>
+                <station station_id="3572">Electrotimis</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station>I.O.T.</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="3574">Ciarda Rosie</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3107">Moteletul</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="9721">Castel</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="9360">Monica</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="5741">Otniel</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="9700">Parc Mosnita Noua</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="9640">Capat Urseni</station>
+                <time>16:05</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Tineret_</station>
+                <time>16:25</time>
+            </arrival>
+            <arrival>
+                <station station_id="9683">Lisitei</station>
+                <time>29 min.</time>
+            </arrival>
+            <arrival>
+                <station>I.A.S.</station>
+                <time>32 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9680">Albina dj</station>
+                <time>40 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9680">Camin Albina</station>
+                <time>15:38</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="9680">Camin Albina</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="9680">Albina</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station>I.A.S.</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station>Lisitei</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="9640">Capat Urseni</station>
+                <time>16:05</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Tineret_</station>
+                <time>16:25</time>
+            </arrival>
+            <arrival>
+                <station station_id="5700">Agricultorilor</station>
+                <time>16:32</time>
+            </arrival>
+            <arrival>
+                <station station_id="5721">Cova Ghera</station>
+                <time>16:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="5741">Otniel</station>
+                <time>16:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="9360">Monica</station>
+                <time>16:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="9721">Castel</station>
+                <time>16:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="3107">Moteletul</station>
+                <time>16:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3574">Ciarda Rosie</station>
+                <time>16:48</time>
+            </arrival>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>16:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="3572">Electrotimis</station>
+                <time>15:38</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3086">
+        <direction1>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8921">Cometei 2</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3506">Aleea Ghirodei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Carabusului</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2654">Prieteniei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2653">Moldovei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6022">Campului__</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="6022">Campului__</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2653">Moldovei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2654">Prieteniei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2655">Spartacus</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2656">Bobalna</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2754">Cometei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Matasarilor</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Uzinei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2735">Printul Turcesc</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1746">
+        <direction1>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3161">Samuil Micu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2824">Renasterii</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8921">Cometei 2</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3506">Aleea Ghirodei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Carabusului</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2654">Prieteniei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2653">Moldovei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Campului</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Primaverii</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Ghiroda</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5780">Ialomita</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5841">Primaria Ghiroda</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="5841">Primaria Ghiroda</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6027">Sinaia</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6026">Busteni</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6025">Semenic</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>DN6</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7560">Camping</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2824">Renasterii</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3161">Samuil Micu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>A. Popovici</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1986">
+        <direction1>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6141">Al. Padurea Verde</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>13 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3589">Macilor</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5700">Viticultorilor</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station>Giarmata Vii</station>
+                <time>20 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Giarmata Vii Stadion</station>
+                <time>21 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Biserica G.Vii1</station>
+                <time>24 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8261">Teilor G.Vii1</station>
+                <time>25 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir G.Vii</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir G.Vii</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="8261">Teilor G.Vii2</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Biserica G.Vii2</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Giarmata Vii Stadion</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station>Giarmata Vii</station>
+                <time>16:05</time>
+            </arrival>
+            <arrival>
+                <station station_id="6141">Al. Padurea Verde</station>
+                <time>16:17</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>16:22</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>16:26</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:30</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2006">
+        <direction1>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>19:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>18:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="5965">Liceul Auto</station>
+                <time>18:08</time>
+            </arrival>
+            <arrival>
+                <station>F.Z.B.</station>
+                <time>18:16</time>
+            </arrival>
+            <arrival>
+                <station station_id="6160">Abator</station>
+                <time>18:18</time>
+            </arrival>
+            <arrival>
+                <station station_id="8921">Comtim p</station>
+                <time>18:19</time>
+            </arrival>
+            <arrival>
+                <station station_id="5841">Intrare Utvin</station>
+                <time>18:22</time>
+            </arrival>
+            <arrival>
+                <station station_id="9621">Centru Utvin</station>
+                <time>18:25</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Utvin</station>
+                <time>18:27</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Sanmihaiu R.</station>
+                <time>18:35</time>
+            </arrival>
+            <arrival>
+                <station>Sanmihai R. Peco_</station>
+                <time>18:23</time>
+            </arrival>
+            <arrival>
+                <station station_id="7121">Benzinarie S.R.</station>
+                <time>18:21</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Primarie S.Roman</station>
+                <time>18:17</time>
+            </arrival>
+            <arrival>
+                <station>Livada S.G.</station>
+                <time>18:47</time>
+            </arrival>
+            <arrival>
+                <station>Strandul Termal_</station>
+                <time>18:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="3420">Scoala Sanmihaiu G.</station>
+                <time>19:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="3362">Drumul cimitirului</station>
+                <time>18:00</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3362">Drumul cimitirului</station>
+                <time>18:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="3420">Scoala S.G._</station>
+                <time>18:00</time>
+            </arrival>
+            <arrival>
+                <station>Strandul Termal</station>
+                <time>18:03</time>
+            </arrival>
+            <arrival>
+                <station>Livada S.G._</station>
+                <time>18:14</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Primarie S.Roman</station>
+                <time>18:17</time>
+            </arrival>
+            <arrival>
+                <station station_id="7121">Benzinarie S.R.</station>
+                <time>18:21</time>
+            </arrival>
+            <arrival>
+                <station>Sanmihai R. Peco_</station>
+                <time>18:23</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod Sanmihaiu R._</station>
+                <time>18:26</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Utvin_</station>
+                <time>18:34</time>
+            </arrival>
+            <arrival>
+                <station station_id="9621">Centru Utvin_</station>
+                <time>18:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="5841">Intrare Utvin_</station>
+                <time>18:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="8921">Comtim s</station>
+                <time>18:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="8960">Abatorlecare</station>
+                <time>18:43</time>
+            </arrival>
+            <arrival>
+                <station>F.Z.B.</station>
+                <time>18:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="5965">Liceul Auto</station>
+                <time>18:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>18:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>19:01</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3306">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>16:09</time>
+            </arrival>
+            <arrival>
+                <station station_id="2837">Bujorilor S</station>
+                <time>16:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="8640">Flora Sanandrei</station>
+                <time>16:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="9621">Centru Sanandrei</station>
+                <time>16:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2814">Maslinului</station>
+                <time>16:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="9621">Centru Carani</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station>Darson Carani</station>
+                <time>15:50</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>Darson Carani</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="9621">Centru Carani_</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station>Maslinului_</station>
+                <time>16:11</time>
+            </arrival>
+            <arrival>
+                <station station_id="9621">Centru Sanandrei_</station>
+                <time>16:13</time>
+            </arrival>
+            <arrival>
+                <station station_id="8640">Flora Sanandrei_</station>
+                <time>16:15</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Lalelelor S</station>
+                <time>16:16</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>16:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>16:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>16:48</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>16:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>16:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>17:04</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3307">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="9622">Gradinita Covaci</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="9622">Gradinita Covaci</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2646">
+        <direction1>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>16:10</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>16:11</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>16:14</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>16:18</time>
+            </arrival>
+            <arrival>
+                <station>Europa_</station>
+                <time>16:32</time>
+            </arrival>
+            <arrival>
+                <station station_id="3080">Moara</station>
+                <time>16:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="8722">Dispensar</station>
+                <time>16:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="7760">Liliacului_</station>
+                <time>16:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta</station>
+                <time>16:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Vest</station>
+                <time>16:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Comtur</station>
+                <time>17:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Biserica BM</station>
+                <time>17:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="7900">Vest Tract</station>
+                <time>17:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="8800">B.Mic_camin_</station>
+                <time>17:26</time>
+            </arrival>
+            <arrival>
+                <station station_id="8800">B.Mic capat</station>
+                <time>16:10</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="8800">B.Mic capat</station>
+                <time>16:10</time>
+            </arrival>
+            <arrival>
+                <station station_id="7560">B.Mic_camin</station>
+                <time>16:12</time>
+            </arrival>
+            <arrival>
+                <station station_id="2927">Vest Tract_</station>
+                <time>16:29</time>
+            </arrival>
+            <arrival>
+                <station station_id="2690">Profi</station>
+                <time>16:32</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada_VI</station>
+                <time>16:34</time>
+            </arrival>
+            <arrival>
+                <station station_id="8762">Class</station>
+                <time>16:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta</station>
+                <time>16:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="7760">Liliacului</station>
+                <time>16:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Biserica</station>
+                <time>16:58</time>
+            </arrival>
+            <arrival>
+                <station>Europa</station>
+                <time>17:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="8201">G. Alexandrescu</station>
+                <time>17:20</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>17:24</time>
+            </arrival>
+            <arrival>
+                <station station_id="3547">Ghe. Lazar</station>
+                <time>17:26</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>17:29</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>16:10</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2506">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3547">Ghe. Lazar</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Dudesti Primarie</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>Dudesti Primarie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7560">Camin D.Noi</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7341">Rus Savitar</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Filipescu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2606">
+        <direction1>
+            <arrival>
+                <station station_id="8441">P-ta P-ta Balcescu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2809">A Saguna</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10186">Tzara</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2755">Petre Tutea</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10161">Praga</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5640">Bucuresti</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10183">Ferventia</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="4981">Liiceanu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10182">I.Creanga_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3107">Sadoveanu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3544">Simfoniei</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3544">Simfoniei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10160">Tutea II</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Rebreanu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Crisurilor</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8481">Caragiale</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Bistrita</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Aries</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul D</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3041">Arinului</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="10186">Tzara</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod A. Saguna</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta P-ta Balcescu</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3326">
+        <direction1>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>20:24</time>
+            </arrival>
+            <arrival>
+                <station>O. Codrus</station>
+                <time>19:36</time>
+            </arrival>
+            <arrival>
+                <station>Leroy Merlin</station>
+                <time>19:39</time>
+            </arrival>
+            <arrival>
+                <station>Teren sport_</station>
+                <time>20:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Primarie Sag_</station>
+                <time>20:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada IV_II_</station>
+                <time>20:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada IV_CXI</station>
+                <time>19:30</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="8802">Strada IV_CXI</station>
+                <time>19:30</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada V_II</station>
+                <time>19:31</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Primarie Sag</station>
+                <time>19:33</time>
+            </arrival>
+            <arrival>
+                <station>Teren sport</station>
+                <time>19:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada XXIV</station>
+                <time>19:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada XXiV_</station>
+                <time>19:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada XXVII</station>
+                <time>19:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="8802">Strada XX</station>
+                <time>19:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="7920">Incontro</station>
+                <time>20:11</time>
+            </arrival>
+            <arrival>
+                <station>Brico Depot</station>
+                <time>20:14</time>
+            </arrival>
+            <arrival>
+                <station>O. Codrus</station>
+                <time>20:17</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>20:24</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3560">
+        <direction1 />
+        <direction2 />
+    </timetable>
+    <timetable vehicle_id="3406">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Cornesti_cap</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Calacea</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3503">Ortisoara2</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="9200">Seceani2</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="9200">Seceani2</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Ortisoara2_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Calacea</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Cornesti_cap</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3426">
+        <direction1>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="3244">Galeria 1</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="8400">I.I. de la Brad</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station>Bodoni G</station>
+                <time>16:40</time>
+            </arrival>
+            <arrival>
+                <station>PricighetoriiG</station>
+                <time>16:42</time>
+            </arrival>
+            <arrival>
+                <station>ArtezaG</station>
+                <time>16:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="9680">C.CulturalCz</station>
+                <time>16:46</time>
+            </arrival>
+            <arrival>
+                <station>CasaCulturaG</station>
+                <time>17:00</time>
+            </arrival>
+            <arrival>
+                <station>Sc.Gen.Gi</station>
+                <time>17:02</time>
+            </arrival>
+            <arrival>
+                <station>Gir.Giarmata</station>
+                <time>15:59</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>Gir.Giarmata</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="7860">B.Catolica G</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station>Casa Cultura G</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="8400">I.I.de la Brad</station>
+                <time>16:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="2966">Iulius Mall</station>
+                <time>16:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>16:44</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3486">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3547">Ghe. Lazar</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7860">Biserica Sandra</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Biserica Uihei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8801">Biserica Uihei_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7860">Biserica Sandra_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Filipescu</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2 />
+    </timetable>
+    <timetable vehicle_id="3466">
+        <direction1>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>18:49</time>
+            </arrival>
+            <arrival>
+                <station>O. Codrus</station>
+                <time>17:56</time>
+            </arrival>
+            <arrival>
+                <station>Leroy Merlin</station>
+                <time>17:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Primarie Pad</station>
+                <time>17:50</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="7283">Primarie Pad</station>
+                <time>17:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="3660">Parc Pad</station>
+                <time>17:53</time>
+            </arrival>
+            <arrival>
+                <station>Purice Pad</station>
+                <time>17:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="7920">Incontro</station>
+                <time>18:36</time>
+            </arrival>
+            <arrival>
+                <station>Brico Depot</station>
+                <time>18:39</time>
+            </arrival>
+            <arrival>
+                <station>O. Codrus</station>
+                <time>18:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>18:49</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="3546">
+        <direction1>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Hector</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Gelu_Chistelec</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="3420">Gelu_scoala</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7860">Biserica_S.Mic</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Varias_peco</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7283">Varias_primarie</station>
+                <time>**:**</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="7283">Varias_primarie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Varias_peco_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7860">Biserica_S.Mic</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Gelu_scoaa_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>Gelu_Chiselec_</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>**:**</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>**:**</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1106">
+        <direction1>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta Maria</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>15:55</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2735">Printul Turcesc</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station>P-ta Sarmisegetusa</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Lalelelor</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul V. Babes</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station>15:41</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station>U.M.T.</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="10200">Arena Electrica</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Est</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Maria 2</station>
+                <time>17 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>18 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>20 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>22 min.</time>
+            </arrival>
+        </direction1>
+        <direction2 />
+    </timetable>
+    <timetable vehicle_id="1126">
+        <direction1>
+            <arrival>
+                <station>City Mall_Tv</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatul</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2883">Crizantemelor</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="2885">Mangalia</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta Maria</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Est</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="10200">Arena Electrica</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station>U.M.T.</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station>15:36</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul V. Babes</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="2749">Lalelelor</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station>P-ta Sarmisegetusa</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2735">Printul Turcesc</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Maria 2</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Mocioni</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2885">Mangalia</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2883">Crizantemelor</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatul</station>
+                <time>18 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>19 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>21 min.</time>
+            </arrival>
+            <arrival>
+                <station>City Mall_Tv</station>
+                <time>15:36</time>
+            </arrival>
+        </direction1>
+        <direction2 />
+    </timetable>
+    <timetable vehicle_id="1266">
+        <direction1>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station>M. Basarab</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3544">Amforei</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3554">F-ca de Bere</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3554">F-ca de Detergenti</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3565">Mecatim</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4701">Spumotim</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3572">Electrotimis</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station>I.O.T.</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3574">Ciarda Rosie</station>
+                <time>16 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3574">Ciarda Rosie</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station>I.O.T.</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3572">Electrotimis</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4701">Spumotim</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3565">Mecatim</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3554">F-ca de Detergenti</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8382">Cimitir Buzias</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3554">F-ca de Bere</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3544">Amforei</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station>M. Basarab</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>12 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2686">
+        <direction1>
+            <arrival>
+                <station station_id="9440">P-ta Maria Tv</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brediceanu</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>15:43</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3554">F-ca de Bere</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatim</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>Deliblata</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="4981">Olimpia</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3681">Cluj</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Crucii</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3660">Parc Doina</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="9440">P-ta Maria Tv</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2706">
+        <direction1>
+            <arrival>
+                <station station_id="3105">P-ta Maria</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3660">Parc Doina</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Crucii</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="3681">Cluj</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="4981">Olimpia</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>Deliblata</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatim</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3554">F-ca de Bere</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>15:36</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3598">P-ta Traian</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station>Bd. 3 August 1919</station>
+                <time>15:37</time>
+            </arrival>
+            <arrival>
+                <station station_id="3170">Prefectura</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="7820">Hotel Continental</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3166">P-ta Libertatii</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta Maria</station>
+                <time>15:47</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2846">
+        <direction1>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatul</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="5081">Chisodei</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="5061">Izlaz</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="8422">E. Zola</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="5041">Progresul</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="5021">Pavlov</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="4981">Lidia</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="3591">Drubeta</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station>Memorandului</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3660">Parc Doina</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9440">P-ta Maria Tv</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brediceanu</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3544">Amforei</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station>M. Basarab</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>1 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station>M. Basarab</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3544">Amforei</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station>Bd. Cetatii</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="8760">Balta Verde</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station>Mendeleev</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="6181">Circumvalatiunii</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brediceanu</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul de Copii</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="4324">Catedrala Mit.</station>
+                <time>16:03</time>
+            </arrival>
+            <arrival>
+                <station station_id="3664">P-ta Maria 2</station>
+                <time>16:05</time>
+            </arrival>
+            <arrival>
+                <station station_id="3660">Parc Doina</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station>Memorandului</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3591">Drubeta</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4981">Lidia</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5021">Pavlov</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5041">Progresul</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8422">E.Zola</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5061">Izlaz</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5081">Chisodei</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="5101">P-ta Veteranilor</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatul</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>18 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="158">
+        <direction1 />
+        <direction2 />
+    </timetable>
+    <timetable vehicle_id="2406">
+        <direction1>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2885">Mangalia</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="2883">Crizantemelor</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatul</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3595">Ghe. Ranetti</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3591">Drubeta</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Salcamilor</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Cl. Martirilor</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul Judetean</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Bd. Sudului</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>16 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3572">Electrotimis</station>
+                <time>18 min.</time>
+            </arrival>
+            <arrival>
+                <station>I.O.T.</station>
+                <time>19 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3574">Ciarda Rosie</station>
+                <time>20 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="3574">Ciarda Rosie</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station>I.O.T.</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="3572">Electrotimis</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station>Ghe. Domasnean</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Bd. Sudului</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul Judetean</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Cl. Martirilor</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3589">Salcamilor</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="3591">Drubeta</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="3593">Brancoveanu</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="3595">Ghe. Ranetti</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station station_id="2739">Bd. L. Rebreanu</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3598">Transilvania</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banatul</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2881">Bd. Dambovita</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2883">Crizantemelor</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2885">Mangalia</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta I. Maniu</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2702">Regele Carol</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>13 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="990">
+        <direction1>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="3161">Samuil Micu</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2824">Renasterii</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="10200">Arena Aqua</station>
+                <time>6 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="10200">Arena Aqua</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2824">Renasterii</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="3161">Samuil Micu</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station>A. Popovici</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station>Oituz</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>9 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>14 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>15 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2786">
+        <direction1>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="3161">Samuil Micu</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="2824">Renasterii</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="10200">Arena Aqua</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="9360">Moticica</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="8661">ROMTRANS</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="9460">Banat Car</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Lugojului</station>
+                <time>16:11</time>
+            </arrival>
+            <arrival>
+                <station station_id="5841">Primaria Ghiroda</station>
+                <time>16:12</time>
+            </arrival>
+            <arrival>
+                <station station_id="5780">Ialomita</station>
+                <time>15:41</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="5780">Ialomita</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="5780">Ialomita 19</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Campului</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2653">Moldovei</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2654">Prieteniei</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="2655">Spartacus</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="2656">Bobalna</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2754">Cometei</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station>Turda</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="10200">Arena Aqua</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="7560">Camping</station>
+                <time>15:53</time>
+            </arrival>
+            <arrival>
+                <station station_id="3177">P-ta V. Economu</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="2824">Renasterii</station>
+                <time>15:57</time>
+            </arrival>
+            <arrival>
+                <station station_id="3161">Samuil Micu</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="3254">P-ta Badea Cartan</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>16:01</time>
+            </arrival>
+            <arrival>
+                <station>A. Popovici</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station>Oituz</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>13 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1006">
+        <direction1>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station station_id="3362">Cimitirul Eroilor</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Pomiculturii</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4428">Ap. Petru si Pavel</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8400">I.I.de la Brad</station>
+                <time>5 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="8400">I.I.de la Brad</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="4428">Ap. Petru si Pavel</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Pomiculturii</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="3362">Cimitirul Eroilor</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>9 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="2766">
+        <direction1>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>15:54</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:56</time>
+            </arrival>
+            <arrival>
+                <station station_id="3362">Cimitirul Eroilor</station>
+                <time>15:58</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>15:59</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Pomiculturii</station>
+                <time>16:00</time>
+            </arrival>
+            <arrival>
+                <station station_id="4428">Ap. Petru si Pavel</station>
+                <time>16:02</time>
+            </arrival>
+            <arrival>
+                <station station_id="8400">I.I. de la Brad</station>
+                <time>16:04</time>
+            </arrival>
+            <arrival>
+                <station station_id="9300">Kaufland</station>
+                <time>16:06</time>
+            </arrival>
+            <arrival>
+                <station station_id="9341">Fropin</station>
+                <time>16:08</time>
+            </arrival>
+            <arrival>
+                <station>Crisan1</station>
+                <time>16:09</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>16:10</time>
+            </arrival>
+            <arrival>
+                <station station_id="8422">Zoltan</station>
+                <time>16:12</time>
+            </arrival>
+            <arrival>
+                <station station_id="8460">I. Attila</station>
+                <time>16:14</time>
+            </arrival>
+            <arrival>
+                <station>Giratie Dumbravita</station>
+                <time>15:45</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>Giratie Dumbravita</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="8460">I. Attila</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="8422">Zoltan</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="8441">P-ta Balcescu</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station>Crisan2</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9341">Fropin</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9300">Kaufland</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8400">I.I.de la Brad</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4428">Ap. Petru si Pavel</station>
+                <time>8 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4429">Pomiculturii</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2964">Div 9 Cavalerie</station>
+                <time>11 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3362">Cimitirul Eroilor</station>
+                <time>13 min.</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>18 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>20 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>21 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>23 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>25 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2671">Ghe. Baritiu</station>
+                <time>26 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="989">
+        <direction1>
+            <arrival>
+                <station station_id="5700">Apicultorilor</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures2</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="2728">M-sal C-tin Prezan</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station station_id="2724">Martir I. Stanciu</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Cl. Martirilor</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Casa Tineretului</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="3224">Sala Olimpia</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="10380">Comp.Stud_3Tb</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcul Copiilor</station>
+                <time>15:52</time>
+            </arrival>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>15:53</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>15:39</time>
+            </arrival>
+            <arrival>
+                <station station_id="2747">Parcul Copiilor</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="10380">Complex Studentesc</station>
+                <time>15:41</time>
+            </arrival>
+            <arrival>
+                <station station_id="3681">Cluj</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station station_id="3587">Cl. Martirilor</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="2724">Martir I. Stanciu</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="2728">Prezan 3ab</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="5001">Mures</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="5700">Apicultorilor</station>
+                <time>15:52</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1206">
+        <direction1>
+            <arrival>
+                <station station_id="3583">Bv.Sudului 2tb</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul Judetean</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="9880">Casa Tineretului</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="3224">Sala Olimpia</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="2833">Pasaj Michelangelo</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="2809">A Saguna</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="8320">I.C. Bratianu</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>5 min.</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station>T. Grozavescu</station>
+                <time>15:42</time>
+            </arrival>
+            <arrival>
+                <station>P-ta Huniade</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="7061">Pod A. Saguna</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="5400">Fac. de Electrotehnica</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="2826">Univ. de Vest</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station station_id="10380">Complex Studentesc</station>
+                <time>15:49</time>
+            </arrival>
+            <arrival>
+                <station station_id="3681">Cluj</station>
+                <time>15:51</time>
+            </arrival>
+            <arrival>
+                <station station_id="2753">Spitalul Judetean</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3583">Bv.Sudului 2tb</station>
+                <time>3 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1086">
+        <direction1>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>U.T.T.</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station station_id="2952">Dacia Service</station>
+                <time>15:48</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>1 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="7201">Bastion</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="4100">Baader</station>
+                <time>15:43</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="4100">Baader</station>
+                <time>15:43</time>
+            </arrival>
+            <arrival>
+                <station>Politia Jud. Timis</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station>A. Popovici</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station>Oituz</station>
+                <time>15:46</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:50</time>
+            </arrival>
+            <arrival>
+                <station>Remus Radulet</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2957">Liege</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station>U.T.T.</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2956">Agronomie</station>
+                <time>7 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+    <timetable vehicle_id="1166">
+        <direction1>
+            <arrival>
+                <station station_id="3107">C.P. Solventul</station>
+                <time>15:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="2760">Gelu</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>&gt;&gt;</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>3 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>6 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2727">P-ta Marasti</station>
+                <time>7 min.</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>10 min.</time>
+            </arrival>
+            <arrival>
+                <station>Remus Radulet</station>
+                <time>12 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="6141">P-ta Verde</station>
+                <time>15:35</time>
+            </arrival>
+        </direction1>
+        <direction2>
+            <arrival>
+                <station station_id="6141">P-ta Verde</station>
+                <time>15:35</time>
+            </arrival>
+            <arrival>
+                <station station_id="5361">Cl. Torontalului</station>
+                <time>15:36</time>
+            </arrival>
+            <arrival>
+                <station station_id="5641">Miresei</station>
+                <time>15:38</time>
+            </arrival>
+            <arrival>
+                <station>P-ta C. Europei</station>
+                <time>15:40</time>
+            </arrival>
+            <arrival>
+                <station station_id="6841">P-ta 700</station>
+                <time>15:44</time>
+            </arrival>
+            <arrival>
+                <station station_id="3105">P-ta R. Maria</station>
+                <time>15:45</time>
+            </arrival>
+            <arrival>
+                <station station_id="9380">Jiul</station>
+                <time>15:47</time>
+            </arrival>
+            <arrival>
+                <station station_id="4483">Gara de Nord</station>
+                <time>2 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2764">Pop de Basesti</station>
+                <time>4 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="2760">Gelu</station>
+                <time>5 min.</time>
+            </arrival>
+            <arrival>
+                <station station_id="3107">C.P. Solventul</station>
+                <time>7 min.</time>
+            </arrival>
+        </direction2>
+    </timetable>
+</timetables>

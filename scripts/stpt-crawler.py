@@ -1,7 +1,10 @@
+import pickle
+import requests
 from unidecode import unidecode
 
-import requests
-from xml.etree.ElementTree import Element, tostring
+from fuzzywuzzy import fuzz
+
+from xml.etree.ElementTree import ElementTree, Element, tostring
 from bs4 import BeautifulSoup
 
 
@@ -23,7 +26,6 @@ available_busses = {'3': 1207, '5a': 2426, '5b': 2446, '5c': 3446,
                     'M45': 2606, 'M46': 3326, 'M47': 3560, 'M48': 3406, 'M49': 3426,
                     'M50': 3486, 'M51': 3466, 'M52': 3546}
 
-
 # iterate over a list two elements at a time
 def grouped(iterable, n):
     return zip(*[iter(iterable)]*n)
@@ -40,9 +42,12 @@ def filter_others(x):
     return True
 
 
-# ToDo: create an XML containing all the vehicle types and id's from the mapping up there
 def crawl_for_data():
     all_vehicles = [available_busses, available_trams, available_trolleys]
+    # mapping of type StationShortName: id -> Ex: 'Ghe. Ranetti': '3595'
+    with open('../data/station_with_ids.pkl', 'rb') as fh:
+        station_ids = pickle.load(fh)
+
     xml_document = Element('timetables')
 
     for vehicle_type in all_vehicles:
@@ -57,28 +62,47 @@ def crawl_for_data():
                 soup = BeautifulSoup(resp.text, 'html.parser')
                 lines = soup.find_all('b')
                 filtered_lines = filter(filter_others, lines)
+                last_line = None
+                line_changed = 0
+                direction_1 = Element('direction1')
+                direction_2 = Element('direction2')
+                direction = direction_1
 
                 for line, arrival in grouped(filtered_lines, 2):
+                    entry = Element('arrival')
                     station = Element('station')
-                    # ToDo: have some mapping for stations here and append the proper StationID
-                    # station.set('station_id', stations[name])
-                    station.text = line.text
-                    arr_time = Element("arrival")
+
+                    for key, value in station_ids.items():
+                        if (fuzz.token_set_ratio(line.text, key) > 60):
+                            station.set('station_id', station_ids[key])
+                            # print(f"{line.text} - {key} - {fuzz.token_set_ratio(line.text, key)}")
+                            pass
+
+                    station.text = unidecode(line.text)
+                    arr_time = Element("time")
                     arr_time.text = arrival.text
 
-                    timetable_entry.append(station)
-                    timetable_entry.append(arr_time)
+                    entry.append(station)
+                    entry.append(arr_time)
 
+                    if not(line.text == last_line) and line_changed == 0:
+                        direction = direction_1
+                    else:
+                        line_changed = 1
+                        direction = direction_2
+
+                    direction.append(entry)
+                    last_line = line.text
+
+                timetable_entry.append(direction_1)
+                timetable_entry.append(direction_2)
             else:
                 print(f'Could not get data for line {vehicle_name}, ID: {vehicle_id}')
 
             xml_document.append(timetable_entry)
-            break
 
-
-        print(tostring(xml_document, encoding='utf8', method='xml'))
-        break
-
+        # print(tostring(xml_document, encoding='utf8', method='xml'))
+    ElementTree(xml_document).write('timetables.xml')
 
 
 crawl_for_data()

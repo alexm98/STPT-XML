@@ -916,6 +916,21 @@
       <GMapsLink>http://maps.google.com/maps?q=Piata%20700@45.756288,21.223006</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
     <TransportStation id="3060">
       <LineID>1066</LineID>
       <LineName>13</LineName>
@@ -1216,6 +1231,22 @@
       <GMapsLink>http://maps.google.com/maps?q=Piata%20Marasti@45.759237,21.227754</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+
     <TransportStation id="3548">
       <LineID>2546</LineID>
       <LineName>13b</LineName>
@@ -1426,6 +1457,22 @@
       <GMapsLink>http://maps.google.com/maps?q=Balta%20Verde@45.758012,21.208578</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+
     <TransportStation id="3560">
       <LineID>1146</LineID>
       <LineName>21</LineName>
@@ -1876,6 +1923,22 @@
       <GMapsLink>http://maps.google.com/maps?q=Banatul%20/%20Depoul%20de%20autobuze@45.749581,21.252789</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+
     <TransportStation id="8960">
       <LineID>2566</LineID>
       <LineName>22</LineName>
@@ -2431,6 +2494,22 @@
       <GMapsLink>x</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+
     <TransportStation id="9786">
       <LineID>3066</LineID>
       <LineName>23</LineName>
@@ -2791,6 +2870,22 @@
       <GMapsLink>x</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+
     <TransportStation id="2971">
       <LineID>1226</LineID>
       <LineName>28</LineName>
@@ -3016,6 +3111,22 @@
       <GMapsLink>http://maps.google.com/maps?q=Piata%20Gen.%20V.%20Economu%20/%20Calea%20Lugojului@45.765775,21.261265</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+
     <TransportStation id="2971">
       <LineID>2626</LineID>
       <LineName>29</LineName>
@@ -7466,6 +7577,21 @@
       <GMapsLink>http://maps.google.com/maps?q=Str.%20Gheorghe%20Baritiu@45.748975,21.199391</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
 
     <TransportStation id="2666">
       <LineID>1526</LineID>
@@ -9180,6 +9306,21 @@
       <GMapsLink>http://maps.google.com/maps?q=Piata%20Mocioni%20/%20Sinaia@45.745971,21.215977</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
 
     <TransportStation id="3420">
       <LineID>1547</LineID>
@@ -9974,6 +10115,21 @@
       <Verified>dup script</Verified>
       <VerificationDate>20.02.17.</VerificationDate>
       <GMapsLink>x</GMapsLink>
+      <InfoComments>0</InfoComments>
+    </TransportStation>
+    <TransportStation id="0">
+      <LineID>0</LineID>
+      <LineName>0</LineName>
+      <RawStationName>0</RawStationName>
+      <FriendlyStationName>0</FriendlyStationName>
+      <ShortStationName>0</ShortStationName>
+      <JunctionName>0</JunctionName>
+      <Lat>0</Lat>
+      <Long>0</Long>
+      <Invalid>0</Invalid>
+      <Verified>0</Verified>
+      <VerificationDate>0</VerificationDate>
+      <GMapsLink>0</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
 
@@ -21940,9 +22096,6 @@
       <GMapsLink>0</GMapsLink>
       <InfoComments>0</InfoComments>
     </TransportStation>
-
-
-
 
     <TransportStation id="2880">
       <LineID>1556</LineID>
