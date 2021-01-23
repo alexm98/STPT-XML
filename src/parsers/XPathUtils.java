@@ -1,6 +1,6 @@
 package parsers;
 
-import Models.Wrapper;
+import Models.StationsWrapper;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
@@ -23,7 +23,7 @@ public class XPathUtils {
         this.doc = doc;
     }
 
-    public XPathUtils(Marshaller marshaller, Wrapper data) {
+    public XPathUtils(Marshaller marshaller, StationsWrapper data) {
         DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
 
         try{

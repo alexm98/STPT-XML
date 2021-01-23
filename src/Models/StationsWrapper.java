@@ -6,12 +6,12 @@ import java.util.List;
 
 @XmlRootElement(name="root")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Wrapper {
+public class StationsWrapper {
     @XmlElementWrapper(name="TransportStations")
     @XmlElement(name="TransportStation")
     private List<TransportStation> transport_stations;
 
-    public Wrapper() {
+    public StationsWrapper() {
         transport_stations = new ArrayList<TransportStation>();
     }
 
