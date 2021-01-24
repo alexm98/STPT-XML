@@ -8,5 +8,5 @@ for tag in root.findall('TransportStations/TransportStation'):
     tag.remove(station_id)
     tag.set('id', station_id.text)
 
-with open('../data/statii-ratt-format.xml', 'wb') as f:
+with open('../data/statii-ratt.xml', 'wb') as f:
     tree.write(f)

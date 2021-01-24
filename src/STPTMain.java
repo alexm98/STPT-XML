@@ -1,6 +1,8 @@
+import parsers.ParserUtils;
+import core.*;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-import parsers.ParserUtils;
 
 public class STPTMain {
     public static void IterateNodeList(NodeList query_res){
@@ -12,11 +14,11 @@ public class STPTMain {
     }
 
     public static void main(String args[]) throws Exception {
-        ParserUtils putils = new ParserUtils("data/statii-ratt-format.xml");
+        ParserUtils putils = new ParserUtils("data/statii-ratt.xml");
         Document doc = putils.parseJAXB();
-//        StationsInteractor s = new StationsInteractor("data/statii-ratt-format.xml");
-//        IterateNodeList(s.getAllStations());
-//        System.out.println(s.getStation(4680));
+        StationsInteractor s = new StationsInteractor("data/statii-ratt.xml");
+        IterateNodeList(s.getAllStations());
+        System.out.println(s.getStation(4680));
 //
 //        VehiclesInteractor v = new VehiclesInteractor("data/vehicles.xml");
 //        IterateNodeList(v.getAllVehicles());

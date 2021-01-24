@@ -1732,7 +1732,6 @@
                     <time>3 min.</time>
                 </arrival>
             </direction>
-            <direction2 />
         </timetable>
         <timetable vehicle_id="1547">
             <direction way="1">
@@ -3070,10 +3069,6 @@
                 </arrival>
             </direction>
         </timetable>
-        <timetable vehicle_id="3560">
-            <direction1 />
-            <direction2 />
-        </timetable>
         <timetable vehicle_id="3406">
             <direction way="1">
                 <arrival>
@@ -3289,7 +3284,6 @@
                     <time>**:**</time>
                 </arrival>
             </direction>
-            <direction2 />
         </timetable>
         <timetable vehicle_id="3466">
             <direction way="1">
@@ -3574,7 +3568,6 @@
                     <time>22 min.</time>
                 </arrival>
             </direction>
-            <direction2 />
         </timetable>
         <timetable vehicle_id="1126">
             <direction way="1">
@@ -3771,7 +3764,6 @@
                     <time>15:36</time>
                 </arrival>
             </direction>
-            <direction2 />
         </timetable>
         <timetable vehicle_id="1266">
             <direction way="1">
@@ -4336,10 +4328,6 @@
                     <time>18 min.</time>
                 </arrival>
             </direction>
-        </timetable>
-        <timetable vehicle_id="158">
-            <direction1 />
-            <direction2 />
         </timetable>
         <timetable vehicle_id="2406">
             <direction way="1">

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType"/>
+  <xs:complexType name="vehicleType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="vehicle-name"/>
+      <xs:element name="vehicle-type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Tram"/>
+            <xs:enumeration value="Trolley"/>
+            <xs:enumeration value="Bus"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="vehiclesType">
+    <xs:sequence>
+      <xs:element type="vehicleType" name="vehicle" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element type="vehiclesType" name="vehicles"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

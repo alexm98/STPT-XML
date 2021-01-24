@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType"/>
+  <xs:complexType name="stationType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="arrivalType">
+    <xs:sequence>
+      <xs:element type="stationType" name="station"/>
+      <xs:element type="xs:string" name="time"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="directionType">
+    <xs:sequence>
+      <xs:element type="arrivalType" name="arrival" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="way" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="timetableType">
+    <xs:sequence>
+      <xs:element type="directionType" name="direction" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="vehicle_id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="timetablesType">
+    <xs:sequence>
+      <xs:element type="timetableType" name="timetable" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element type="timetablesType" name="timetables"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

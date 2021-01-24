@@ -16,8 +16,8 @@ public class CamelREST extends RouteBuilder {
     private final ParserUtils putils;
 
     public CamelREST() throws JAXBException, ParserConfigurationException, SAXException {
-        this.stations_interactor = new StationsInteractor("data/statii-ratt-format.xml");
-        this.putils = new ParserUtils("data/statii-ratt-format.xml");
+        this.stations_interactor = new StationsInteractor("data/statii-ratt.xml");
+        this.putils = new ParserUtils("data/statii-ratt.xml");
     }
 
     @Override

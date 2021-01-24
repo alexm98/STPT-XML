@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType"/>
+  <xs:complexType name="TransportStationType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="LineID"/>
+      <xs:element type="xs:string" name="LineName"/>
+      <xs:element type="xs:string" name="RawStationName"/>
+      <xs:element type="xs:string" name="FriendlyStationName"/>
+      <xs:element type="xs:string" name="ShortStationName"/>
+      <xs:element type="xs:string" name="JunctionName"/>
+      <xs:element type="xs:string" name="Lat"/>
+      <xs:element type="xs:string" name="Long"/>
+      <xs:element name="Invalid">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="TRUE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Verified">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="dup script"/>
+            <xs:enumeration value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="VerificationDate"/>
+      <xs:element type="xs:string" name="GMapsLink"/>
+      <xs:element name="InfoComments">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="statie temporara"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="TransportStationsType">
+    <xs:sequence>
+      <xs:element type="TransportStationType" name="TransportStation" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element type="TransportStationsType" name="TransportStations"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
