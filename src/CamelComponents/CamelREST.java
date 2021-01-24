@@ -1,5 +1,6 @@
 package CamelComponents;
 
+import Models.TimeTable;
 import Models.Vehicle;
 import core.StationsInteractor;
 import core.TimeTablesInteractor;
@@ -34,6 +35,7 @@ public class CamelREST extends RouteBuilder {
                 .bindingMode(RestBindingMode.auto);
 
         rest("/api")
+                // Begin: Stations REST endpoints
                 .get("/stations")
                 .produces("application/xml")
                 .route()
@@ -45,6 +47,8 @@ public class CamelREST extends RouteBuilder {
                 .route()
                 .bean(stations_interactor, "getStation(${header.id})")
                 .endRest()
+
+                // Begin: Vehicles REST endpoints
 
                 .get("/vehicles")
                 .produces("application/xml")
@@ -78,6 +82,41 @@ public class CamelREST extends RouteBuilder {
                 .produces("application/xml")
                 .route()
                 .bean(vehicles_interactor, "deleteVehicle(${header.id})")
+                .endRest()
+
+                // Begin: TimeTables REST endpoints
+                .get("/timetables")
+                .produces("application/xml")
+                .route()
+                .bean(timetables_interactor, "getAllTimeTables")
+                .endRest()
+
+                .get("/timetable/{id}")
+                .produces("application/xml")
+                .route()
+                .bean(timetables_interactor, "getTimeTable(${header.id})")
+                .endRest()
+
+//                .put("/timetable/{id}")
+//                .type(TimeTable.class)
+//                .consumes("application/xml")
+//                .produces("application/xml")
+//                .route()
+//                .bean(vehicles_interactor, "replaceTimeTable(${header.id}, ${body})")
+//                .endRest()
+
+                .post("/timetable")
+                .type(TimeTable.class)
+                .consumes("application/xml")
+                .produces("application/xml")
+                .route()
+                .bean(timetables_interactor, "createTimeTable(${body})")
                 .endRest();
+//
+//                .delete("/vehicle/{id}")
+//                .produces("application/xml")
+//                .route()
+//                .bean(vehicles_interactor, "deleteVehicle(${header.id})")
+//                .endRest();
     }
 };

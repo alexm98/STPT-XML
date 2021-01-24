@@ -10,4 +10,12 @@ public class Direction {
     public int way;
     @XmlElement(name = "arrival")
     public ArrayList<Arrival> arrivals;
+
+    public Direction(){
+    }
+
+    public Direction(int way, ArrayList<Arrival> arrivals){
+        this.way = way;
+        this.arrivals = arrivals;
+    }
 }
