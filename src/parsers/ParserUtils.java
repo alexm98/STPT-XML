@@ -1,9 +1,6 @@
 package parsers;
 
-import Models.TransportStation;
-import Models.Vehicle;
-import Models.StationsWrapper;
-import Models.VehiclesWrapper;
+import Models.*;
 import org.w3c.dom.Document;
 
 import javax.xml.bind.JAXBContext;
@@ -27,8 +24,16 @@ public class ParserUtils {
 
     public Document parseJAXB() throws JAXBException, ParserConfigurationException {
         File doc = new File(this.path_to_doc);
-        JAXBContext jc = JAXBContext.newInstance(StationsWrapper.class, VehiclesWrapper.class,
-                TransportStation.class, Vehicle.class);
+        JAXBContext jc = JAXBContext.newInstance(
+                TimetablesWrapper.class,
+                StationsWrapper.class,
+                VehiclesWrapper.class,
+                TransportStation.class,
+                Vehicle.class,
+                Direction.class,
+                Arrival.class,
+                TimeTable.class,
+                Time.class);
 
 //        SchemaFactory f = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 //        Schema schema = f.newSchema(new File("schema.xsd"));

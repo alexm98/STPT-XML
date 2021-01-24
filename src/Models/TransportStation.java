@@ -37,6 +37,10 @@ public class TransportStation {
     public TransportStation(){
     }
 
+    public TransportStation(int station_id){
+        this.stationID = station_id;
+    }
+
     public TransportStation(int lineID, String lineName, int stationID, String rawStationName,
                             String friendlyStationName, String shortStationName, String junctionName,
                             double lat, double longitude, Boolean is_invalid, String verified,
