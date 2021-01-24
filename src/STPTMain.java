@@ -1,7 +1,5 @@
-import parsers.ParserUtils;
-import core.*;
-
-import org.w3c.dom.Document;
+import CamelComponents.CamelREST;
+import org.apache.camel.main.Main;
 import org.w3c.dom.NodeList;
 
 public class STPTMain {
@@ -14,11 +12,11 @@ public class STPTMain {
     }
 
     public static void main(String args[]) throws Exception {
-        ParserUtils putils = new ParserUtils("data/statii-ratt.xml");
-        Document doc = putils.parseJAXB();
-        StationsInteractor s = new StationsInteractor("data/statii-ratt.xml");
-        IterateNodeList(s.getAllStations());
-        System.out.println(s.getStation(4680));
+//        ParserUtils putils = new ParserUtils("data/statii-ratt.xml");
+//        Document doc = putils.parseJAXB();
+//        StationsInteractor s = new StationsInteractor("data/statii-ratt.xml");
+//        IterateNodeList(s.getAllStations());
+//        System.out.println(s.getStation(4680));
 //
 //        VehiclesInteractor v = new VehiclesInteractor("data/vehicles.xml");
 //        IterateNodeList(v.getAllVehicles());
@@ -28,8 +26,8 @@ public class STPTMain {
 //        IterateNodeList(t.getAllTimeTables());
 //        IterateNodeList(t.getTimeTable(1106));
 
-//        Main main = new Main();
-//        main.configure().addRoutesBuilder(new CamelREST());
-//        main.run(args);
+        Main main = new Main();
+        main.configure().addRoutesBuilder(new CamelREST());
+        main.run(args);
     }
 }

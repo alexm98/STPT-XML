@@ -23,8 +23,8 @@ public class Vehicle {
 
     public String toString(){
         return "Vehicle{" +
-                ", id=" + this.vehicleID +
+                "id=" + this.vehicleID +
                 ", name=" + this.vehicleName +
-                ", type=" + this.vehicleType;
+                ", type=" + this.vehicleType + "}";
     }
 }

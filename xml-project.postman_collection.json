@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "acca805a-ca4b-47f1-ab5e-ebba7ce28156",
+		"name": "xml-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllStations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/stations/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"stations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStationByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/station/2810",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"station",
+						"2810"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/vehicles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"vehicles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9091/api/vehicle/1006",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/vehicle/1006",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"vehicle",
+						"1006"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteVehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/vehicle/1126",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"vehicle",
+						"1126"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "replaceVehicle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    <vehicle id=\"1106\">\n        <vehicle-name>42</vehicle-name>\n        <vehicle-type>Bus</vehicle-type>\n    </vehicle>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/vehicle/1106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"vehicle",
+						"1106"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createVehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    <vehicle id=\"1234\">\n        <vehicle-name>Express 42</vehicle-name>\n        <vehicle-type>Spaceship</vehicle-type>\n    </vehicle>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
