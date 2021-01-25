@@ -218,7 +218,7 @@ extends core.Interactor</pre>
 <td class="colFirst"><code>org.w3c.dom.Node</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArrival(int,java.lang.String,Models.Time)">createArrival</a></span>&#8203;(int&nbsp;station_id,
              java.lang.String&nbsp;station_name,
-             Models.Time&nbsp;arrives_in)</code></th>
+             models.Time&nbsp;arrives_in)</code></th>
 <td class="colLast">
 <div class="block">Method which is used for creating a new element of the type arrival.</div>
 </td>
@@ -226,7 +226,7 @@ extends core.Interactor</pre>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>org.w3c.dom.Node</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDirection(java.lang.Integer,java.util.ArrayList)">createDirection</a></span>&#8203;(java.lang.Integer&nbsp;way,
-               java.util.ArrayList&lt;Models.Arrival&gt;&nbsp;arrivals)</code></th>
+               java.util.ArrayList&lt;models.Arrival&gt;&nbsp;arrivals)</code></th>
 <td class="colLast">
 <div class="block">Method which is used for creating a new element of the type direction.</div>
 </td>
@@ -234,14 +234,14 @@ extends core.Interactor</pre>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>org.w3c.dom.Node</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTimeTable(int,java.util.ArrayList)">createTimeTable</a></span>&#8203;(int&nbsp;vehicle_id,
-               java.util.ArrayList&lt;Models.Direction&gt;&nbsp;directions)</code></th>
+               java.util.ArrayList&lt;models.Direction&gt;&nbsp;directions)</code></th>
 <td class="colLast">
 <div class="block">Method which is used for creating a new element of the type timetable.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>org.w3c.dom.Node</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTimeTable(Models.TimeTable)">createTimeTable</a></span>&#8203;(Models.TimeTable&nbsp;t)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTimeTable(Models.TimeTable)">createTimeTable</a></span>&#8203;(models.TimeTable&nbsp;t)</code></th>
 <td class="colLast">
 <div class="block">Method for creating a new timetable which is used by JAXB binding.</div>
 </td>
@@ -270,7 +270,7 @@ extends core.Interactor</pre>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>org.w3c.dom.Document</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#replaceTimeTable(java.lang.Integer,Models.TimeTable)">replaceTimeTable</a></span>&#8203;(java.lang.Integer&nbsp;id,
-                Models.TimeTable&nbsp;t)</code></th>
+                models.TimeTable&nbsp;t)</code></th>
 <td class="colLast">
 <div class="block">Method for replacing an element of type timetable with a new TimeTable, based on a given id.</div>
 </td>
@@ -388,7 +388,7 @@ extends core.Interactor</pre>
 <h4>createArrival</h4>
 <pre class="methodSignature">public&nbsp;org.w3c.dom.Node&nbsp;createArrival&#8203;(int&nbsp;station_id,
                                       java.lang.String&nbsp;station_name,
-                                      Models.Time&nbsp;arrives_in)</pre>
+                                      models.Time&nbsp;arrives_in)</pre>
 <div class="block">Method which is used for creating a new element of the type arrival.
 
  This is achieved by creating a new element of type arrival and adding it to the timetable of the searched id.</div>
@@ -409,7 +409,7 @@ extends core.Interactor</pre>
 <li class="blockList">
 <h4>createDirection</h4>
 <pre class="methodSignature">public&nbsp;org.w3c.dom.Node&nbsp;createDirection&#8203;(java.lang.Integer&nbsp;way,
-                                        java.util.ArrayList&lt;Models.Arrival&gt;&nbsp;arrivals)</pre>
+                                        java.util.ArrayList&lt;models.Arrival&gt;&nbsp;arrivals)</pre>
 <div class="block">Method which is used for creating a new element of the type direction.
 
  This is achieved by creating a new element of type direction and adding it to the timetable of the searched id.</div>
@@ -429,7 +429,7 @@ extends core.Interactor</pre>
 <li class="blockList">
 <h4>createTimeTable</h4>
 <pre class="methodSignature">public&nbsp;org.w3c.dom.Node&nbsp;createTimeTable&#8203;(int&nbsp;vehicle_id,
-                                        java.util.ArrayList&lt;Models.Direction&gt;&nbsp;directions)
+                                        java.util.ArrayList&lt;models.Direction&gt;&nbsp;directions)
                                  throws javax.xml.xpath.XPathExpressionException</pre>
 <div class="block">Method which is used for creating a new element of the type timetable.
 
@@ -457,7 +457,7 @@ extends core.Interactor</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>createTimeTable</h4>
-<pre class="methodSignature">public&nbsp;org.w3c.dom.Node&nbsp;createTimeTable&#8203;(Models.TimeTable&nbsp;t)
+<pre class="methodSignature">public&nbsp;org.w3c.dom.Node&nbsp;createTimeTable&#8203;(models.TimeTable&nbsp;t)
                                  throws javax.xml.xpath.XPathExpressionException</pre>
 <div class="block">Method for creating a new timetable which is used by JAXB binding.</div>
 <dl>
@@ -477,7 +477,7 @@ extends core.Interactor</pre>
 <li class="blockList">
 <h4>replaceTimeTable</h4>
 <pre class="methodSignature">public&nbsp;org.w3c.dom.Document&nbsp;replaceTimeTable&#8203;(java.lang.Integer&nbsp;id,
-                                             Models.TimeTable&nbsp;t)
+                                             models.TimeTable&nbsp;t)
                                       throws javax.xml.xpath.XPathExpressionException</pre>
 <div class="block">Method for replacing an element of type timetable with a new TimeTable, based on a given id.
 

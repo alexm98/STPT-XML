@@ -50,15 +50,15 @@
 \section*{Classes}
 {\raggedright
 \hspace{0.0cm} $\bullet$ java.lang.Object {\tiny \refdefined{java.lang.Object}} \\
-\hspace{1.0cm} $\bullet$ Models.Arrival {\tiny \refdefined{Models.Arrival}} \\
-\hspace{1.0cm} $\bullet$ Models.Direction {\tiny \refdefined{Models.Direction}} \\
-\hspace{1.0cm} $\bullet$ Models.StationsWrapper {\tiny \refdefined{Models.StationsWrapper}} \\
-\hspace{1.0cm} $\bullet$ Models.Time {\tiny \refdefined{Models.Time}} \\
-\hspace{1.0cm} $\bullet$ Models.TimeTable {\tiny \refdefined{Models.TimeTable}} \\
-\hspace{1.0cm} $\bullet$ Models.TimetablesWrapper {\tiny \refdefined{Models.TimetablesWrapper}} \\
-\hspace{1.0cm} $\bullet$ Models.TransportStation {\tiny \refdefined{Models.TransportStation}} \\
-\hspace{1.0cm} $\bullet$ Models.Vehicle {\tiny \refdefined{Models.Vehicle}} \\
-\hspace{1.0cm} $\bullet$ Models.VehiclesWrapper {\tiny \refdefined{Models.VehiclesWrapper}} \\
+\hspace{1.0cm} $\bullet$ models.Arrival {\tiny \refdefined{models.Arrival}} \\
+\hspace{1.0cm} $\bullet$ models.Direction {\tiny \refdefined{models.Direction}} \\
+\hspace{1.0cm} $\bullet$ models.StationsWrapper {\tiny \refdefined{models.StationsWrapper}} \\
+\hspace{1.0cm} $\bullet$ models.Time {\tiny \refdefined{models.Time}} \\
+\hspace{1.0cm} $\bullet$ models.TimeTable {\tiny \refdefined{models.TimeTable}} \\
+\hspace{1.0cm} $\bullet$ models.TimetablesWrapper {\tiny \refdefined{models.TimetablesWrapper}} \\
+\hspace{1.0cm} $\bullet$ models.TransportStation {\tiny \refdefined{models.TransportStation}} \\
+\hspace{1.0cm} $\bullet$ models.Vehicle {\tiny \refdefined{models.Vehicle}} \\
+\hspace{1.0cm} $\bullet$ models.VehiclesWrapper {\tiny \refdefined{models.VehiclesWrapper}} \\
 \hspace{1.0cm} $\bullet$ core.Interactor {\tiny \refdefined{core.Interactor}} \\
 \hspace{2.0cm} $\bullet$ core.StationsInteractor {\tiny \refdefined{core.StationsInteractor}} \\
 \hspace{2.0cm} $\bullet$ core.TimeTablesInteractor {\tiny \refdefined{core.TimeTablesInteractor}} \\
@@ -204,7 +204,7 @@ public class XPathUtils
 \subsection{Constructor summary}{
 \begin{verse}
 \hyperlink{parsers.XPathUtils(org.w3c.dom.Document)}{{\bf XPathUtils(Document)}} Constructor of the XPathUtils clas.\\
-\hyperlink{parsers.XPathUtils(javax.xml.bind.Marshaller, Models.StationsWrapper)}{{\bf XPathUtils(Marshaller, StationsWrapper)}} \\
+\hyperlink{parsers.XPathUtils(javax.xml.bind.Marshaller, models.StationsWrapper)}{{\bf XPathUtils(Marshaller, StationsWrapper)}} \\
 \end{verse}
 }
 \subsection{Method summary}{
@@ -248,9 +248,9 @@ Constructor of the XPathUtils clas.
 }%end item
 \item{ 
 \index{XPathUtils(Marshaller, StationsWrapper)}
-\hypertarget{parsers.XPathUtils(javax.xml.bind.Marshaller, Models.StationsWrapper)}{{\bf  XPathUtils}\\}
+\hypertarget{parsers.XPathUtils(javax.xml.bind.Marshaller, models.StationsWrapper)}{{\bf  XPathUtils}\\}
 \begin{lstlisting}[frame=none]
-public XPathUtils(javax.xml.bind.Marshaller marshaller,Models.StationsWrapper data)\end{lstlisting} %end signature
+public XPathUtils(javax.xml.bind.Marshaller marshaller,models.StationsWrapper data)\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
@@ -515,11 +515,11 @@ public class StationsInteractor
 \subsection{Method summary}{
 \begin{verse}
 \hyperlink{core.StationsInteractor.createStation(java.lang.Integer, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf createStation(Integer, int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} Method which is used for creating a new element of the type transport station.\\
-\hyperlink{core.StationsInteractor.createStation(Models.TransportStation)}{{\bf createStation(TransportStation)}} Method for creating a new transport station which is used by JAXB binding.\\
+\hyperlink{core.StationsInteractor.createStation(models.TransportStation)}{{\bf createStation(TransportStation)}} Method for creating a new transport station which is used by JAXB binding.\\
 \hyperlink{core.StationsInteractor.deleteStation(java.lang.Integer)}{{\bf deleteStation(Integer)}} Method for deleting an element of type transport station based on a given id.\\
 \hyperlink{core.StationsInteractor.getAllStations()}{{\bf getAllStations()}} Method for querying for all available transport-stations, taken from the parent XML document.\\
 \hyperlink{core.StationsInteractor.getStation(java.lang.Integer)}{{\bf getStation(Integer)}} Method for finding a transport-station based on a given id.\\
-\hyperlink{core.StationsInteractor.replaceStation(java.lang.Integer, Models.TransportStation)}{{\bf replaceStation(Integer, TransportStation)}} Method for replacing an element of type transport station with a new TransportStation, based on a given id.\\
+\hyperlink{core.StationsInteractor.replaceStation(java.lang.Integer, models.TransportStation)}{{\bf replaceStation(Integer, TransportStation)}} Method for replacing an element of type transport station with a new TransportStation, based on a given id.\\
 \end{verse}
 }
 \subsection{Constructors}{
@@ -614,9 +614,9 @@ Returns a Node object which represents the newly added transport station element
 }%end item
 \item{ 
 \index{createStation(TransportStation)}
-\hypertarget{core.StationsInteractor.createStation(Models.TransportStation)}{{\bf  createStation}\\}
+\hypertarget{core.StationsInteractor.createStation(models.TransportStation)}{{\bf  createStation}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Node createStation(Models.TransportStation t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+public org.w3c.dom.Node createStation(models.TransportStation t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -719,9 +719,9 @@ Node: If the transport station with the requested id has been found, it will be 
 }%end item
 \item{ 
 \index{replaceStation(Integer, TransportStation)}
-\hypertarget{core.StationsInteractor.replaceStation(java.lang.Integer, Models.TransportStation)}{{\bf  replaceStation}\\}
+\hypertarget{core.StationsInteractor.replaceStation(java.lang.Integer, models.TransportStation)}{{\bf  replaceStation}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Document replaceStation(java.lang.Integer id,Models.TransportStation t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+public org.w3c.dom.Document replaceStation(java.lang.Integer id,models.TransportStation t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -798,14 +798,14 @@ public class TimeTablesInteractor
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{core.TimeTablesInteractor.createArrival(int, java.lang.String, Models.Time)}{{\bf createArrival(int, String, Time)}} Method which is used for creating a new element of the type arrival.\\
+\hyperlink{core.TimeTablesInteractor.createArrival(int, java.lang.String, models.Time)}{{\bf createArrival(int, String, Time)}} Method which is used for creating a new element of the type arrival.\\
 \hyperlink{core.TimeTablesInteractor.createDirection(java.lang.Integer, java.util.ArrayList)}{{\bf createDirection(Integer, ArrayList)}} Method which is used for creating a new element of the type direction.\\
 \hyperlink{core.TimeTablesInteractor.createTimeTable(int, java.util.ArrayList)}{{\bf createTimeTable(int, ArrayList)}} Method which is used for creating a new element of the type timetable.\\
-\hyperlink{core.TimeTablesInteractor.createTimeTable(Models.TimeTable)}{{\bf createTimeTable(TimeTable)}} Method for creating a new timetable which is used by JAXB binding.\\
+\hyperlink{core.TimeTablesInteractor.createTimeTable(models.TimeTable)}{{\bf createTimeTable(TimeTable)}} Method for creating a new timetable which is used by JAXB binding.\\
 \hyperlink{core.TimeTablesInteractor.deleteTimeTable(java.lang.Integer)}{{\bf deleteTimeTable(Integer)}} Method for deleting an element of type timetable based on a given id.\\
 \hyperlink{core.TimeTablesInteractor.getAllTimeTables()}{{\bf getAllTimeTables()}} Method for querying for all available timetables, taken from the parent XML document.\\
 \hyperlink{core.TimeTablesInteractor.getTimeTable(java.lang.Integer)}{{\bf getTimeTable(Integer)}} Method for finding a timetable based on a given id.\\
-\hyperlink{core.TimeTablesInteractor.replaceTimeTable(java.lang.Integer, Models.TimeTable)}{{\bf replaceTimeTable(Integer, TimeTable)}} Method for replacing an element of type timetable with a new TimeTable, based on a given id.\\
+\hyperlink{core.TimeTablesInteractor.replaceTimeTable(java.lang.Integer, models.TimeTable)}{{\bf replaceTimeTable(Integer, TimeTable)}} Method for replacing an element of type timetable with a new TimeTable, based on a given id.\\
 \end{verse}
 }
 \subsection{Constructors}{
@@ -844,9 +844,9 @@ Constructor of the TimeTablesInteractor class, which calls the parent class for 
 \begin{itemize}
 \item{ 
 \index{createArrival(int, String, Time)}
-\hypertarget{core.TimeTablesInteractor.createArrival(int, java.lang.String, Models.Time)}{{\bf  createArrival}\\}
+\hypertarget{core.TimeTablesInteractor.createArrival(int, java.lang.String, models.Time)}{{\bf  createArrival}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Node createArrival(int station_id,java.lang.String station_name,Models.Time arrives_in)\end{lstlisting} %end signature
+public org.w3c.dom.Node createArrival(int station_id,java.lang.String station_name,models.Time arrives_in)\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -926,9 +926,9 @@ Returns a Node object which represents the newly added timetable element.
 }%end item
 \item{ 
 \index{createTimeTable(TimeTable)}
-\hypertarget{core.TimeTablesInteractor.createTimeTable(Models.TimeTable)}{{\bf  createTimeTable}\\}
+\hypertarget{core.TimeTablesInteractor.createTimeTable(models.TimeTable)}{{\bf  createTimeTable}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Node createTimeTable(Models.TimeTable t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+public org.w3c.dom.Node createTimeTable(models.TimeTable t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -1031,9 +1031,9 @@ If the timetable with the requested id has been found, it will be returned.
 }%end item
 \item{ 
 \index{replaceTimeTable(Integer, TimeTable)}
-\hypertarget{core.TimeTablesInteractor.replaceTimeTable(java.lang.Integer, Models.TimeTable)}{{\bf  replaceTimeTable}\\}
+\hypertarget{core.TimeTablesInteractor.replaceTimeTable(java.lang.Integer, models.TimeTable)}{{\bf  replaceTimeTable}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Document replaceTimeTable(java.lang.Integer id,Models.TimeTable t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+public org.w3c.dom.Document replaceTimeTable(java.lang.Integer id,models.TimeTable t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -1111,11 +1111,11 @@ public class VehiclesInteractor
 \subsection{Method summary}{
 \begin{verse}
 \hyperlink{core.VehiclesInteractor.createVehicle(java.lang.Integer, java.lang.String, java.lang.String)}{{\bf createVehicle(Integer, String, String)}} Method which is used for creating a new element of the type vehicle.\\
-\hyperlink{core.VehiclesInteractor.createVehicle(Models.Vehicle)}{{\bf createVehicle(Vehicle)}} Method for creating a new vehicle which is used by JAXB binding.\\
+\hyperlink{core.VehiclesInteractor.createVehicle(models.Vehicle)}{{\bf createVehicle(Vehicle)}} Method for creating a new vehicle which is used by JAXB binding.\\
 \hyperlink{core.VehiclesInteractor.deleteVehicle(java.lang.Integer)}{{\bf deleteVehicle(Integer)}} Method for deleting an element of type vehicle based on a given id.\\
 \hyperlink{core.VehiclesInteractor.getAllVehicles()}{{\bf getAllVehicles()}} Method for querying for all available vehicles, taken from the parent XML document.\\
 \hyperlink{core.VehiclesInteractor.getVehicle(java.lang.Integer)}{{\bf getVehicle(Integer)}} Method for finding a vehicle based on a given id.\\
-\hyperlink{core.VehiclesInteractor.replaceVehicle(java.lang.Integer, Models.Vehicle)}{{\bf replaceVehicle(Integer, Vehicle)}} Method for replacing an element of type vehicle with a new Vehicle, based on a given id.\\
+\hyperlink{core.VehiclesInteractor.replaceVehicle(java.lang.Integer, models.Vehicle)}{{\bf replaceVehicle(Integer, Vehicle)}} Method for replacing an element of type vehicle with a new Vehicle, based on a given id.\\
 \end{verse}
 }
 \subsection{Constructors}{
@@ -1186,9 +1186,9 @@ Returns a Node object which represents the newly added vehicle element.
 }%end item
 \item{ 
 \index{createVehicle(Vehicle)}
-\hypertarget{core.VehiclesInteractor.createVehicle(Models.Vehicle)}{{\bf  createVehicle}\\}
+\hypertarget{core.VehiclesInteractor.createVehicle(models.Vehicle)}{{\bf  createVehicle}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Node createVehicle(Models.Vehicle v) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+public org.w3c.dom.Node createVehicle(models.Vehicle v) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -1291,9 +1291,9 @@ Node: If the vehicle with the requested id has been found, it will be returned.
 }%end item
 \item{ 
 \index{replaceVehicle(Integer, Vehicle)}
-\hypertarget{core.VehiclesInteractor.replaceVehicle(java.lang.Integer, Models.Vehicle)}{{\bf  replaceVehicle}\\}
+\hypertarget{core.VehiclesInteractor.replaceVehicle(java.lang.Integer, models.Vehicle)}{{\bf  replaceVehicle}\\}
 \begin{lstlisting}[frame=none]
-public org.w3c.dom.Document replaceVehicle(java.lang.Integer id,Models.Vehicle vehicle) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+public org.w3c.dom.Document replaceVehicle(java.lang.Integer id,models.Vehicle vehicle) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
 \begin{itemize}
 \item{
 {\bf  Description}
@@ -1357,56 +1357,56 @@ Document: The XML document which has the requested vehicle replaced.
 }
 }
 }
-\chapter{Package Models}{
-\label{Models}\hypertarget{Models}{}
+\chapter{Package models}{
+\label{models}\hypertarget{models}{}
 \hskip -.05in
 \hbox to \hsize{\textit{ Package Contents\hfil Page}}
 \vskip .13in
 \hbox{{\bf  Classes}}
-\entityintro{Arrival}{Models.Arrival}{}
-\entityintro{Direction}{Models.Direction}{}
-\entityintro{StationsWrapper}{Models.StationsWrapper}{}
-\entityintro{Time}{Models.Time}{}
-\entityintro{TimeTable}{Models.TimeTable}{}
-\entityintro{TimetablesWrapper}{Models.TimetablesWrapper}{}
-\entityintro{TransportStation}{Models.TransportStation}{}
-\entityintro{Vehicle}{Models.Vehicle}{Class which holds the implementation for a vehicle object.}
-\entityintro{VehiclesWrapper}{Models.VehiclesWrapper}{Class which holds the wrapper for the Vehicle object.}
+\entityintro{Arrival}{models.Arrival}{}
+\entityintro{Direction}{models.Direction}{}
+\entityintro{StationsWrapper}{models.StationsWrapper}{}
+\entityintro{Time}{models.Time}{}
+\entityintro{TimeTable}{models.TimeTable}{}
+\entityintro{TimetablesWrapper}{models.TimetablesWrapper}{}
+\entityintro{TransportStation}{models.TransportStation}{}
+\entityintro{Vehicle}{models.Vehicle}{Class which holds the implementation for a vehicle object.}
+\entityintro{VehiclesWrapper}{models.VehiclesWrapper}{Class which holds the wrapper for the Vehicle object.}
 \vskip .1in
 \vskip .1in
-\section{\label{Models.Arrival}Class Arrival}{
-\hypertarget{Models.Arrival}{}\vskip .1in 
+\section{\label{models.Arrival}Class Arrival}{
+\hypertarget{models.Arrival}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Arrival
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.Arrival.station}{{\bf station}} \\
-\hyperlink{Models.Arrival.time}{{\bf time}} \\
+\hyperlink{models.Arrival.station}{{\bf station}} \\
+\hyperlink{models.Arrival.time}{{\bf time}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.Arrival()}{{\bf Arrival()}} \\
-\hyperlink{Models.Arrival(Models.TransportStation, Models.Time)}{{\bf Arrival(TransportStation, Time)}} \\
+\hyperlink{models.Arrival()}{{\bf Arrival()}} \\
+\hyperlink{models.Arrival(models.TransportStation, models.Time)}{{\bf Arrival(TransportStation, Time)}} \\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.Arrival.toString()}{{\bf toString()}} \\
+\hyperlink{models.Arrival.toString()}{{\bf toString()}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{station}
-\label{Models.Arrival.station}\hypertarget{Models.Arrival.station}{\texttt{public TransportStation\ {\bf  station}}
+\label{models.Arrival.station}\hypertarget{models.Arrival.station}{\texttt{public TransportStation\ {\bf  station}}
 }
 }
 \item{
 \index{time}
-\label{Models.Arrival.time}\hypertarget{Models.Arrival.time}{\texttt{public Time\ {\bf  time}}
+\label{models.Arrival.time}\hypertarget{models.Arrival.time}{\texttt{public Time\ {\bf  time}}
 }
 }
 \end{itemize}
@@ -1416,13 +1416,13 @@ public class Arrival
 \begin{itemize}
 \item{ 
 \index{Arrival()}
-\hypertarget{Models.Arrival()}{{\bf  Arrival}\\}
+\hypertarget{models.Arrival()}{{\bf  Arrival}\\}
 \begin{lstlisting}[frame=none]
 public Arrival()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{Arrival(TransportStation, Time)}
-\hypertarget{Models.Arrival(Models.TransportStation, Models.Time)}{{\bf  Arrival}\\}
+\hypertarget{models.Arrival(models.TransportStation, models.Time)}{{\bf  Arrival}\\}
 \begin{lstlisting}[frame=none]
 public Arrival(TransportStation station,Time t)\end{lstlisting} %end signature
 }%end item
@@ -1433,41 +1433,41 @@ public Arrival(TransportStation station,Time t)\end{lstlisting} %end signature
 \begin{itemize}
 \item{ 
 \index{toString()}
-\hypertarget{Models.Arrival.toString()}{{\bf  toString}\\}
+\hypertarget{models.Arrival.toString()}{{\bf  toString}\\}
 \begin{lstlisting}[frame=none]
 public java.lang.String toString()\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.Direction}Class Direction}{
-\hypertarget{Models.Direction}{}\vskip .1in 
+\section{\label{models.Direction}Class Direction}{
+\hypertarget{models.Direction}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Direction
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.Direction.arrivals}{{\bf arrivals}} \\
-\hyperlink{Models.Direction.way}{{\bf way}} \\
+\hyperlink{models.Direction.arrivals}{{\bf arrivals}} \\
+\hyperlink{models.Direction.way}{{\bf way}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.Direction()}{{\bf Direction()}} \\
-\hyperlink{Models.Direction(int, java.util.ArrayList)}{{\bf Direction(int, ArrayList)}} \\
+\hyperlink{models.Direction()}{{\bf Direction()}} \\
+\hyperlink{models.Direction(int, java.util.ArrayList)}{{\bf Direction(int, ArrayList)}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{way}
-\label{Models.Direction.way}\hypertarget{Models.Direction.way}{\texttt{public int\ {\bf  way}}
+\label{models.Direction.way}\hypertarget{models.Direction.way}{\texttt{public int\ {\bf  way}}
 }
 }
 \item{
 \index{arrivals}
-\label{Models.Direction.arrivals}\hypertarget{Models.Direction.arrivals}{\texttt{public java.util.ArrayList\ {\bf  arrivals}}
+\label{models.Direction.arrivals}\hypertarget{models.Direction.arrivals}{\texttt{public java.util.ArrayList\ {\bf  arrivals}}
 }
 }
 \end{itemize}
@@ -1477,46 +1477,46 @@ public class Direction
 \begin{itemize}
 \item{ 
 \index{Direction()}
-\hypertarget{Models.Direction()}{{\bf  Direction}\\}
+\hypertarget{models.Direction()}{{\bf  Direction}\\}
 \begin{lstlisting}[frame=none]
 public Direction()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{Direction(int, ArrayList)}
-\hypertarget{Models.Direction(int, java.util.ArrayList)}{{\bf  Direction}\\}
+\hypertarget{models.Direction(int, java.util.ArrayList)}{{\bf  Direction}\\}
 \begin{lstlisting}[frame=none]
 public Direction(int way,java.util.ArrayList arrivals)\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.StationsWrapper}Class StationsWrapper}{
-\hypertarget{Models.StationsWrapper}{}\vskip .1in 
+\section{\label{models.StationsWrapper}Class StationsWrapper}{
+\hypertarget{models.StationsWrapper}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class StationsWrapper
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.StationsWrapper.transport_stations}{{\bf transport\_stations}} \\
+\hyperlink{models.StationsWrapper.transport_stations}{{\bf transport\_stations}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.StationsWrapper()}{{\bf StationsWrapper()}} \\
+\hyperlink{models.StationsWrapper()}{{\bf StationsWrapper()}} \\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.StationsWrapper.getArticles()}{{\bf getArticles()}} \\
-\hyperlink{Models.StationsWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
+\hyperlink{models.StationsWrapper.getArticles()}{{\bf getArticles()}} \\
+\hyperlink{models.StationsWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{transport\_stations}
-\label{Models.StationsWrapper.transport_stations}\hypertarget{Models.StationsWrapper.transport_stations}{\texttt{private java.util.List\ {\bf  transport\_stations}}
+\label{models.StationsWrapper.transport_stations}\hypertarget{models.StationsWrapper.transport_stations}{\texttt{private java.util.List\ {\bf  transport\_stations}}
 }
 }
 \end{itemize}
@@ -1526,7 +1526,7 @@ public class StationsWrapper
 \begin{itemize}
 \item{ 
 \index{StationsWrapper()}
-\hypertarget{Models.StationsWrapper()}{{\bf  StationsWrapper}\\}
+\hypertarget{models.StationsWrapper()}{{\bf  StationsWrapper}\\}
 \begin{lstlisting}[frame=none]
 public StationsWrapper()\end{lstlisting} %end signature
 }%end item
@@ -1537,46 +1537,46 @@ public StationsWrapper()\end{lstlisting} %end signature
 \begin{itemize}
 \item{ 
 \index{getArticles()}
-\hypertarget{Models.StationsWrapper.getArticles()}{{\bf  getArticles}\\}
+\hypertarget{models.StationsWrapper.getArticles()}{{\bf  getArticles}\\}
 \begin{lstlisting}[frame=none]
 public java.util.List getArticles()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{setArticles(List)}
-\hypertarget{Models.StationsWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
+\hypertarget{models.StationsWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
 \begin{lstlisting}[frame=none]
 public void setArticles(java.util.List transport_stations)\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.Time}Class Time}{
-\hypertarget{Models.Time}{}\vskip .1in 
+\section{\label{models.Time}Class Time}{
+\hypertarget{models.Time}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Time
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.Time.time}{{\bf time}} \\
+\hyperlink{models.Time.time}{{\bf time}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.Time()}{{\bf Time()}} \\
-\hyperlink{Models.Time(java.lang.String)}{{\bf Time(String)}} \\
+\hyperlink{models.Time()}{{\bf Time()}} \\
+\hyperlink{models.Time(java.lang.String)}{{\bf Time(String)}} \\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.Time.toString()}{{\bf toString()}} \\
+\hyperlink{models.Time.toString()}{{\bf toString()}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{time}
-\label{Models.Time.time}\hypertarget{Models.Time.time}{\texttt{public java.lang.String\ {\bf  time}}
+\label{models.Time.time}\hypertarget{models.Time.time}{\texttt{public java.lang.String\ {\bf  time}}
 }
 }
 \end{itemize}
@@ -1586,13 +1586,13 @@ public class Time
 \begin{itemize}
 \item{ 
 \index{Time()}
-\hypertarget{Models.Time()}{{\bf  Time}\\}
+\hypertarget{models.Time()}{{\bf  Time}\\}
 \begin{lstlisting}[frame=none]
 public Time()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{Time(String)}
-\hypertarget{Models.Time(java.lang.String)}{{\bf  Time}\\}
+\hypertarget{models.Time(java.lang.String)}{{\bf  Time}\\}
 \begin{lstlisting}[frame=none]
 public Time(java.lang.String time)\end{lstlisting} %end signature
 }%end item
@@ -1603,40 +1603,40 @@ public Time(java.lang.String time)\end{lstlisting} %end signature
 \begin{itemize}
 \item{ 
 \index{toString()}
-\hypertarget{Models.Time.toString()}{{\bf  toString}\\}
+\hypertarget{models.Time.toString()}{{\bf  toString}\\}
 \begin{lstlisting}[frame=none]
 public java.lang.String toString()\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.TimeTable}Class TimeTable}{
-\hypertarget{Models.TimeTable}{}\vskip .1in 
+\section{\label{models.TimeTable}Class TimeTable}{
+\hypertarget{models.TimeTable}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class TimeTable
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.TimeTable.direction}{{\bf direction}} \\
-\hyperlink{Models.TimeTable.vehicleID}{{\bf vehicleID}} \\
+\hyperlink{models.TimeTable.direction}{{\bf direction}} \\
+\hyperlink{models.TimeTable.vehicleID}{{\bf vehicleID}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.TimeTable()}{{\bf TimeTable()}} \\
+\hyperlink{models.TimeTable()}{{\bf TimeTable()}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{vehicleID}
-\label{Models.TimeTable.vehicleID}\hypertarget{Models.TimeTable.vehicleID}{\texttt{public int\ {\bf  vehicleID}}
+\label{models.TimeTable.vehicleID}\hypertarget{models.TimeTable.vehicleID}{\texttt{public int\ {\bf  vehicleID}}
 }
 }
 \item{
 \index{direction}
-\label{Models.TimeTable.direction}\hypertarget{Models.TimeTable.direction}{\texttt{public java.util.ArrayList\ {\bf  direction}}
+\label{models.TimeTable.direction}\hypertarget{models.TimeTable.direction}{\texttt{public java.util.ArrayList\ {\bf  direction}}
 }
 }
 \end{itemize}
@@ -1646,40 +1646,40 @@ public class TimeTable
 \begin{itemize}
 \item{ 
 \index{TimeTable()}
-\hypertarget{Models.TimeTable()}{{\bf  TimeTable}\\}
+\hypertarget{models.TimeTable()}{{\bf  TimeTable}\\}
 \begin{lstlisting}[frame=none]
 public TimeTable()\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.TimetablesWrapper}Class TimetablesWrapper}{
-\hypertarget{Models.TimetablesWrapper}{}\vskip .1in 
+\section{\label{models.TimetablesWrapper}Class TimetablesWrapper}{
+\hypertarget{models.TimetablesWrapper}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class TimetablesWrapper
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.TimetablesWrapper.timeTables}{{\bf timeTables}} \\
+\hyperlink{models.TimetablesWrapper.timeTables}{{\bf timeTables}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.TimetablesWrapper()}{{\bf TimetablesWrapper()}} \\
+\hyperlink{models.TimetablesWrapper()}{{\bf TimetablesWrapper()}} \\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.TimetablesWrapper.getArticles()}{{\bf getArticles()}} \\
-\hyperlink{Models.TimetablesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
+\hyperlink{models.TimetablesWrapper.getArticles()}{{\bf getArticles()}} \\
+\hyperlink{models.TimetablesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{timeTables}
-\label{Models.TimetablesWrapper.timeTables}\hypertarget{Models.TimetablesWrapper.timeTables}{\texttt{private java.util.List\ {\bf  timeTables}}
+\label{models.TimetablesWrapper.timeTables}\hypertarget{models.TimetablesWrapper.timeTables}{\texttt{private java.util.List\ {\bf  timeTables}}
 }
 }
 \end{itemize}
@@ -1689,7 +1689,7 @@ public class TimetablesWrapper
 \begin{itemize}
 \item{ 
 \index{TimetablesWrapper()}
-\hypertarget{Models.TimetablesWrapper()}{{\bf  TimetablesWrapper}\\}
+\hypertarget{models.TimetablesWrapper()}{{\bf  TimetablesWrapper}\\}
 \begin{lstlisting}[frame=none]
 public TimetablesWrapper()\end{lstlisting} %end signature
 }%end item
@@ -1700,125 +1700,125 @@ public TimetablesWrapper()\end{lstlisting} %end signature
 \begin{itemize}
 \item{ 
 \index{getArticles()}
-\hypertarget{Models.TimetablesWrapper.getArticles()}{{\bf  getArticles}\\}
+\hypertarget{models.TimetablesWrapper.getArticles()}{{\bf  getArticles}\\}
 \begin{lstlisting}[frame=none]
 public java.util.List getArticles()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{setArticles(List)}
-\hypertarget{Models.TimetablesWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
+\hypertarget{models.TimetablesWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
 \begin{lstlisting}[frame=none]
 public void setArticles(java.util.List timetables)\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.TransportStation}Class TransportStation}{
-\hypertarget{Models.TransportStation}{}\vskip .1in 
+\section{\label{models.TransportStation}Class TransportStation}{
+\hypertarget{models.TransportStation}{}\vskip .1in
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class TransportStation
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.TransportStation.friendlyStationName}{{\bf friendlyStationName}} \\
-\hyperlink{Models.TransportStation.gmaps_links}{{\bf gmaps\_links}} \\
-\hyperlink{Models.TransportStation.info_comments}{{\bf info\_comments}} \\
-\hyperlink{Models.TransportStation.is_invalid}{{\bf is\_invalid}} \\
-\hyperlink{Models.TransportStation.junctionName}{{\bf junctionName}} \\
-\hyperlink{Models.TransportStation.lat}{{\bf lat}} \\
-\hyperlink{Models.TransportStation.lineID}{{\bf lineID}} \\
-\hyperlink{Models.TransportStation.lineName}{{\bf lineName}} \\
-\hyperlink{Models.TransportStation.longitude}{{\bf longitude}} \\
-\hyperlink{Models.TransportStation.rawStationName}{{\bf rawStationName}} \\
-\hyperlink{Models.TransportStation.shortStationName}{{\bf shortStationName}} \\
-\hyperlink{Models.TransportStation.stationID}{{\bf stationID}} \\
-\hyperlink{Models.TransportStation.verification_date}{{\bf verification\_date}} \\
-\hyperlink{Models.TransportStation.verified}{{\bf verified}} \\
+\hyperlink{models.TransportStation.friendlyStationName}{{\bf friendlyStationName}} \\
+\hyperlink{models.TransportStation.gmaps_links}{{\bf gmaps\_links}} \\
+\hyperlink{models.TransportStation.info_comments}{{\bf info\_comments}} \\
+\hyperlink{models.TransportStation.is_invalid}{{\bf is\_invalid}} \\
+\hyperlink{models.TransportStation.junctionName}{{\bf junctionName}} \\
+\hyperlink{models.TransportStation.lat}{{\bf lat}} \\
+\hyperlink{models.TransportStation.lineID}{{\bf lineID}} \\
+\hyperlink{models.TransportStation.lineName}{{\bf lineName}} \\
+\hyperlink{models.TransportStation.longitude}{{\bf longitude}} \\
+\hyperlink{models.TransportStation.rawStationName}{{\bf rawStationName}} \\
+\hyperlink{models.TransportStation.shortStationName}{{\bf shortStationName}} \\
+\hyperlink{models.TransportStation.stationID}{{\bf stationID}} \\
+\hyperlink{models.TransportStation.verification_date}{{\bf verification\_date}} \\
+\hyperlink{models.TransportStation.verified}{{\bf verified}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.TransportStation()}{{\bf TransportStation()}} \\
-\hyperlink{Models.TransportStation(int)}{{\bf TransportStation(int)}} \\
-\hyperlink{Models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} \\
+\hyperlink{models.TransportStation()}{{\bf TransportStation()}} \\
+\hyperlink{models.TransportStation(int)}{{\bf TransportStation(int)}} \\
+\hyperlink{models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} \\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.TransportStation.toString()}{{\bf toString()}} \\
+\hyperlink{models.TransportStation.toString()}{{\bf toString()}} \\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{lineID}
-\label{Models.TransportStation.lineID}\hypertarget{Models.TransportStation.lineID}{\texttt{public int\ {\bf  lineID}}
+\label{models.TransportStation.lineID}\hypertarget{models.TransportStation.lineID}{\texttt{public int\ {\bf  lineID}}
 }
 }
 \item{
 \index{stationID}
-\label{Models.TransportStation.stationID}\hypertarget{Models.TransportStation.stationID}{\texttt{public int\ {\bf  stationID}}
+\label{models.TransportStation.stationID}\hypertarget{models.TransportStation.stationID}{\texttt{public int\ {\bf  stationID}}
 }
 }
 \item{
 \index{lineName}
-\label{Models.TransportStation.lineName}\hypertarget{Models.TransportStation.lineName}{\texttt{public java.lang.String\ {\bf  lineName}}
+\label{models.TransportStation.lineName}\hypertarget{models.TransportStation.lineName}{\texttt{public java.lang.String\ {\bf  lineName}}
 }
 }
 \item{
 \index{rawStationName}
-\label{Models.TransportStation.rawStationName}\hypertarget{Models.TransportStation.rawStationName}{\texttt{public java.lang.String\ {\bf  rawStationName}}
+\label{models.TransportStation.rawStationName}\hypertarget{models.TransportStation.rawStationName}{\texttt{public java.lang.String\ {\bf  rawStationName}}
 }
 }
 \item{
 \index{friendlyStationName}
-\label{Models.TransportStation.friendlyStationName}\hypertarget{Models.TransportStation.friendlyStationName}{\texttt{public java.lang.String\ {\bf  friendlyStationName}}
+\label{models.TransportStation.friendlyStationName}\hypertarget{models.TransportStation.friendlyStationName}{\texttt{public java.lang.String\ {\bf  friendlyStationName}}
 }
 }
 \item{
 \index{shortStationName}
-\label{Models.TransportStation.shortStationName}\hypertarget{Models.TransportStation.shortStationName}{\texttt{public java.lang.String\ {\bf  shortStationName}}
+\label{models.TransportStation.shortStationName}\hypertarget{models.TransportStation.shortStationName}{\texttt{public java.lang.String\ {\bf  shortStationName}}
 }
 }
 \item{
 \index{junctionName}
-\label{Models.TransportStation.junctionName}\hypertarget{Models.TransportStation.junctionName}{\texttt{public java.lang.String\ {\bf  junctionName}}
+\label{models.TransportStation.junctionName}\hypertarget{models.TransportStation.junctionName}{\texttt{public java.lang.String\ {\bf  junctionName}}
 }
 }
 \item{
 \index{lat}
-\label{Models.TransportStation.lat}\hypertarget{Models.TransportStation.lat}{\texttt{public double\ {\bf  lat}}
+\label{models.TransportStation.lat}\hypertarget{models.TransportStation.lat}{\texttt{public double\ {\bf  lat}}
 }
 }
 \item{
 \index{longitude}
-\label{Models.TransportStation.longitude}\hypertarget{Models.TransportStation.longitude}{\texttt{public double\ {\bf  longitude}}
+\label{models.TransportStation.longitude}\hypertarget{models.TransportStation.longitude}{\texttt{public double\ {\bf  longitude}}
 }
 }
 \item{
 \index{is\_invalid}
-\label{Models.TransportStation.is_invalid}\hypertarget{Models.TransportStation.is_invalid}{\texttt{public java.lang.Boolean\ {\bf  is\_invalid}}
+\label{models.TransportStation.is_invalid}\hypertarget{models.TransportStation.is_invalid}{\texttt{public java.lang.Boolean\ {\bf  is\_invalid}}
 }
 }
 \item{
 \index{verified}
-\label{Models.TransportStation.verified}\hypertarget{Models.TransportStation.verified}{\texttt{public java.lang.String\ {\bf  verified}}
+\label{models.TransportStation.verified}\hypertarget{models.TransportStation.verified}{\texttt{public java.lang.String\ {\bf  verified}}
 }
 }
 \item{
 \index{verification\_date}
-\label{Models.TransportStation.verification_date}\hypertarget{Models.TransportStation.verification_date}{\texttt{public java.lang.String\ {\bf  verification\_date}}
+\label{models.TransportStation.verification_date}\hypertarget{models.TransportStation.verification_date}{\texttt{public java.lang.String\ {\bf  verification\_date}}
 }
 }
 \item{
 \index{gmaps\_links}
-\label{Models.TransportStation.gmaps_links}\hypertarget{Models.TransportStation.gmaps_links}{\texttt{public java.lang.String\ {\bf  gmaps\_links}}
+\label{models.TransportStation.gmaps_links}\hypertarget{models.TransportStation.gmaps_links}{\texttt{public java.lang.String\ {\bf  gmaps\_links}}
 }
 }
 \item{
 \index{info\_comments}
-\label{Models.TransportStation.info_comments}\hypertarget{Models.TransportStation.info_comments}{\texttt{public java.lang.String\ {\bf  info\_comments}}
+\label{models.TransportStation.info_comments}\hypertarget{models.TransportStation.info_comments}{\texttt{public java.lang.String\ {\bf  info\_comments}}
 }
 }
 \end{itemize}
@@ -1828,19 +1828,19 @@ public class TransportStation
 \begin{itemize}
 \item{ 
 \index{TransportStation()}
-\hypertarget{Models.TransportStation()}{{\bf  TransportStation}\\}
+\hypertarget{models.TransportStation()}{{\bf  TransportStation}\\}
 \begin{lstlisting}[frame=none]
 public TransportStation()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{TransportStation(int)}
-\hypertarget{Models.TransportStation(int)}{{\bf  TransportStation}\\}
+\hypertarget{models.TransportStation(int)}{{\bf  TransportStation}\\}
 \begin{lstlisting}[frame=none]
 public TransportStation(int station_id)\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}
-\hypertarget{Models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf  TransportStation}\\}
+\hypertarget{models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf  TransportStation}\\}
 \begin{lstlisting}[frame=none]
 public TransportStation(int lineID,java.lang.String lineName,int stationID,java.lang.String rawStationName,java.lang.String friendlyStationName,java.lang.String shortStationName,java.lang.String junctionName,double lat,double longitude,java.lang.Boolean is_invalid,java.lang.String verified,java.lang.String verification_date,java.lang.String gmaps_links,java.lang.String info_comments)\end{lstlisting} %end signature
 }%end item
@@ -1851,15 +1851,15 @@ public TransportStation(int lineID,java.lang.String lineName,int stationID,java.
 \begin{itemize}
 \item{ 
 \index{toString()}
-\hypertarget{Models.TransportStation.toString()}{{\bf  toString}\\}
+\hypertarget{models.TransportStation.toString()}{{\bf  toString}\\}
 \begin{lstlisting}[frame=none]
 public java.lang.String toString()\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
 }
-\section{\label{Models.Vehicle}Class Vehicle}{
-\hypertarget{Models.Vehicle}{}\vskip .1in 
+\section{\label{models.Vehicle}Class Vehicle}{
+\hypertarget{models.Vehicle}{}\vskip .1in
 Class which holds the implementation for a vehicle object.\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
@@ -1867,37 +1867,37 @@ public class Vehicle
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.Vehicle.vehicleID}{{\bf vehicleID}} \\
-\hyperlink{Models.Vehicle.vehicleName}{{\bf vehicleName}} \\
-\hyperlink{Models.Vehicle.vehicleType}{{\bf vehicleType}} \\
+\hyperlink{models.Vehicle.vehicleID}{{\bf vehicleID}} \\
+\hyperlink{models.Vehicle.vehicleName}{{\bf vehicleName}} \\
+\hyperlink{models.Vehicle.vehicleType}{{\bf vehicleType}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.Vehicle()}{{\bf Vehicle()}} \\
-\hyperlink{Models.Vehicle(int, java.lang.String, java.lang.String)}{{\bf Vehicle(int, String, String)}} Constructor for the Vehicle class.\\
+\hyperlink{models.Vehicle()}{{\bf Vehicle()}} \\
+\hyperlink{models.Vehicle(int, java.lang.String, java.lang.String)}{{\bf Vehicle(int, String, String)}} Constructor for the Vehicle class.\\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.Vehicle.toString()}{{\bf toString()}} Override of string form for a vehicle object.\\
+\hyperlink{models.Vehicle.toString()}{{\bf toString()}} Override of string form for a vehicle object.\\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{vehicleID}
-\label{Models.Vehicle.vehicleID}\hypertarget{Models.Vehicle.vehicleID}{\texttt{public int\ {\bf  vehicleID}}
+\label{models.Vehicle.vehicleID}\hypertarget{models.Vehicle.vehicleID}{\texttt{public int\ {\bf  vehicleID}}
 }
 }
 \item{
 \index{vehicleName}
-\label{Models.Vehicle.vehicleName}\hypertarget{Models.Vehicle.vehicleName}{\texttt{public java.lang.String\ {\bf  vehicleName}}
+\label{models.Vehicle.vehicleName}\hypertarget{models.Vehicle.vehicleName}{\texttt{public java.lang.String\ {\bf  vehicleName}}
 }
 }
 \item{
 \index{vehicleType}
-\label{Models.Vehicle.vehicleType}\hypertarget{Models.Vehicle.vehicleType}{\texttt{public java.lang.String\ {\bf  vehicleType}}
+\label{models.Vehicle.vehicleType}\hypertarget{models.Vehicle.vehicleType}{\texttt{public java.lang.String\ {\bf  vehicleType}}
 }
 }
 \end{itemize}
@@ -1907,13 +1907,13 @@ public class Vehicle
 \begin{itemize}
 \item{ 
 \index{Vehicle()}
-\hypertarget{Models.Vehicle()}{{\bf  Vehicle}\\}
+\hypertarget{models.Vehicle()}{{\bf  Vehicle}\\}
 \begin{lstlisting}[frame=none]
 public Vehicle()\end{lstlisting} %end signature
 }%end item
 \item{ 
 \index{Vehicle(int, String, String)}
-\hypertarget{Models.Vehicle(int, java.lang.String, java.lang.String)}{{\bf  Vehicle}\\}
+\hypertarget{models.Vehicle(int, java.lang.String, java.lang.String)}{{\bf  Vehicle}\\}
 \begin{lstlisting}[frame=none]
 public Vehicle(int id,java.lang.String name,java.lang.String type)\end{lstlisting} %end signature
 \begin{itemize}
@@ -1942,7 +1942,7 @@ Constructor for the Vehicle class.
 \begin{itemize}
 \item{ 
 \index{toString()}
-\hypertarget{Models.Vehicle.toString()}{{\bf  toString}\\}
+\hypertarget{models.Vehicle.toString()}{{\bf  toString}\\}
 \begin{lstlisting}[frame=none]
 public java.lang.String toString()\end{lstlisting} %end signature
 \begin{itemize}
@@ -1959,8 +1959,8 @@ Pretty printed format of a vehicle instance.
 \end{itemize}
 }
 }
-\section{\label{Models.VehiclesWrapper}Class VehiclesWrapper}{
-\hypertarget{Models.VehiclesWrapper}{}\vskip .1in 
+\section{\label{models.VehiclesWrapper}Class VehiclesWrapper}{
+\hypertarget{models.VehiclesWrapper}{}\vskip .1in
 Class which holds the wrapper for the Vehicle object.\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
@@ -1968,25 +1968,25 @@ public class VehiclesWrapper
  extends java.lang.Object\end{lstlisting}
 \subsection{Field summary}{
 \begin{verse}
-\hyperlink{Models.VehiclesWrapper.vehicles}{{\bf vehicles}} \\
+\hyperlink{models.VehiclesWrapper.vehicles}{{\bf vehicles}} \\
 \end{verse}
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{Models.VehiclesWrapper()}{{\bf VehiclesWrapper()}} Constructor of the VehicleWrapper class.\\
+\hyperlink{models.VehiclesWrapper()}{{\bf VehiclesWrapper()}} Constructor of the VehicleWrapper class.\\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{Models.VehiclesWrapper.getArticles()}{{\bf getArticles()}} Method which returns all the vehicles which appear in the XML document.\\
-\hyperlink{Models.VehiclesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} Set a list of vehicles.\\
+\hyperlink{models.VehiclesWrapper.getArticles()}{{\bf getArticles()}} Method which returns all the vehicles which appear in the XML document.\\
+\hyperlink{models.VehiclesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} Set a list of vehicles.\\
 \end{verse}
 }
 \subsection{Fields}{
 \begin{itemize}
 \item{
 \index{vehicles}
-\label{Models.VehiclesWrapper.vehicles}\hypertarget{Models.VehiclesWrapper.vehicles}{\texttt{private java.util.List\ {\bf  vehicles}}
+\label{models.VehiclesWrapper.vehicles}\hypertarget{models.VehiclesWrapper.vehicles}{\texttt{private java.util.List\ {\bf  vehicles}}
 }
 }
 \end{itemize}
@@ -1996,7 +1996,7 @@ public class VehiclesWrapper
 \begin{itemize}
 \item{ 
 \index{VehiclesWrapper()}
-\hypertarget{Models.VehiclesWrapper()}{{\bf  VehiclesWrapper}\\}
+\hypertarget{models.VehiclesWrapper()}{{\bf  VehiclesWrapper}\\}
 \begin{lstlisting}[frame=none]
 public VehiclesWrapper()\end{lstlisting} %end signature
 \begin{itemize}
@@ -2014,7 +2014,7 @@ Constructor of the VehicleWrapper class. Creates the vehicles list.
 \begin{itemize}
 \item{ 
 \index{getArticles()}
-\hypertarget{Models.VehiclesWrapper.getArticles()}{{\bf  getArticles}\\}
+\hypertarget{models.VehiclesWrapper.getArticles()}{{\bf  getArticles}\\}
 \begin{lstlisting}[frame=none]
 public java.util.List getArticles()\end{lstlisting} %end signature
 \begin{itemize}
@@ -2030,7 +2030,7 @@ All found elements of type Vehicle.
 }%end item
 \item{ 
 \index{setArticles(List)}
-\hypertarget{Models.VehiclesWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
+\hypertarget{models.VehiclesWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
 \begin{lstlisting}[frame=none]
 public void setArticles(java.util.List vehicles)\end{lstlisting} %end signature
 \begin{itemize}

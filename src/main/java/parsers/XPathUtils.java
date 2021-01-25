@@ -1,6 +1,6 @@
 package parsers;
 
-import Models.StationsWrapper;
+import models.StationsWrapper;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 

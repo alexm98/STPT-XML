@@ -1,8 +1,8 @@
 package CamelComponents;
 
-import Models.TimeTable;
-import Models.TransportStation;
-import Models.Vehicle;
+import models.TimeTable;
+import models.TransportStation;
+import models.Vehicle;
 import core.StationsInteractor;
 import core.TimeTablesInteractor;
 import core.VehiclesInteractor;

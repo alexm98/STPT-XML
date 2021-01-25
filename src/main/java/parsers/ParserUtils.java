@@ -1,6 +1,6 @@
 package parsers;
 
-import Models.*;
+import models.*;
 import org.w3c.dom.Document;
 
 import javax.xml.bind.JAXBContext;

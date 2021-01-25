@@ -51,7 +51,7 @@ Since JAXB is deprecated in Java 11 one has to use the Java 8 binaries to run th
 -title "STPT: XML Technologies Project"  \
 -author "Alexandru Munteanu\\\\Maria Vonica\\\\Zouel Fikar Jahjah" \
 -sourcepath /xml-project/src/main/java \
--subpackages Models parsers core 
+-subpackages models parsers core 
 ```
 
 The output is going to be in `doc-tex/main.tex`, compile it twice using `pdflatex main.tex` and enjoy!
