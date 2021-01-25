@@ -1,46 +1,25 @@
 package core;
 
-import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import parsers.ParserUtils;
-import parsers.XPathUtils;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
-public class StationsInteractor {
-    private Document document;
-    private XPathUtils xputils;
-    private ParserUtils putils;
+public class StationsInteractor extends Interactor {
 
     public StationsInteractor(String path_to_doc) throws
             ParserConfigurationException,
             JAXBException {
-        this.putils = new ParserUtils(path_to_doc);
-        this.document = this.putils.parseJAXB();
-        this.xputils = new XPathUtils(this.document);
+        super(path_to_doc);
     }
 
     public NodeList getAllStations() throws XPathExpressionException {
         return xputils.QueryXPath("/root/TransportStations/TransportStation");
     }
 
-    public NodeList getStation(Integer station_id) throws XPathExpressionException {
-        return xputils.QueryXPath(String.format("//TransportStation[@id=%s]", station_id));
-    }
-
-    public Document getDocument(){
-        return this.document;
-    }
-
-    public void SaveDocument(String location) throws TransformerException {
-        try{
-            this.putils.SaveDoc(this.document, location);
-        }
-        catch (TransformerException e){
-            System.out.println(e.getMessage());
-        }
+    public Node getStation(Integer station_id) throws XPathExpressionException {
+        return xputils.QueryXPath(String.format("//TransportStation[@id=%s]", station_id)).item(0);
     }
 }
