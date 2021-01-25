@@ -14,6 +14,9 @@ import parsers.ParserUtils;
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 
+/**
+ * Class which implements the camel REST API component.
+ */
 @Component
 public class CamelREST extends RouteBuilder {
     private final StationsInteractor stations_interactor;
@@ -21,6 +24,13 @@ public class CamelREST extends RouteBuilder {
     private final TimeTablesInteractor timetables_interactor;
     private final ParserUtils putils;
 
+    /**
+     * Constructor of the camel REST API class.
+     *
+     * Here one sets up the interactors needed for the XML files.
+     * @throws JAXBException @see JAXBException
+     * @throws ParserConfigurationException @see ParserConfigurationException
+     */
     public CamelREST() throws JAXBException, ParserConfigurationException {
         this.vehicles_interactor = new VehiclesInteractor("data/vehicles.xml");
         this.timetables_interactor = new TimeTablesInteractor("data/timetables.xml");
@@ -28,6 +38,10 @@ public class CamelREST extends RouteBuilder {
         this.putils = new ParserUtils("data/statii-ratt.xml");
     }
 
+    /**
+     * Methos which configures the routes and endpoints for the REST API.
+     * @throws Exception @see Exception
+     */
     @Override
     public void configure() throws Exception {
         restConfiguration().component("netty-http")
