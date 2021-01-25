@@ -47,11 +47,11 @@ public class XPathUtils {
     }
 
     /**
-     * Method which, given a query in the form of a String object, generates a ArrayList<String> of responses using
+     * Method which, given a query in the form of a String object, generates a ArrayList of responses using
      * XPath.
      *
-     * @param query Query which will be used for generating the ArrayList<String> results.
-     * @return ArrayList<String> Results of the given query.
+     * @param query Query which will be used for generating the ArrayList results.
+     * @return ArrayList Results of the given query.
      * @throws XPathExpressionException @see XPathExpressionException
      */
     public ArrayList<String> QueryXPathString(String query) throws XPathExpressionException {
@@ -82,7 +82,7 @@ public class XPathUtils {
 
     /**
      * Method which, given a query in the form of a String object, generates a NodeList of responses using XPath.
-     * @param query Query which will be used for generating the ArrayList<String> results.
+     * @param query Query which will be used for generating the ArrayList results.
      * @return NodeList Results of the given query.
      * @throws XPathExpressionException @see XPathExpressionException
      */
