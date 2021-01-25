@@ -39,6 +39,7 @@ public class StationsInteractor extends Interactor {
 
     /**
      * Constructor of the StationsInteractor class, which calls the parent class for creating the marshalled XML doc.
+     *
      * @param path_to_doc Path to the XML document which will be used by the interactor.
      * @throws ParserConfigurationException @see ParserConfigurationException
      * @throws JAXBException @see JAXBException
@@ -188,7 +189,7 @@ public class StationsInteractor extends Interactor {
      *
      * @param id Integer: id for finding the requested transport station.
      * @param t TransportStation: Replacement for the old transport station element.
-     * @return Document: The XML document which has the requested vehicle replaced.
+     * @return Document: The XML document which has the requested transport station replaced.
      * @throws XPathExpressionException  @see XPathExpressionException
      */
     public Document replaceStation(Integer id, TransportStation t) throws XPathExpressionException {
@@ -208,9 +209,9 @@ public class StationsInteractor extends Interactor {
      *
      * If the requested transport station is found, it will be removed from its parent in the XML document.
 
-     * @param id id for finding the requested transport station to be deleted.
-     * @return Document: The XML document which has the requested vehicle deleted.
-     * @throws XPathExpressionException @see XPathExpressionException
+     * @param id Integer: id for finding the requested transport station to be deleted.
+     * @return Document: The XML document which has the requested transport station deleted.
+     * @throws XPathExpressionException @see XPathExpressionExceptiond
      */
     public Document deleteStation(Integer id) throws XPathExpressionException {
         Element station_to_delete = (Element) getStation(id);
