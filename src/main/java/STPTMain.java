@@ -22,9 +22,9 @@ public class STPTMain {
 //        IterateNodeList(v.getAllVehicles());
 //        System.out.println(v.getVehicle(1106));
 
-//        TimeTablesInteractor t = new TimeTablesInteractor("data/vehicles.xml");
-//        IterateNodeList(t.getAllTimeTables());
-//        IterateNodeList(t.getTimeTable(1106));
+        VehiclesInteractor v = new VehiclesInteractor("data/vehicles.xml");
+        IterateNodeList(v.getAllVehicles());
+        System.out.println(v.getVehicle(1106));
 
         Main main = new Main();
         main.configure().addRoutesBuilder(new CamelREST());
