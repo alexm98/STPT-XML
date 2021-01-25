@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<timetables-root>
     <timetables>
         <timetable vehicle_id="1207">
             <direction way="1">
@@ -5400,4 +5400,4 @@
             </direction>
         </timetable>
     </timetables>
-</root>
+</timetables-root>

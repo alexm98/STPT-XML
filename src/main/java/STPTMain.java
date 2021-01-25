@@ -1,5 +1,6 @@
 import CamelComponents.CamelREST;
 import core.StationsInteractor;
+import core.TimeTablesInteractor;
 import core.VehiclesInteractor;
 import org.apache.camel.main.Main;
 import org.w3c.dom.Document;
@@ -16,17 +17,20 @@ public class STPTMain {
     }
 
     public static void main(String args[]) throws Exception {
-        StationsInteractor s = new StationsInteractor("data/statii-ratt.xml");
-        VehiclesInteractor v = new VehiclesInteractor("data/vehicles.xml");
+        StationsInteractor stationsInteractor = new StationsInteractor("data/statii-ratt.xml");
+        VehiclesInteractor vehiclesInteractor = new VehiclesInteractor("data/vehicles.xml");
+        TimeTablesInteractor timetablesInteractor = new TimeTablesInteractor("data/timetables.xml");
 
-        NodeList allStations = s.getAllStations();
-        NodeList allVehicles = v.getAllVehicles();
+        NodeList allStations = stationsInteractor.getAllStations();
+        NodeList allVehicles = vehiclesInteractor.getAllVehicles();
+        NodeList allTimetables = timetablesInteractor.getAllTimeTables();
 
-        s.prettyPrintNodeList(allStations);
-        v.prettyPrintNodeList(allVehicles);
+        stationsInteractor.prettyPrintNodeList(allStations);
+        vehiclesInteractor.prettyPrintNodeList(allVehicles);
+        timetablesInteractor.prettyPrintNodeList(allTimetables);
 
-        System.out.println(s.getStation(2810));
-        System.out.println(v.getVehicle(158));
+//        System.out.println(s.getStation(2810));
+//        System.out.println(v.getVehicle(158));
 
 //        Main main = new Main();
 //        main.configure().addRoutesBuilder(new CamelREST());

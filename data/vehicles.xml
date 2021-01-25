@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<vehicles-root>
     <vehicles>
         <vehicle id="1106">
             <vehicle-name>1</vehicle-name>
@@ -206,4 +206,4 @@
             <vehicle-type>Bus</vehicle-type>
         </vehicle>
     </vehicles>
-</root>
+</vehicles-root>

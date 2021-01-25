@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlRootElement(name="root")
+@XmlRootElement(name="timetables-root")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TimetablesWrapper {
     @XmlElementWrapper(name="timetables")

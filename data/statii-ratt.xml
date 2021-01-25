@@ -1,4 +1,4 @@
-<root>
+<transport-stations-root>
   <TransportStations>
     <TransportStation id="3106">
       <LineID>1207</LineID>
@@ -10396,4 +10396,4 @@
       <InfoComments>0</InfoComments>
     </TransportStation>
   </TransportStations>
-</root>
+</transport-stations-root>

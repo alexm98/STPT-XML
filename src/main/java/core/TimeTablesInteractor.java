@@ -20,7 +20,7 @@ public class TimeTablesInteractor extends Interactor {
     }
 
     public NodeList getAllTimeTables() throws XPathExpressionException {
-        return xputils.QueryXPath("/root/timetables");
+        return xputils.QueryXPath("/timetables-root/timetables/timetable");
     }
 
     public NodeList getTimeTable(Integer vehicle_id) throws XPathExpressionException {

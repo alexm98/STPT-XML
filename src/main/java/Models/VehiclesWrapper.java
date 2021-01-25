@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlRootElement(name="root")
+@XmlRootElement(name="vehicles-root")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VehiclesWrapper {
     @XmlElementWrapper(name="vehicles")

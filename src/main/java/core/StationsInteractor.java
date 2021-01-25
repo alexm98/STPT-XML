@@ -16,7 +16,7 @@ public class StationsInteractor extends Interactor {
     }
 
     public NodeList getAllStations() throws XPathExpressionException {
-        return xputils.QueryXPath("/root/TransportStations/TransportStation");
+        return xputils.QueryXPath("/transport-stations-root/TransportStations/TransportStation");
     }
 
     public Node getStation(Integer station_id) throws XPathExpressionException {

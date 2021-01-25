@@ -44,7 +44,7 @@ public class VehiclesInteractor extends Interactor {
 
 
     public NodeList getAllVehicles() throws XPathExpressionException {
-        return xputils.QueryXPath("/root/vehicles/vehicle");
+        return xputils.QueryXPath("/vehicles-root/vehicles/vehicle");
     }
 
     public Node getVehicle(Integer vehicle_id) throws XPathExpressionException {
