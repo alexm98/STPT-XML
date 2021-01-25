@@ -43,14 +43,19 @@ public class Interactor {
         }
 
         for (int i = 0; i < length; i++) {
-            if (nodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                Element el = (Element) nodeList.item(i);
-                System.out.println(el.getNodeName() + " " +
-                        nodeList.item(i).getAttributes().item(0) + " " +
-                        nodeList.item(i).getTextContent());
-            }
+            Node currentNode = nodeList.item(i);
+            prettyPrintNode(currentNode);
         }
 
         System.out.println();
+    }
+
+    public void prettyPrintNode(Node node) {
+        if (node.getNodeType() == Node.ELEMENT_NODE) {
+            Element el = (Element) node;
+            System.out.println(el.getNodeName() + " " +
+                    el.getAttributes().item(0) + " " +
+                    el.getTextContent());
+        }
     }
 }

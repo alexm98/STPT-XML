@@ -4,6 +4,7 @@ import core.TimeTablesInteractor;
 import core.VehiclesInteractor;
 import org.apache.camel.main.Main;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import parsers.ParserUtils;
 
@@ -21,16 +22,19 @@ public class STPTMain {
         VehiclesInteractor vehiclesInteractor = new VehiclesInteractor("data/vehicles.xml");
         TimeTablesInteractor timetablesInteractor = new TimeTablesInteractor("data/timetables.xml");
 
-        NodeList allStations = stationsInteractor.getAllStations();
-        NodeList allVehicles = vehiclesInteractor.getAllVehicles();
-        NodeList allTimetables = timetablesInteractor.getAllTimeTables();
+//        NodeList allStations = stationsInteractor.getAllStations();
+//        NodeList allVehicles = vehiclesInteractor.getAllVehicles();
+//        NodeList allTimetables = timetablesInteractor.getAllTimeTables();
+//
+//        stationsInteractor.prettyPrintNodeList(allStations);
+//        vehiclesInteractor.prettyPrintNodeList(allVehicles);
+//        timetablesInteractor.prettyPrintNodeList(allTimetables);
 
-        stationsInteractor.prettyPrintNodeList(allStations);
-        vehiclesInteractor.prettyPrintNodeList(allVehicles);
-        timetablesInteractor.prettyPrintNodeList(allTimetables);
+        Node foundStation = stationsInteractor.getStation(2810);
+        stationsInteractor.prettyPrintNode(foundStation);
 
-//        System.out.println(s.getStation(2810));
-//        System.out.println(v.getVehicle(158));
+        Node foundVehicle = vehiclesInteractor.getVehicle(158);
+        vehiclesInteractor.prettyPrintNode(foundVehicle);
 
 //        Main main = new Main();
 //        main.configure().addRoutesBuilder(new CamelREST());
