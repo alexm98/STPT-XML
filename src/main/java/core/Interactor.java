@@ -1,6 +1,9 @@
 package core;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import parsers.ParserUtils;
 import parsers.XPathUtils;
 
@@ -30,5 +33,24 @@ public class Interactor {
         catch (TransformerException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public void prettyPrintNodeList(NodeList nodeList) {
+        int length = nodeList.getLength();
+
+        if (length == 0) {
+            System.out.println("There are no items in the requested node list.");
+        }
+
+        for (int i = 0; i < length; i++) {
+            if (nodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                Element el = (Element) nodeList.item(i);
+                System.out.println(el.getNodeName() + " " +
+                        nodeList.item(i).getAttributes().item(0) + " " +
+                        nodeList.item(i).getTextContent());
+            }
+        }
+
+        System.out.println();
     }
 }
