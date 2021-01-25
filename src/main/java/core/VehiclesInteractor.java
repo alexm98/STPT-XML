@@ -5,25 +5,15 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import parsers.ParserUtils;
-import parsers.XPathUtils;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
-public class VehiclesInteractor {
-    private Document document;
-    private XPathUtils xputils;
-    private ParserUtils putils;
+public class VehiclesInteractor extends Interactor {
 
-    public VehiclesInteractor(String path_to_doc) throws
-            ParserConfigurationException,
-            JAXBException {
-        this.putils = new ParserUtils(path_to_doc);
-        this.document = this.putils.parseJAXB();
-        this.xputils = new XPathUtils(this.document);
+    public VehiclesInteractor(String path_to_doc) throws JAXBException, ParserConfigurationException {
+        super(path_to_doc);
     }
 
     public Node createVehicle(Integer new_id, String vehicleName, String vehicleType) throws XPathExpressionException {
@@ -75,18 +65,5 @@ public class VehiclesInteractor {
         node_to_replace.getParentNode().replaceChild(new_au, node_to_replace);
 
         return this.document;
-    }
-
-    public Document getDocument(){
-        return this.document;
-    }
-
-    public void SaveDocument(String location) throws TransformerException {
-        try{
-            this.putils.SaveDoc(this.document, location);
-        }
-        catch (TransformerException e){
-            System.out.println(e.getMessage());
-        }
     }
 }
