@@ -1,6 +1,7 @@
 package CamelComponents;
 
 import Models.TimeTable;
+import Models.TransportStation;
 import Models.Vehicle;
 import core.StationsInteractor;
 import core.TimeTablesInteractor;
@@ -46,6 +47,28 @@ public class CamelREST extends RouteBuilder {
                 .produces("application/xml")
                 .route()
                 .bean(stations_interactor, "getStation(${header.id})")
+                .endRest()
+
+                .put("/station/{id}")
+                .type(TransportStation.class)
+                .consumes("application/xml")
+                .produces("application/xml")
+                .route()
+                .bean(stations_interactor, "replaceStation(${header.id}, ${body})")
+                .endRest()
+
+                .post("/station")
+                .type(TransportStation.class)
+                .consumes("application/xml")
+                .produces("application/xml")
+                .route()
+                .bean(stations_interactor, "createStation(${body})")
+                .endRest()
+
+                .delete("/station/{id}")
+                .produces("application/xml")
+                .route()
+                .bean(stations_interactor, "deleteStation(${header.id})")
                 .endRest()
 
                 // Begin: Vehicles REST endpoints

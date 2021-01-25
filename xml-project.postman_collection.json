@@ -48,6 +48,86 @@
 			"response": []
 		},
 		{
+			"name": "replaceStation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<transport-station id=\"3106\">\n  <line-id>4321</line-id>\n  <line-name>42</line-name>\n  <raw-station-name>Parcul Justitiei</raw-station-name>\n  <friendly-station-name>Parcul Justitiei</friendly-station-name>\n  <short-station-name>Parcul Justitiei</short-station-name>\n  <junciton-name>Justitiei</junciton-name>\n  <lat>45.7511824</lat>\n  <long>21.2236019</long>\n  <invalid>0</invalid>\n  <verified>dup script</verified>\n  <verification-date>01.01.2021</verification-date>\n  <gmaps-link>https://www.google.com/maps/place/Parcul+Justi%C8%9Biei/@45.7511824,21.2236019</gmaps-link>\n  <info-comments>0</info-comments>\n</transport-station>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/station/3106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"station",
+						"3106"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createStation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<transport-station id=\"1234\">\n  <line-id>4321</line-id>\n  <line-name>42</line-name>\n  <raw-station-name>Parcul Justitiei</raw-station-name>\n  <friendly-station-name>Parcul Justitiei</friendly-station-name>\n  <short-station-name>Parcul Justitiei</short-station-name>\n  <junciton-name>Justitiei</junciton-name>\n  <lat>45.7511824</lat>\n  <long>21.2236019</long>\n  <invalid>0</invalid>\n  <verified>dup script</verified>\n  <verification-date>01.01.2021</verification-date>\n  <gmaps-link>https://www.google.com/maps/place/Parcul+Justi%C8%9Biei/@45.7511824,21.2236019</gmaps-link>\n  <info-comments>0</info-comments>\n</transport-station>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/station",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"station"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/station/3106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"station",
+						"3106"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getVehicles",
 			"request": {
 				"method": "GET",
@@ -69,7 +149,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:9091/api/vehicle/1006",
+			"name": "getVehicle",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -90,34 +170,13 @@
 			"response": []
 		},
 		{
-			"name": "deleteVehicle",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9091/api/vehicle/1126",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9091",
-					"path": [
-						"api",
-						"vehicle",
-						"1126"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "replaceVehicle",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    <vehicle id=\"1106\">\n        <vehicle-name>42</vehicle-name>\n        <vehicle-type>Bus</vehicle-type>\n    </vehicle>",
+					"raw": "<vehicle id=\"1106\">\n    <vehicle-name>42</vehicle-name>\n    <vehicle-type>Bus</vehicle-type>\n</vehicle>",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -164,6 +223,97 @@
 					"path": [
 						"api",
 						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteVehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/vehicle/1126",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"vehicle",
+						"1126"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTimeTables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/timetables",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"timetables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTimeTable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/timetable/886",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"timetable",
+						"886"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTimeTable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<timetable vehicle_id=\"1266\">\n            <direction way=\"1\">\n                <arrival>\n                    <station id=\"5361\">Cl. Torontalului</station>\n                    <time>15:53</time>\n                </arrival>\n                <arrival>\n                    <station>M. Basarab</station>\n                    <time>15:54</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3544\">Amforei</station>\n                    <time>&gt;&gt;</time>\n                </arrival>\n                <arrival>\n                    <station>Bd. Cetatii</station>\n                    <time>1 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"8760\">Balta Verde</station>\n                    <time>3 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Mendeleev</station>\n                    <time>4 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"6181\">Circumvalatiunii</station>\n                    <time>5 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"6841\">P-ta 700</station>\n                    <time>7 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3166\">P-ta Libertatii</station>\n                    <time>8 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"7820\">Hotel Continental</station>\n                    <time>9 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3170\">Prefectura</station>\n                    <time>11 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Bd. 3 August 1919</station>\n                    <time>2 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3598\">P-ta Traian</station>\n                    <time>3 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3554\">F-ca de Bere</station>\n                    <time>5 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"8382\">Cimitir Buzias</station>\n                    <time>7 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3554\">F-ca de Detergenti</station>\n                    <time>8 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3565\">Mecatim</station>\n                    <time>10 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"4701\">Spumotim</station>\n                    <time>11 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Ghe. Domasnean</station>\n                    <time>12 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3572\">Electrotimis</station>\n                    <time>13 min.</time>\n                </arrival>\n                <arrival>\n                    <station>I.O.T.</station>\n                    <time>15 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3574\">Ciarda Rosie</station>\n                    <time>16 min.</time>\n                </arrival>\n            </direction>\n            <direction way=\"0\">\n                <arrival>\n                    <station id=\"3574\">Ciarda Rosie</station>\n                    <time>15:53</time>\n                </arrival>\n                <arrival>\n                    <station>I.O.T.</station>\n                    <time>&gt;&gt;</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3572\">Electrotimis</station>\n                    <time>2 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Ghe. Domasnean</station>\n                    <time>2 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"4701\">Spumotim</station>\n                    <time>3 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3565\">Mecatim</station>\n                    <time>4 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3554\">F-ca de Detergenti</station>\n                    <time>6 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"8382\">Cimitir Buzias</station>\n                    <time>8 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3554\">F-ca de Bere</station>\n                    <time>10 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3598\">P-ta Traian</station>\n                    <time>12 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Bd. 3 August 1919</station>\n                    <time>13 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3170\">Prefectura</station>\n                    <time>15 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"7820\">Hotel Continental</station>\n                    <time>&gt;&gt;</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3166\">P-ta Libertatii</station>\n                    <time>2 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"6841\">P-ta 700</station>\n                    <time>3 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"6181\">Circumvalatiunii</station>\n                    <time>5 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Mendeleev</station>\n                    <time>6 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"8760\">Balta Verde</station>\n                    <time>7 min.</time>\n                </arrival>\n                <arrival>\n                    <station>Bd. Cetatii</station>\n                    <time>9 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"3544\">Amforei</station>\n                    <time>10 min.</time>\n                </arrival>\n                <arrival>\n                    <station>M. Basarab</station>\n                    <time>11 min.</time>\n                </arrival>\n                <arrival>\n                    <station id=\"5361\">Cl. Torontalului</station>\n                    <time>12 min.</time>\n                </arrival>\n            </direction>\n        </timetable>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/timetable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"timetable"
 					]
 				}
 			},
