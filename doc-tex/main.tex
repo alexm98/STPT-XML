@@ -1,0 +1,2055 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage{ifpdf}
+\usepackage[headings]{fullpage}
+\usepackage{listings}
+\lstset{language=Java,breaklines=true}
+\ifpdf \usepackage[pdftex, pdfpagemode={UseOutlines},bookmarks,colorlinks,linkcolor={blue},plainpages=false,pdfpagelabels,citecolor={red},breaklinks=true]{hyperref}
+  \usepackage[pdftex]{graphicx}
+  \pdfcompresslevel=9
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+
+\newcommand{\entityintro}[3]{%
+  \hbox to \hsize{%
+    \vbox{%
+      \hbox to .2in{}%
+    }%
+    {\bf  #1}%
+    \dotfill\pageref{#2}%
+  }
+  \makebox[\hsize]{%
+    \parbox{.4in}{}%
+    \parbox[l]{5in}{%
+      \vspace{1mm}%
+      #3%
+      \vspace{1mm}%
+    }%
+  }%
+}
+\newcommand{\refdefined}[1]{
+\expandafter\ifx\csname r@#1\endcsname\relax
+\relax\else
+{$($in \ref{#1}, page \pageref{#1}$)$}\fi}
+\date{\today}
+\title{STPT: XML Technologies Project}
+\author{Alexandru Munteanu\\Maria Vonica\\Zouel Fikar Jahjah}
+\chardef\textbackslash=`\\
+\begin{document}
+\maketitle
+\sloppy
+\addtocontents{toc}{\protect\markboth{Contents}{Contents}}
+\tableofcontents
+\chapter*{Class Hierarchy}{
+\thispagestyle{empty}
+\markboth{Class Hierarchy}{Class Hierarchy}
+\addcontentsline{toc}{chapter}{Class Hierarchy}
+\section*{Classes}
+{\raggedright
+\hspace{0.0cm} $\bullet$ java.lang.Object {\tiny \refdefined{java.lang.Object}} \\
+\hspace{1.0cm} $\bullet$ Models.Arrival {\tiny \refdefined{Models.Arrival}} \\
+\hspace{1.0cm} $\bullet$ Models.Direction {\tiny \refdefined{Models.Direction}} \\
+\hspace{1.0cm} $\bullet$ Models.StationsWrapper {\tiny \refdefined{Models.StationsWrapper}} \\
+\hspace{1.0cm} $\bullet$ Models.Time {\tiny \refdefined{Models.Time}} \\
+\hspace{1.0cm} $\bullet$ Models.TimeTable {\tiny \refdefined{Models.TimeTable}} \\
+\hspace{1.0cm} $\bullet$ Models.TimetablesWrapper {\tiny \refdefined{Models.TimetablesWrapper}} \\
+\hspace{1.0cm} $\bullet$ Models.TransportStation {\tiny \refdefined{Models.TransportStation}} \\
+\hspace{1.0cm} $\bullet$ Models.Vehicle {\tiny \refdefined{Models.Vehicle}} \\
+\hspace{1.0cm} $\bullet$ Models.VehiclesWrapper {\tiny \refdefined{Models.VehiclesWrapper}} \\
+\hspace{1.0cm} $\bullet$ core.Interactor {\tiny \refdefined{core.Interactor}} \\
+\hspace{2.0cm} $\bullet$ core.StationsInteractor {\tiny \refdefined{core.StationsInteractor}} \\
+\hspace{2.0cm} $\bullet$ core.TimeTablesInteractor {\tiny \refdefined{core.TimeTablesInteractor}} \\
+\hspace{2.0cm} $\bullet$ core.VehiclesInteractor {\tiny \refdefined{core.VehiclesInteractor}} \\
+\hspace{1.0cm} $\bullet$ parsers.ParserUtils {\tiny \refdefined{parsers.ParserUtils}} \\
+\hspace{1.0cm} $\bullet$ parsers.XPathUtils {\tiny \refdefined{parsers.XPathUtils}} \\
+}
+}
+\chapter{Package parsers}{
+\label{parsers}\hypertarget{parsers}{}
+\hskip -.05in
+\hbox to \hsize{\textit{ Package Contents\hfil Page}}
+\vskip .13in
+\hbox{{\bf  Classes}}
+\entityintro{ParserUtils}{parsers.ParserUtils}{Class which implements basic parsing methods over an XML document.}
+\entityintro{XPathUtils}{parsers.XPathUtils}{Class which implements the XPath operations needed for the application.}
+\vskip .1in
+\vskip .1in
+\section{\label{parsers.ParserUtils}Class ParserUtils}{
+\hypertarget{parsers.ParserUtils}{}\vskip .1in 
+Class which implements basic parsing methods over an XML document.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class ParserUtils
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{parsers.ParserUtils.path_to_doc}{{\bf path\_to\_doc}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{parsers.ParserUtils(java.lang.String)}{{\bf ParserUtils(String)}} Constructor of the ParserUtil class.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{parsers.ParserUtils.parseJAXB()}{{\bf parseJAXB()}} Method which parses an XML document by using JAXB.\\
+\hyperlink{parsers.ParserUtils.SaveDoc(org.w3c.dom.Document, java.lang.String)}{{\bf SaveDoc(Document, String)}} Method which, given a document and a location, saves the document at the specific location.\\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{path\_to\_doc}
+\label{parsers.ParserUtils.path_to_doc}\hypertarget{parsers.ParserUtils.path_to_doc}{\texttt{public java.lang.String\ {\bf  path\_to\_doc}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{ParserUtils(String)}
+\hypertarget{parsers.ParserUtils(java.lang.String)}{{\bf  ParserUtils}\\}
+\begin{lstlisting}[frame=none]
+public ParserUtils(java.lang.String path_to_doc)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the ParserUtil class.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_doc} -- Location of the XML document to be used.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{parseJAXB()}
+\hypertarget{parsers.ParserUtils.parseJAXB()}{{\bf  parseJAXB}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document parseJAXB() throws javax.xml.bind.JAXBException, javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which parses an XML document by using JAXB. This is achieved by specifying which classes are to be taken into consideration for JAXB binding, then unmarshalling the XML document into the classes and returning the marshalled document back.
+}
+\item{{\bf  Returns} -- 
+Marshalled XML document. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.bind.JAXBException} -- @see JAXBException}
+   \item{\vskip -.6ex \texttt{javax.xml.parsers.ParserConfigurationException} -- @see ParserConfigurationException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{SaveDoc(Document, String)}
+\hypertarget{parsers.ParserUtils.SaveDoc(org.w3c.dom.Document, java.lang.String)}{{\bf  SaveDoc}\\}
+\begin{lstlisting}[frame=none]
+public void SaveDoc(org.w3c.dom.Document doc,java.lang.String location) throws javax.xml.transform.TransformerException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which, given a document and a location, saves the document at the specific location.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{doc} -- Document to be saved.}
+   \item{
+\texttt{location} -- Location where the document will be saved.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.transform.TransformerException} -- @see TransformerException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+}
+\section{\label{parsers.XPathUtils}Class XPathUtils}{
+\hypertarget{parsers.XPathUtils}{}\vskip .1in 
+Class which implements the XPath operations needed for the application.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class XPathUtils
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{parsers.XPathUtils.doc}{{\bf doc}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{parsers.XPathUtils(org.w3c.dom.Document)}{{\bf XPathUtils(Document)}} Constructor of the XPathUtils clas.\\
+\hyperlink{parsers.XPathUtils(javax.xml.bind.Marshaller, Models.StationsWrapper)}{{\bf XPathUtils(Marshaller, StationsWrapper)}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{parsers.XPathUtils.printNodes(org.w3c.dom.NodeList)}{{\bf printNodes(NodeList)}} \\
+\hyperlink{parsers.XPathUtils.QueryXPath(java.lang.String)}{{\bf QueryXPath(String)}} Method which, given a query in the form of a String object, generates a NodeList of responses using XPath.\\
+\hyperlink{parsers.XPathUtils.QueryXPathString(java.lang.String)}{{\bf QueryXPathString(String)}} Method which, given a query in the form of a String object, generates a ArrayList of responses using XPath.\\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{doc}
+\label{parsers.XPathUtils.doc}\hypertarget{parsers.XPathUtils.doc}{\texttt{public org.w3c.dom.Document\ {\bf  doc}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{XPathUtils(Document)}
+\hypertarget{parsers.XPathUtils(org.w3c.dom.Document)}{{\bf  XPathUtils}\\}
+\begin{lstlisting}[frame=none]
+public XPathUtils(org.w3c.dom.Document doc)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the XPathUtils clas.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{doc} -- XML document, used for querying.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{XPathUtils(Marshaller, StationsWrapper)}
+\hypertarget{parsers.XPathUtils(javax.xml.bind.Marshaller, Models.StationsWrapper)}{{\bf  XPathUtils}\\}
+\begin{lstlisting}[frame=none]
+public XPathUtils(javax.xml.bind.Marshaller marshaller,Models.StationsWrapper data)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{printNodes(NodeList)}
+\hypertarget{parsers.XPathUtils.printNodes(org.w3c.dom.NodeList)}{{\bf  printNodes}\\}
+\begin{lstlisting}[frame=none]
+public void printNodes(org.w3c.dom.NodeList node_list)\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{QueryXPath(String)}
+\hypertarget{parsers.XPathUtils.QueryXPath(java.lang.String)}{{\bf  QueryXPath}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.NodeList QueryXPath(java.lang.String query) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which, given a query in the form of a String object, generates a NodeList of responses using XPath.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{query} -- Query which will be used for generating the ArrayList results.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+NodeList Results of the given query. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{QueryXPathString(String)}
+\hypertarget{parsers.XPathUtils.QueryXPathString(java.lang.String)}{{\bf  QueryXPathString}\\}
+\begin{lstlisting}[frame=none]
+public java.util.ArrayList QueryXPathString(java.lang.String query) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which, given a query in the form of a String object, generates a ArrayList of responses using XPath.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{query} -- Query which will be used for generating the ArrayList results.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+ArrayList Results of the given query. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+}
+}
+\chapter{Package core}{
+\label{core}\hypertarget{core}{}
+\hskip -.05in
+\hbox to \hsize{\textit{ Package Contents\hfil Page}}
+\vskip .13in
+\hbox{{\bf  Classes}}
+\entityintro{Interactor}{core.Interactor}{Class which represents the base for the interactors.}
+\entityintro{StationsInteractor}{core.StationsInteractor}{Class which holds the implementation for interacting with a transport-station object.}
+\entityintro{TimeTablesInteractor}{core.TimeTablesInteractor}{Class which holds the implementation for interacting with a timetable object.}
+\entityintro{VehiclesInteractor}{core.VehiclesInteractor}{Class which holds the implementation for interacting with a vehicle object.}
+\vskip .1in
+\vskip .1in
+\section{\label{core.Interactor}Class Interactor}{
+\hypertarget{core.Interactor}{}\vskip .1in 
+Class which represents the base for the interactors. Through this, one can access the document and pretty print methods.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class Interactor
+ extends java.lang.Object\end{lstlisting}
+\subsection{All known subclasses}{TimeTablesInteractor\small{\refdefined{core.TimeTablesInteractor}}, StationsInteractor\small{\refdefined{core.StationsInteractor}}, VehiclesInteractor\small{\refdefined{core.VehiclesInteractor}}}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{core.Interactor.document}{{\bf document}} \\
+\hyperlink{core.Interactor.putils}{{\bf putils}} \\
+\hyperlink{core.Interactor.xputils}{{\bf xputils}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{core.Interactor(java.lang.String)}{{\bf Interactor(String)}} Constructor of the Interactor class.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{core.Interactor.getDocument()}{{\bf getDocument()}} Method which returns the parsed XML document.\\
+\hyperlink{core.Interactor.prettyPrintNode(org.w3c.dom.Node)}{{\bf prettyPrintNode(Node)}} Method to pretty print a Node element.\\
+\hyperlink{core.Interactor.prettyPrintNodeList(org.w3c.dom.NodeList)}{{\bf prettyPrintNodeList(NodeList)}} Method to pretty print the elements of a NodeList argument.\\
+\hyperlink{core.Interactor.SaveDocument(java.lang.String)}{{\bf SaveDocument(String)}} Method which saves the XML document.\\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{document}
+\label{core.Interactor.document}\hypertarget{core.Interactor.document}{\texttt{protected org.w3c.dom.Document\ {\bf  document}}
+}
+}
+\item{
+\index{xputils}
+\label{core.Interactor.xputils}\hypertarget{core.Interactor.xputils}{\texttt{protected parsers.XPathUtils\ {\bf  xputils}}
+}
+}
+\item{
+\index{putils}
+\label{core.Interactor.putils}\hypertarget{core.Interactor.putils}{\texttt{protected parsers.ParserUtils\ {\bf  putils}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{Interactor(String)}
+\hypertarget{core.Interactor(java.lang.String)}{{\bf  Interactor}\\}
+\begin{lstlisting}[frame=none]
+public Interactor(java.lang.String path_to_doc) throws javax.xml.bind.JAXBException, javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the Interactor class.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_doc} -- Path to the XML document to be used.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.bind.JAXBException} -- @see JAXBException}
+   \item{\vskip -.6ex \texttt{javax.xml.parsers.ParserConfigurationException} -- @see ParserConfigurationException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{getDocument()}
+\hypertarget{core.Interactor.getDocument()}{{\bf  getDocument}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document getDocument()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which returns the parsed XML document.
+}
+\item{{\bf  Returns} -- 
+Return the parsed XML document. 
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{prettyPrintNode(Node)}
+\hypertarget{core.Interactor.prettyPrintNode(org.w3c.dom.Node)}{{\bf  prettyPrintNode}\\}
+\begin{lstlisting}[frame=none]
+public void prettyPrintNode(org.w3c.dom.Node node)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method to pretty print a Node element.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{node} -- Node element to be printed.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{prettyPrintNodeList(NodeList)}
+\hypertarget{core.Interactor.prettyPrintNodeList(org.w3c.dom.NodeList)}{{\bf  prettyPrintNodeList}\\}
+\begin{lstlisting}[frame=none]
+public void prettyPrintNodeList(org.w3c.dom.NodeList nodeList)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method to pretty print the elements of a NodeList argument.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{nodeList} -- A list of Node elements.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{SaveDocument(String)}
+\hypertarget{core.Interactor.SaveDocument(java.lang.String)}{{\bf  SaveDocument}\\}
+\begin{lstlisting}[frame=none]
+public void SaveDocument(java.lang.String location) throws javax.xml.transform.TransformerException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which saves the XML document.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{location} -- Location of the updated document.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.transform.TransformerException} -- @see TransformerException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+}
+\section{\label{core.StationsInteractor}Class StationsInteractor}{
+\hypertarget{core.StationsInteractor}{}\vskip .1in 
+Class which holds the implementation for interacting with a transport-station object. A transport-station element of of the following structure in the XML: \texttt{\small 2406 Tv9b Bv Sudului\_2 Bulevardul Sudului / Hotel Lido (AEM) Sudului Sudului 45.737211 21.250093 0 dup script 11.12.16. http://maps.google.com/maps?q=Bulevardul\%20Sudului\%20/\%20Hotel\%20Lido@45.737211,21.250093 0 } Using the StationsInteractor class we can operate on such elements by parsing the XML document and using the XPathUtils class to query, delete, edit and add.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class StationsInteractor
+ extends core.Interactor\end{lstlisting}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{core.StationsInteractor(java.lang.String)}{{\bf StationsInteractor(String)}} Constructor of the StationsInteractor class, which calls the parent class for creating the marshalled XML doc.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{core.StationsInteractor.createStation(java.lang.Integer, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf createStation(Integer, int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} Method which is used for creating a new element of the type transport station.\\
+\hyperlink{core.StationsInteractor.createStation(Models.TransportStation)}{{\bf createStation(TransportStation)}} Method for creating a new transport station which is used by JAXB binding.\\
+\hyperlink{core.StationsInteractor.deleteStation(java.lang.Integer)}{{\bf deleteStation(Integer)}} Method for deleting an element of type transport station based on a given id.\\
+\hyperlink{core.StationsInteractor.getAllStations()}{{\bf getAllStations()}} Method for querying for all available transport-stations, taken from the parent XML document.\\
+\hyperlink{core.StationsInteractor.getStation(java.lang.Integer)}{{\bf getStation(Integer)}} Method for finding a transport-station based on a given id.\\
+\hyperlink{core.StationsInteractor.replaceStation(java.lang.Integer, Models.TransportStation)}{{\bf replaceStation(Integer, TransportStation)}} Method for replacing an element of type transport station with a new TransportStation, based on a given id.\\
+\end{verse}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{StationsInteractor(String)}
+\hypertarget{core.StationsInteractor(java.lang.String)}{{\bf  StationsInteractor}\\}
+\begin{lstlisting}[frame=none]
+public StationsInteractor(java.lang.String path_to_doc) throws javax.xml.parsers.ParserConfigurationException, javax.xml.bind.JAXBException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the StationsInteractor class, which calls the parent class for creating the marshalled XML doc.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_doc} -- Path to the XML document which will be used by the interactor.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.parsers.ParserConfigurationException} -- @see ParserConfigurationException}
+   \item{\vskip -.6ex \texttt{javax.xml.bind.JAXBException} -- @see JAXBException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{createStation(Integer, int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}
+\hypertarget{core.StationsInteractor.createStation(java.lang.Integer, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf  createStation}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createStation(java.lang.Integer new_id,int lineID,java.lang.String lineName,int stationID,java.lang.String rawStationName,java.lang.String friendlyStationName,java.lang.String shortStationName,java.lang.String junctionName,double x,double y,java.lang.Boolean is_invalid,java.lang.String verif,java.lang.String verif_date,java.lang.String gmaps_links,java.lang.String info_comm) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which is used for creating a new element of the type transport station. This is achieved by using XPath for finding where to place the new transport station element, and creating it based on the passed parameters. After creation, we append the new Element to the parent.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{new\_id} -- Integer: Id of the vehicle to be added. Example: 3306}
+   \item{
+\texttt{lineID} -- int: Id of the line for the transport station. Example: 1266.}
+   \item{
+\texttt{lineName} -- String: Name of the line. Example: Tv4.}
+   \item{
+\texttt{stationID} -- int: id of the station.}
+   \item{
+\texttt{rawStationName} -- String: Raw name for the station. Example: P-ta Crucii\_2.}
+   \item{
+\texttt{friendlyStationName} -- String: Friendlier version of the raw station name. Example: Piata Crucii (Torontalului)}
+   \item{
+\texttt{shortStationName} -- String: Shorter version for the station name. Example: P-ta Crucii.}
+   \item{
+\texttt{junctionName} -- String: Name of the junction. Example: P-ta Crucii.}
+   \item{
+\texttt{x} -- double: Latitude of the station location.}
+   \item{
+\texttt{y} -- double: Longitude of the station location.}
+   \item{
+\texttt{is\_invalid} -- Boolean: States whether the station is still in use.}
+   \item{
+\texttt{verif} -- String: How the station is verified.}
+   \item{
+\texttt{verif\_date} -- String: Date of the last verification.}
+   \item{
+\texttt{gmaps\_links} -- String: Link for google maps location.}
+   \item{
+\texttt{info\_comm} -- String: More info.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node object which represents the newly added transport station element. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{createStation(TransportStation)}
+\hypertarget{core.StationsInteractor.createStation(Models.TransportStation)}{{\bf  createStation}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createStation(Models.TransportStation t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for creating a new transport station which is used by JAXB binding.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{t} -- TransportStation: TransportStation element representing the new element to be added.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node element representing the newly added transport station element. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{deleteStation(Integer)}
+\hypertarget{core.StationsInteractor.deleteStation(java.lang.Integer)}{{\bf  deleteStation}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document deleteStation(java.lang.Integer id) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for deleting an element of type transport station based on a given id. The querying to find the transport station whose specific id is the requested one is done by using the existent getVehicle(Integer id) method. If the transport station is found, a new transpor station is created with the new requirements and the parent will now replace the old transport station with the new one. If the requested transport station is found, it will be removed from its parent in the XML document.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Integer: id for finding the requested transport station to be deleted.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Document: The XML document which has the requested transport station deleted. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionExceptiond}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getAllStations()}
+\hypertarget{core.StationsInteractor.getAllStations()}{{\bf  getAllStations}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.NodeList getAllStations() throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for querying for all available transport-stations, taken from the parent XML document. The querying is done by passing the following xPath expression to the XPathUtils object: "/transport-stations-root/transport-stations/transport-station"
+}
+\item{{\bf  Returns} -- 
+NodeList: A list of Nodes representing all the matched elements found by the query. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getStation(Integer)}
+\hypertarget{core.StationsInteractor.getStation(java.lang.Integer)}{{\bf  getStation}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getStation(java.lang.Integer station_id) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for finding a transport-station based on a given id. The querying is done by passing the searched id in the following xPath expression, and passing the expression to the XPathUtils class: "//transport-station\lbrack @id=\%s\rbrack " The transport station whose id matches the required id will be returned.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{station\_id} -- Integer: Searched transport station id.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Node: If the transport station with the requested id has been found, it will be returned. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{replaceStation(Integer, TransportStation)}
+\hypertarget{core.StationsInteractor.replaceStation(java.lang.Integer, Models.TransportStation)}{{\bf  replaceStation}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document replaceStation(java.lang.Integer id,Models.TransportStation t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for replacing an element of type transport station with a new TransportStation, based on a given id. The querying to find the requested transport station to be replaced will be done by using the existent getStation(Integer id) method. If the transport station is found, a new transport station is created with the new requirements and the parent will now replace the old transport station with the new one.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Integer: id for finding the requested transport station.}
+   \item{
+\texttt{t} -- TransportStation: Replacement for the old transport station element.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Document: The XML document which has the requested transport station replaced. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Members inherited from class Interactor }{
+\texttt{core.Interactor} {\small 
+\refdefined{core.Interactor}}
+{\small 
+
+\vskip -2em
+\begin{itemize}
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  document}}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public Document {\bf  getDocument}()
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  prettyPrintNode}(\texttt{org.w3c.dom.Node} {\bf  node})
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  prettyPrintNodeList}(\texttt{org.w3c.dom.NodeList} {\bf  nodeList})
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  putils}}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  SaveDocument}(\texttt{java.lang.String} {\bf  location}) throws javax.xml.transform.TransformerException
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  xputils}}%end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{core.TimeTablesInteractor}Class TimeTablesInteractor}{
+\hypertarget{core.TimeTablesInteractor}{}\vskip .1in 
+Class which holds the implementation for interacting with a timetable object. A timetable element of of the following structure in the XML: \texttt{\small Gara de Nord 15:39    }Using the TimeTablesInteractor class we can operate on such elements by parsing the XML document and using the XPathUtils class to query, delete, edit and add.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class TimeTablesInteractor
+ extends core.Interactor\end{lstlisting}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{core.TimeTablesInteractor(java.lang.String)}{{\bf TimeTablesInteractor(String)}} Constructor of the TimeTablesInteractor class, which calls the parent class for creating the marshalled XML doc.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{core.TimeTablesInteractor.createArrival(int, java.lang.String, Models.Time)}{{\bf createArrival(int, String, Time)}} Method which is used for creating a new element of the type arrival.\\
+\hyperlink{core.TimeTablesInteractor.createDirection(java.lang.Integer, java.util.ArrayList)}{{\bf createDirection(Integer, ArrayList)}} Method which is used for creating a new element of the type direction.\\
+\hyperlink{core.TimeTablesInteractor.createTimeTable(int, java.util.ArrayList)}{{\bf createTimeTable(int, ArrayList)}} Method which is used for creating a new element of the type timetable.\\
+\hyperlink{core.TimeTablesInteractor.createTimeTable(Models.TimeTable)}{{\bf createTimeTable(TimeTable)}} Method for creating a new timetable which is used by JAXB binding.\\
+\hyperlink{core.TimeTablesInteractor.deleteTimeTable(java.lang.Integer)}{{\bf deleteTimeTable(Integer)}} Method for deleting an element of type timetable based on a given id.\\
+\hyperlink{core.TimeTablesInteractor.getAllTimeTables()}{{\bf getAllTimeTables()}} Method for querying for all available timetables, taken from the parent XML document.\\
+\hyperlink{core.TimeTablesInteractor.getTimeTable(java.lang.Integer)}{{\bf getTimeTable(Integer)}} Method for finding a timetable based on a given id.\\
+\hyperlink{core.TimeTablesInteractor.replaceTimeTable(java.lang.Integer, Models.TimeTable)}{{\bf replaceTimeTable(Integer, TimeTable)}} Method for replacing an element of type timetable with a new TimeTable, based on a given id.\\
+\end{verse}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{TimeTablesInteractor(String)}
+\hypertarget{core.TimeTablesInteractor(java.lang.String)}{{\bf  TimeTablesInteractor}\\}
+\begin{lstlisting}[frame=none]
+public TimeTablesInteractor(java.lang.String path_to_doc) throws javax.xml.parsers.ParserConfigurationException, javax.xml.bind.JAXBException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the TimeTablesInteractor class, which calls the parent class for creating the marshalled XML doc.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_doc} -- Path to the XML document which will be used by the interactor.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.parsers.ParserConfigurationException} -- @see ParserConfigurationException}
+   \item{\vskip -.6ex \texttt{javax.xml.bind.JAXBException} -- @see JAXBException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{createArrival(int, String, Time)}
+\hypertarget{core.TimeTablesInteractor.createArrival(int, java.lang.String, Models.Time)}{{\bf  createArrival}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createArrival(int station_id,java.lang.String station_name,Models.Time arrives_in)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which is used for creating a new element of the type arrival. This is achieved by creating a new element of type arrival and adding it to the timetable of the searched id.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{station\_id} -- int: id of the station. Example: 4483.}
+   \item{
+\texttt{station\_name} -- String: Name of the station. Example: Gara de Nord.}
+   \item{
+\texttt{arrives\_in} -- Time: Time of arrival. Example: 16:05}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node object which represents the newly added arrival element. 
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{createDirection(Integer, ArrayList)}
+\hypertarget{core.TimeTablesInteractor.createDirection(java.lang.Integer, java.util.ArrayList)}{{\bf  createDirection}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createDirection(java.lang.Integer way,java.util.ArrayList arrivals)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which is used for creating a new element of the type direction. This is achieved by creating a new element of type direction and adding it to the timetable of the searched id.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{way} -- Integer: 0 represents coming, 1 represents going.}
+   \item{
+\texttt{arrivals} -- ArrayList of type Arrival: Elements of the type arrival.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node object which represents the newly added direction element. 
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{createTimeTable(int, ArrayList)}
+\hypertarget{core.TimeTablesInteractor.createTimeTable(int, java.util.ArrayList)}{{\bf  createTimeTable}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createTimeTable(int vehicle_id,java.util.ArrayList directions) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which is used for creating a new element of the type timetable. This is achieved by finding where to add the new timetable element in the XML document, using the following query in the XPathUtils object: \texttt{\small "//timetable\lbrack not(@vehicle\_id = preceding-sibling::timetable/@id) and not(@vehicle\_id =following-sibling::timetable/@vehicle\_id)\rbrack "} We then create the vehicle id and the directions for that vehicle. We now need to only populate the directions with arrivals.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{vehicle\_id} -- Integer: id of the vehicle for which the timetable is created. Example: 1207.}
+   \item{
+\texttt{directions} -- ArrayList of type Direction: Possible directions for the vehicle.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node object which represents the newly added timetable element. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{createTimeTable(TimeTable)}
+\hypertarget{core.TimeTablesInteractor.createTimeTable(Models.TimeTable)}{{\bf  createTimeTable}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createTimeTable(Models.TimeTable t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for creating a new timetable which is used by JAXB binding.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{t} -- TimeTable: TimeTable element representing the new element to be added.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node element representing the newly added timetable element. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{deleteTimeTable(Integer)}
+\hypertarget{core.TimeTablesInteractor.deleteTimeTable(java.lang.Integer)}{{\bf  deleteTimeTable}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document deleteTimeTable(java.lang.Integer id) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for deleting an element of type timetable based on a given id. The querying to find the timetable whose specific id is the requested one is done by using the existent getTimeTable(Integer id) method. If the timetable is found, a new timetable is created with the new requirements and the parent will now replace the old timetable with the new one. If the requested timetable is found, it will be removed from its parent in the XML document.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Integer: id for finding the requested timetable to be deleted.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Document: The XML document which has the requested timetable deleted. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionExceptiond}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getAllTimeTables()}
+\hypertarget{core.TimeTablesInteractor.getAllTimeTables()}{{\bf  getAllTimeTables}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.NodeList getAllTimeTables() throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for querying for all available timetables, taken from the parent XML document. The querying is done by passing the following xPath expression to the XPathUtils object: "/timetables-root/timetables/timetable"
+}
+\item{{\bf  Returns} -- 
+A list of Nodes representing all the matched elements found by the query. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getTimeTable(Integer)}
+\hypertarget{core.TimeTablesInteractor.getTimeTable(java.lang.Integer)}{{\bf  getTimeTable}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getTimeTable(java.lang.Integer vehicle_id) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for finding a timetable based on a given id. The querying is done by passing the searched id in the following xPath expression, and passing the expression to the XPathUtils class: "//timetable\lbrack @vehicle\_id=\%s\rbrack " The timetable whose id matches the required id will be returned.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{vehicle\_id} -- Integer: Searched timetable id.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+If the timetable with the requested id has been found, it will be returned. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{replaceTimeTable(Integer, TimeTable)}
+\hypertarget{core.TimeTablesInteractor.replaceTimeTable(java.lang.Integer, Models.TimeTable)}{{\bf  replaceTimeTable}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document replaceTimeTable(java.lang.Integer id,Models.TimeTable t) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for replacing an element of type timetable with a new TimeTable, based on a given id. The querying is done by searching for the timetable to be updated with the existing method getTimeTable(). If the timetable is found, we create a new timetable from t and we update the parent with the new node.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Integer: id for finding the requested timetable.}
+   \item{
+\texttt{t} -- TimeTable: Replacement for the old timetable element.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Document: The XML document which has the requested timetable replaced. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Members inherited from class Interactor }{
+\texttt{core.Interactor} {\small 
+\refdefined{core.Interactor}}
+{\small 
+
+\vskip -2em
+\begin{itemize}
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  document}}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public Document {\bf  getDocument}()
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  prettyPrintNode}(\texttt{org.w3c.dom.Node} {\bf  node})
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  prettyPrintNodeList}(\texttt{org.w3c.dom.NodeList} {\bf  nodeList})
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  putils}}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  SaveDocument}(\texttt{java.lang.String} {\bf  location}) throws javax.xml.transform.TransformerException
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  xputils}}%end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{core.VehiclesInteractor}Class VehiclesInteractor}{
+\hypertarget{core.VehiclesInteractor}{}\vskip .1in 
+Class which holds the implementation for interacting with a vehicle object. A vehicle element of of the following structure in the XML: \texttt{\small M42 Bus } Using the VehiclesInteractor class we can operate on such elements by parsing the XML document and using the XPathUtils class to query, delete, edit and add.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class VehiclesInteractor
+ extends core.Interactor\end{lstlisting}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{core.VehiclesInteractor(java.lang.String)}{{\bf VehiclesInteractor(String)}} Constructor of the VehiclesInteractor class, which calls the parent class for creating the marshalled XML document.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{core.VehiclesInteractor.createVehicle(java.lang.Integer, java.lang.String, java.lang.String)}{{\bf createVehicle(Integer, String, String)}} Method which is used for creating a new element of the type vehicle.\\
+\hyperlink{core.VehiclesInteractor.createVehicle(Models.Vehicle)}{{\bf createVehicle(Vehicle)}} Method for creating a new vehicle which is used by JAXB binding.\\
+\hyperlink{core.VehiclesInteractor.deleteVehicle(java.lang.Integer)}{{\bf deleteVehicle(Integer)}} Method for deleting an element of type vehicle based on a given id.\\
+\hyperlink{core.VehiclesInteractor.getAllVehicles()}{{\bf getAllVehicles()}} Method for querying for all available vehicles, taken from the parent XML document.\\
+\hyperlink{core.VehiclesInteractor.getVehicle(java.lang.Integer)}{{\bf getVehicle(Integer)}} Method for finding a vehicle based on a given id.\\
+\hyperlink{core.VehiclesInteractor.replaceVehicle(java.lang.Integer, Models.Vehicle)}{{\bf replaceVehicle(Integer, Vehicle)}} Method for replacing an element of type vehicle with a new Vehicle, based on a given id.\\
+\end{verse}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{VehiclesInteractor(String)}
+\hypertarget{core.VehiclesInteractor(java.lang.String)}{{\bf  VehiclesInteractor}\\}
+\begin{lstlisting}[frame=none]
+public VehiclesInteractor(java.lang.String path_to_doc) throws javax.xml.bind.JAXBException, javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the VehiclesInteractor class, which calls the parent class for creating the marshalled XML document.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_doc} -- Path to the XML document which will be used by the interactor.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.bind.JAXBException} -- @see JAXBException}
+   \item{\vskip -.6ex \texttt{javax.xml.parsers.ParserConfigurationException} -- @see ParserConfigurationException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{createVehicle(Integer, String, String)}
+\hypertarget{core.VehiclesInteractor.createVehicle(java.lang.Integer, java.lang.String, java.lang.String)}{{\bf  createVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createVehicle(java.lang.Integer new_id,java.lang.String vehicleName,java.lang.String vehicleType) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which is used for creating a new element of the type vehicle. This is achieved by using XPath for finding where to place the new vehicle element, and creating it based on the passed parameters. After creation, we append the new Element to the parent.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{new\_id} -- Integer: Id of the vehicle to be added. Example: 3306}
+   \item{
+\texttt{vehicleName} -- String: Name of the vehicle to be added. Example: M42}
+   \item{
+\texttt{vehicleType} -- String: Type of the vehicle to be added. Example: Bus}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node object which represents the newly added vehicle element. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{createVehicle(Vehicle)}
+\hypertarget{core.VehiclesInteractor.createVehicle(Models.Vehicle)}{{\bf  createVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createVehicle(Models.Vehicle v) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for creating a new vehicle which is used by JAXB binding.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{v} -- Vehicle: Vehicle element representing the new element to be added.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node element representing the newly added vehicle element. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{deleteVehicle(Integer)}
+\hypertarget{core.VehiclesInteractor.deleteVehicle(java.lang.Integer)}{{\bf  deleteVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document deleteVehicle(java.lang.Integer id) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for deleting an element of type vehicle based on a given id. The querying to find the vehicle whose specific id is the requested one is done by passing the following xPath expression to the XPathUtils object: "//vehicle\lbrack @id=\%s\rbrack " If the requested vehicle is found, it will be removed from its parent in the XML document.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Integer: id for finding the requested vehicle.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Document: The XML document which has the requested vehicle deleted. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getAllVehicles()}
+\hypertarget{core.VehiclesInteractor.getAllVehicles()}{{\bf  getAllVehicles}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.NodeList getAllVehicles() throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for querying for all available vehicles, taken from the parent XML document. The querying is done by passing the following xPath expression to the XPathUtils object: "/vehicles-root/vehicles/vehicle"
+}
+\item{{\bf  Returns} -- 
+NodeList: A list of Nodes representing all the matched elements found by the query. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getVehicle(Integer)}
+\hypertarget{core.VehiclesInteractor.getVehicle(java.lang.Integer)}{{\bf  getVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getVehicle(java.lang.Integer vehicle_id) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for finding a vehicle based on a given id. The querying is done by passing the searched id in the following xPath expression, and passing the expression to the XPathUtils class: "//vehicle\lbrack @id=\%s\rbrack " The vehicle whose id matches the required id will be returned.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{vehicle\_id} -- Integer: Searched vehicle id.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Node: If the vehicle with the requested id has been found, it will be returned. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{replaceVehicle(Integer, Vehicle)}
+\hypertarget{core.VehiclesInteractor.replaceVehicle(java.lang.Integer, Models.Vehicle)}{{\bf  replaceVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Document replaceVehicle(java.lang.Integer id,Models.Vehicle vehicle) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for replacing an element of type vehicle with a new Vehicle, based on a given id. The querying to find the requested vehicle to be replaced will be done by using the existent getVehicle(Integer id) method. If the vehicle is found, a new vehicle is created with the new requirements and the parent will now replace the old vehicle with the new one.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Integer: id for finding the requested vehicle.}
+   \item{
+\texttt{vehicle} -- Vehicle: Replacement for the old vehicle element.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Document: The XML document which has the requested vehicle replaced. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Members inherited from class Interactor }{
+\texttt{core.Interactor} {\small 
+\refdefined{core.Interactor}}
+{\small 
+
+\vskip -2em
+\begin{itemize}
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  document}}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public Document {\bf  getDocument}()
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  prettyPrintNode}(\texttt{org.w3c.dom.Node} {\bf  node})
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  prettyPrintNodeList}(\texttt{org.w3c.dom.NodeList} {\bf  nodeList})
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  putils}}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{public void {\bf  SaveDocument}(\texttt{java.lang.String} {\bf  location}) throws javax.xml.transform.TransformerException
+}%end signature
+}%end item
+\item{\vskip -1.5ex 
+\texttt{protected {\bf  xputils}}%end signature
+}%end item
+\end{itemize}
+}
+}
+}
+\chapter{Package Models}{
+\label{Models}\hypertarget{Models}{}
+\hskip -.05in
+\hbox to \hsize{\textit{ Package Contents\hfil Page}}
+\vskip .13in
+\hbox{{\bf  Classes}}
+\entityintro{Arrival}{Models.Arrival}{}
+\entityintro{Direction}{Models.Direction}{}
+\entityintro{StationsWrapper}{Models.StationsWrapper}{}
+\entityintro{Time}{Models.Time}{}
+\entityintro{TimeTable}{Models.TimeTable}{}
+\entityintro{TimetablesWrapper}{Models.TimetablesWrapper}{}
+\entityintro{TransportStation}{Models.TransportStation}{}
+\entityintro{Vehicle}{Models.Vehicle}{Class which holds the implementation for a vehicle object.}
+\entityintro{VehiclesWrapper}{Models.VehiclesWrapper}{Class which holds the wrapper for the Vehicle object.}
+\vskip .1in
+\vskip .1in
+\section{\label{Models.Arrival}Class Arrival}{
+\hypertarget{Models.Arrival}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class Arrival
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.Arrival.station}{{\bf station}} \\
+\hyperlink{Models.Arrival.time}{{\bf time}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.Arrival()}{{\bf Arrival()}} \\
+\hyperlink{Models.Arrival(Models.TransportStation, Models.Time)}{{\bf Arrival(TransportStation, Time)}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.Arrival.toString()}{{\bf toString()}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{station}
+\label{Models.Arrival.station}\hypertarget{Models.Arrival.station}{\texttt{public TransportStation\ {\bf  station}}
+}
+}
+\item{
+\index{time}
+\label{Models.Arrival.time}\hypertarget{Models.Arrival.time}{\texttt{public Time\ {\bf  time}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{Arrival()}
+\hypertarget{Models.Arrival()}{{\bf  Arrival}\\}
+\begin{lstlisting}[frame=none]
+public Arrival()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{Arrival(TransportStation, Time)}
+\hypertarget{Models.Arrival(Models.TransportStation, Models.Time)}{{\bf  Arrival}\\}
+\begin{lstlisting}[frame=none]
+public Arrival(TransportStation station,Time t)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{toString()}
+\hypertarget{Models.Arrival.toString()}{{\bf  toString}\\}
+\begin{lstlisting}[frame=none]
+public java.lang.String toString()\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.Direction}Class Direction}{
+\hypertarget{Models.Direction}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class Direction
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.Direction.arrivals}{{\bf arrivals}} \\
+\hyperlink{Models.Direction.way}{{\bf way}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.Direction()}{{\bf Direction()}} \\
+\hyperlink{Models.Direction(int, java.util.ArrayList)}{{\bf Direction(int, ArrayList)}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{way}
+\label{Models.Direction.way}\hypertarget{Models.Direction.way}{\texttt{public int\ {\bf  way}}
+}
+}
+\item{
+\index{arrivals}
+\label{Models.Direction.arrivals}\hypertarget{Models.Direction.arrivals}{\texttt{public java.util.ArrayList\ {\bf  arrivals}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{Direction()}
+\hypertarget{Models.Direction()}{{\bf  Direction}\\}
+\begin{lstlisting}[frame=none]
+public Direction()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{Direction(int, ArrayList)}
+\hypertarget{Models.Direction(int, java.util.ArrayList)}{{\bf  Direction}\\}
+\begin{lstlisting}[frame=none]
+public Direction(int way,java.util.ArrayList arrivals)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.StationsWrapper}Class StationsWrapper}{
+\hypertarget{Models.StationsWrapper}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class StationsWrapper
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.StationsWrapper.transport_stations}{{\bf transport\_stations}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.StationsWrapper()}{{\bf StationsWrapper()}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.StationsWrapper.getArticles()}{{\bf getArticles()}} \\
+\hyperlink{Models.StationsWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{transport\_stations}
+\label{Models.StationsWrapper.transport_stations}\hypertarget{Models.StationsWrapper.transport_stations}{\texttt{private java.util.List\ {\bf  transport\_stations}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{StationsWrapper()}
+\hypertarget{Models.StationsWrapper()}{{\bf  StationsWrapper}\\}
+\begin{lstlisting}[frame=none]
+public StationsWrapper()\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{getArticles()}
+\hypertarget{Models.StationsWrapper.getArticles()}{{\bf  getArticles}\\}
+\begin{lstlisting}[frame=none]
+public java.util.List getArticles()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{setArticles(List)}
+\hypertarget{Models.StationsWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
+\begin{lstlisting}[frame=none]
+public void setArticles(java.util.List transport_stations)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.Time}Class Time}{
+\hypertarget{Models.Time}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class Time
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.Time.time}{{\bf time}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.Time()}{{\bf Time()}} \\
+\hyperlink{Models.Time(java.lang.String)}{{\bf Time(String)}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.Time.toString()}{{\bf toString()}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{time}
+\label{Models.Time.time}\hypertarget{Models.Time.time}{\texttt{public java.lang.String\ {\bf  time}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{Time()}
+\hypertarget{Models.Time()}{{\bf  Time}\\}
+\begin{lstlisting}[frame=none]
+public Time()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{Time(String)}
+\hypertarget{Models.Time(java.lang.String)}{{\bf  Time}\\}
+\begin{lstlisting}[frame=none]
+public Time(java.lang.String time)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{toString()}
+\hypertarget{Models.Time.toString()}{{\bf  toString}\\}
+\begin{lstlisting}[frame=none]
+public java.lang.String toString()\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.TimeTable}Class TimeTable}{
+\hypertarget{Models.TimeTable}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class TimeTable
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.TimeTable.direction}{{\bf direction}} \\
+\hyperlink{Models.TimeTable.vehicleID}{{\bf vehicleID}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.TimeTable()}{{\bf TimeTable()}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{vehicleID}
+\label{Models.TimeTable.vehicleID}\hypertarget{Models.TimeTable.vehicleID}{\texttt{public int\ {\bf  vehicleID}}
+}
+}
+\item{
+\index{direction}
+\label{Models.TimeTable.direction}\hypertarget{Models.TimeTable.direction}{\texttt{public java.util.ArrayList\ {\bf  direction}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{TimeTable()}
+\hypertarget{Models.TimeTable()}{{\bf  TimeTable}\\}
+\begin{lstlisting}[frame=none]
+public TimeTable()\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.TimetablesWrapper}Class TimetablesWrapper}{
+\hypertarget{Models.TimetablesWrapper}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class TimetablesWrapper
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.TimetablesWrapper.timeTables}{{\bf timeTables}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.TimetablesWrapper()}{{\bf TimetablesWrapper()}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.TimetablesWrapper.getArticles()}{{\bf getArticles()}} \\
+\hyperlink{Models.TimetablesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{timeTables}
+\label{Models.TimetablesWrapper.timeTables}\hypertarget{Models.TimetablesWrapper.timeTables}{\texttt{private java.util.List\ {\bf  timeTables}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{TimetablesWrapper()}
+\hypertarget{Models.TimetablesWrapper()}{{\bf  TimetablesWrapper}\\}
+\begin{lstlisting}[frame=none]
+public TimetablesWrapper()\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{getArticles()}
+\hypertarget{Models.TimetablesWrapper.getArticles()}{{\bf  getArticles}\\}
+\begin{lstlisting}[frame=none]
+public java.util.List getArticles()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{setArticles(List)}
+\hypertarget{Models.TimetablesWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
+\begin{lstlisting}[frame=none]
+public void setArticles(java.util.List timetables)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.TransportStation}Class TransportStation}{
+\hypertarget{Models.TransportStation}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class TransportStation
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.TransportStation.friendlyStationName}{{\bf friendlyStationName}} \\
+\hyperlink{Models.TransportStation.gmaps_links}{{\bf gmaps\_links}} \\
+\hyperlink{Models.TransportStation.info_comments}{{\bf info\_comments}} \\
+\hyperlink{Models.TransportStation.is_invalid}{{\bf is\_invalid}} \\
+\hyperlink{Models.TransportStation.junctionName}{{\bf junctionName}} \\
+\hyperlink{Models.TransportStation.lat}{{\bf lat}} \\
+\hyperlink{Models.TransportStation.lineID}{{\bf lineID}} \\
+\hyperlink{Models.TransportStation.lineName}{{\bf lineName}} \\
+\hyperlink{Models.TransportStation.longitude}{{\bf longitude}} \\
+\hyperlink{Models.TransportStation.rawStationName}{{\bf rawStationName}} \\
+\hyperlink{Models.TransportStation.shortStationName}{{\bf shortStationName}} \\
+\hyperlink{Models.TransportStation.stationID}{{\bf stationID}} \\
+\hyperlink{Models.TransportStation.verification_date}{{\bf verification\_date}} \\
+\hyperlink{Models.TransportStation.verified}{{\bf verified}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.TransportStation()}{{\bf TransportStation()}} \\
+\hyperlink{Models.TransportStation(int)}{{\bf TransportStation(int)}} \\
+\hyperlink{Models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.TransportStation.toString()}{{\bf toString()}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{lineID}
+\label{Models.TransportStation.lineID}\hypertarget{Models.TransportStation.lineID}{\texttt{public int\ {\bf  lineID}}
+}
+}
+\item{
+\index{stationID}
+\label{Models.TransportStation.stationID}\hypertarget{Models.TransportStation.stationID}{\texttt{public int\ {\bf  stationID}}
+}
+}
+\item{
+\index{lineName}
+\label{Models.TransportStation.lineName}\hypertarget{Models.TransportStation.lineName}{\texttt{public java.lang.String\ {\bf  lineName}}
+}
+}
+\item{
+\index{rawStationName}
+\label{Models.TransportStation.rawStationName}\hypertarget{Models.TransportStation.rawStationName}{\texttt{public java.lang.String\ {\bf  rawStationName}}
+}
+}
+\item{
+\index{friendlyStationName}
+\label{Models.TransportStation.friendlyStationName}\hypertarget{Models.TransportStation.friendlyStationName}{\texttt{public java.lang.String\ {\bf  friendlyStationName}}
+}
+}
+\item{
+\index{shortStationName}
+\label{Models.TransportStation.shortStationName}\hypertarget{Models.TransportStation.shortStationName}{\texttt{public java.lang.String\ {\bf  shortStationName}}
+}
+}
+\item{
+\index{junctionName}
+\label{Models.TransportStation.junctionName}\hypertarget{Models.TransportStation.junctionName}{\texttt{public java.lang.String\ {\bf  junctionName}}
+}
+}
+\item{
+\index{lat}
+\label{Models.TransportStation.lat}\hypertarget{Models.TransportStation.lat}{\texttt{public double\ {\bf  lat}}
+}
+}
+\item{
+\index{longitude}
+\label{Models.TransportStation.longitude}\hypertarget{Models.TransportStation.longitude}{\texttt{public double\ {\bf  longitude}}
+}
+}
+\item{
+\index{is\_invalid}
+\label{Models.TransportStation.is_invalid}\hypertarget{Models.TransportStation.is_invalid}{\texttt{public java.lang.Boolean\ {\bf  is\_invalid}}
+}
+}
+\item{
+\index{verified}
+\label{Models.TransportStation.verified}\hypertarget{Models.TransportStation.verified}{\texttt{public java.lang.String\ {\bf  verified}}
+}
+}
+\item{
+\index{verification\_date}
+\label{Models.TransportStation.verification_date}\hypertarget{Models.TransportStation.verification_date}{\texttt{public java.lang.String\ {\bf  verification\_date}}
+}
+}
+\item{
+\index{gmaps\_links}
+\label{Models.TransportStation.gmaps_links}\hypertarget{Models.TransportStation.gmaps_links}{\texttt{public java.lang.String\ {\bf  gmaps\_links}}
+}
+}
+\item{
+\index{info\_comments}
+\label{Models.TransportStation.info_comments}\hypertarget{Models.TransportStation.info_comments}{\texttt{public java.lang.String\ {\bf  info\_comments}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{TransportStation()}
+\hypertarget{Models.TransportStation()}{{\bf  TransportStation}\\}
+\begin{lstlisting}[frame=none]
+public TransportStation()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{TransportStation(int)}
+\hypertarget{Models.TransportStation(int)}{{\bf  TransportStation}\\}
+\begin{lstlisting}[frame=none]
+public TransportStation(int station_id)\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}
+\hypertarget{Models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf  TransportStation}\\}
+\begin{lstlisting}[frame=none]
+public TransportStation(int lineID,java.lang.String lineName,int stationID,java.lang.String rawStationName,java.lang.String friendlyStationName,java.lang.String shortStationName,java.lang.String junctionName,double lat,double longitude,java.lang.Boolean is_invalid,java.lang.String verified,java.lang.String verification_date,java.lang.String gmaps_links,java.lang.String info_comments)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{toString()}
+\hypertarget{Models.TransportStation.toString()}{{\bf  toString}\\}
+\begin{lstlisting}[frame=none]
+public java.lang.String toString()\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.Vehicle}Class Vehicle}{
+\hypertarget{Models.Vehicle}{}\vskip .1in 
+Class which holds the implementation for a vehicle object.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class Vehicle
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.Vehicle.vehicleID}{{\bf vehicleID}} \\
+\hyperlink{Models.Vehicle.vehicleName}{{\bf vehicleName}} \\
+\hyperlink{Models.Vehicle.vehicleType}{{\bf vehicleType}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.Vehicle()}{{\bf Vehicle()}} \\
+\hyperlink{Models.Vehicle(int, java.lang.String, java.lang.String)}{{\bf Vehicle(int, String, String)}} Constructor for the Vehicle class.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.Vehicle.toString()}{{\bf toString()}} Override of string form for a vehicle object.\\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{vehicleID}
+\label{Models.Vehicle.vehicleID}\hypertarget{Models.Vehicle.vehicleID}{\texttt{public int\ {\bf  vehicleID}}
+}
+}
+\item{
+\index{vehicleName}
+\label{Models.Vehicle.vehicleName}\hypertarget{Models.Vehicle.vehicleName}{\texttt{public java.lang.String\ {\bf  vehicleName}}
+}
+}
+\item{
+\index{vehicleType}
+\label{Models.Vehicle.vehicleType}\hypertarget{Models.Vehicle.vehicleType}{\texttt{public java.lang.String\ {\bf  vehicleType}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{Vehicle()}
+\hypertarget{Models.Vehicle()}{{\bf  Vehicle}\\}
+\begin{lstlisting}[frame=none]
+public Vehicle()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{Vehicle(int, String, String)}
+\hypertarget{Models.Vehicle(int, java.lang.String, java.lang.String)}{{\bf  Vehicle}\\}
+\begin{lstlisting}[frame=none]
+public Vehicle(int id,java.lang.String name,java.lang.String type)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor for the Vehicle class.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{id} -- Unique id for the vehicle object.}
+   \item{
+\texttt{name} -- Name of the vehicle.}
+   \item{
+\texttt{type} -- Type of the vehicle.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{toString()}
+\hypertarget{Models.Vehicle.toString()}{{\bf  toString}\\}
+\begin{lstlisting}[frame=none]
+public java.lang.String toString()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Override of string form for a vehicle object.
+}
+\item{{\bf  Returns} -- 
+Pretty printed format of a vehicle instance. 
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+}
+\section{\label{Models.VehiclesWrapper}Class VehiclesWrapper}{
+\hypertarget{Models.VehiclesWrapper}{}\vskip .1in 
+Class which holds the wrapper for the Vehicle object.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class VehiclesWrapper
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{Models.VehiclesWrapper.vehicles}{{\bf vehicles}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{Models.VehiclesWrapper()}{{\bf VehiclesWrapper()}} Constructor of the VehicleWrapper class.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{Models.VehiclesWrapper.getArticles()}{{\bf getArticles()}} Method which returns all the vehicles which appear in the XML document.\\
+\hyperlink{Models.VehiclesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} Set a list of vehicles.\\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{vehicles}
+\label{Models.VehiclesWrapper.vehicles}\hypertarget{Models.VehiclesWrapper.vehicles}{\texttt{private java.util.List\ {\bf  vehicles}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{VehiclesWrapper()}
+\hypertarget{Models.VehiclesWrapper()}{{\bf  VehiclesWrapper}\\}
+\begin{lstlisting}[frame=none]
+public VehiclesWrapper()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the VehicleWrapper class. Creates the vehicles list.
+}
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{getArticles()}
+\hypertarget{Models.VehiclesWrapper.getArticles()}{{\bf  getArticles}\\}
+\begin{lstlisting}[frame=none]
+public java.util.List getArticles()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which returns all the vehicles which appear in the XML document.
+}
+\item{{\bf  Returns} -- 
+All found elements of type Vehicle. 
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{setArticles(List)}
+\hypertarget{Models.VehiclesWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
+\begin{lstlisting}[frame=none]
+public void setArticles(java.util.List vehicles)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Set a list of vehicles.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{vehicles} -- A list of elements of type Vehicle.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+}
+}
+\end{document}
