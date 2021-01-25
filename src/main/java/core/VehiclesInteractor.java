@@ -18,7 +18,7 @@ public class VehiclesInteractor extends Interactor {
 
     public Node createVehicle(Integer new_id, String vehicleName, String vehicleType) throws XPathExpressionException {
         // get last vehicle ID, create a new node and add it to it's parent
-        Element last_vehicle = (Element) (xputils.QueryXPath("//vehicle[not(@id <= preceding-sibling::vehicle/@id) and not(@id <=following-sibling::vehicle/@id)]").item(0));
+        Element last_vehicle = (Element) (xputils.QueryXPath("//timetable[not(@vehicle_id <= preceding-sibling::timetable/@vehicle_id) and not(@vehicle_id <=following-sibling::timetable/@vehicle_id)]").item(0));
 
         if(new_id == null) {
             new_id = Integer.parseInt(last_vehicle.getAttribute("id")) + 1;

@@ -120,13 +120,13 @@ public class CamelREST extends RouteBuilder {
                 .bean(timetables_interactor, "getTimeTable(${header.id})")
                 .endRest()
 
-//                .put("/timetable/{id}")
-//                .type(TimeTable.class)
-//                .consumes("application/xml")
-//                .produces("application/xml")
-//                .route()
-//                .bean(vehicles_interactor, "replaceTimeTable(${header.id}, ${body})")
-//                .endRest()
+                .put("/timetable/{id}")
+                .type(TimeTable.class)
+                .consumes("application/xml")
+                .produces("application/xml")
+                .route()
+                .bean(timetables_interactor, "replaceTimeTable(${header.id}, ${body})")
+                .endRest()
 
                 .post("/timetable")
                 .type(TimeTable.class)
@@ -134,12 +134,12 @@ public class CamelREST extends RouteBuilder {
                 .produces("application/xml")
                 .route()
                 .bean(timetables_interactor, "createTimeTable(${body})")
+                .endRest()
+
+                .delete("/timetable/{id}")
+                .produces("application/xml")
+                .route()
+                .bean(timetables_interactor, "deleteTimeTable(${header.id})")
                 .endRest();
-//
-//                .delete("/vehicle/{id}")
-//                .produces("application/xml")
-//                .route()
-//                .bean(vehicles_interactor, "deleteVehicle(${header.id})")
-//                .endRest();
     }
 };

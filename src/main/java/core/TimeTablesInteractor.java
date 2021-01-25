@@ -1,7 +1,7 @@
 package core;
 
 import Models.*;
-
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -23,8 +23,8 @@ public class TimeTablesInteractor extends Interactor {
         return xputils.QueryXPath("/timetables-root/timetables/timetable");
     }
 
-    public NodeList getTimeTable(Integer vehicle_id) throws XPathExpressionException {
-        return xputils.QueryXPath(String.format("//timetable[@vehicle_id=%s]", vehicle_id));
+    public Node getTimeTable(Integer vehicle_id) throws XPathExpressionException {
+        return xputils.QueryXPath(String.format("//timetable[@vehicle_id=%s]", vehicle_id)).item(0);
     }
 
     public Node createArrival(int station_id, String station_name, Time arrives_in){
@@ -53,24 +53,39 @@ public class TimeTablesInteractor extends Interactor {
         return direction;
     }
 
-    public Node createTimeTable(Integer new_id, int vehicle_id, ArrayList<Direction> directions) throws XPathExpressionException {
-        // get last vehicle ID, create a new node and add it to it's parent
-        Element last_timetable = (Element) (xputils.QueryXPath("//timetable[not(@vehicle_id <= preceding-sibling::vehicle/@id) and not(@id <=following-sibling::timetable/@vehicle_id)]").item(0));
+    public Node createTimeTable(int vehicle_id, ArrayList<Direction> directions) throws XPathExpressionException {
+        Element last_timetable = (Element) (xputils.QueryXPath("//timetable[not(@vehicle_id <= preceding-sibling::timetable/@id) and not(@vehicle_id <=following-sibling::timetable/@vehicle_id)]").item(0));
 
-        if(new_id == null) {
-            new_id = Integer.parseInt(last_timetable.getAttribute("id")) + 1;
-        }
 
         Element new_timetable = this.document.createElement("timetable");
-        new_timetable.setAttribute("vehicle_id", new_id.toString());
+        new_timetable.setAttribute("vehicle_id", String.valueOf(vehicle_id));
 
         for(Direction d : directions){
             Element dir = (Element) this.createDirection(d.way, d.arrivals);
-            last_timetable.appendChild(dir);
+            new_timetable.appendChild(dir);
         }
 
         last_timetable.getParentNode().appendChild(new_timetable);
 
         return new_timetable;
+    }
+
+    public Node createTimeTable(TimeTable t) throws XPathExpressionException {
+        return this.createTimeTable(t.vehicleID, t.direction);
+    }
+
+    public Document replaceTimeTable(Integer id, TimeTable t) throws XPathExpressionException {
+        Node node_to_replace = this.getTimeTable(id);
+        Node new_timetable = this.createTimeTable(t);
+        node_to_replace.getParentNode().replaceChild(new_timetable, node_to_replace);
+
+        return this.document;
+    }
+
+    public Document deleteTimeTable(Integer id) throws XPathExpressionException {
+        Element timetable_to_delete = (Element) getTimeTable(id);
+        timetable_to_delete.getParentNode().removeChild(timetable_to_delete);
+
+        return this.document;
     }
 }
