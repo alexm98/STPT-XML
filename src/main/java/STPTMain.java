@@ -3,10 +3,7 @@ import core.StationsInteractor;
 import core.TimeTablesInteractor;
 import core.VehiclesInteractor;
 import org.apache.camel.main.Main;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import parsers.ParserUtils;
 
 public class STPTMain {
     public static void IterateNodeList(NodeList query_res){
@@ -30,14 +27,14 @@ public class STPTMain {
 //        vehiclesInteractor.prettyPrintNodeList(allVehicles);
 //        timetablesInteractor.prettyPrintNodeList(allTimetables);
 
-        Node foundStation = stationsInteractor.getStation(2810);
-        stationsInteractor.prettyPrintNode(foundStation);
+//        Node foundStation = stationsInteractor.getStation(2810);
+//        stationsInteractor.prettyPrintNode(foundStation);
 
-        Node foundVehicle = vehiclesInteractor.getVehicle(158);
-        vehiclesInteractor.prettyPrintNode(foundVehicle);
+//        Node foundVehicle = vehiclesInteractor.getVehicle(158);
+//        vehiclesInteractor.prettyPrintNode(foundVehicle);
 
-//        Main main = new Main();
-//        main.configure().addRoutesBuilder(new CamelREST());
-//        main.run(args);
+        Main main = new Main();
+        main.configure().addRoutesBuilder(new CamelREST());
+        main.run(args);
     }
 }

@@ -7,8 +7,8 @@ import java.util.List;
 @XmlRootElement(name="transport-stations-root")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StationsWrapper {
-    @XmlElementWrapper(name="TransportStations")
-    @XmlElement(name="TransportStation")
+    @XmlElementWrapper(name="transport-stations")
+    @XmlElement(name="transport-station")
     private List<TransportStation> transport_stations;
 
     public StationsWrapper() {

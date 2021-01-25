@@ -2,36 +2,36 @@ package Models;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "TransportStation")
+@XmlRootElement(name = "transport-station")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TransportStation {
-    @XmlElement(name = "LineID")
+    @XmlElement(name = "line-id")
     public int lineID;
     @XmlAttribute(name = "id")
     public int stationID;
-    @XmlElement(name = "LineName")
+    @XmlElement(name = "line-name")
     public String lineName;
-    @XmlElement(name="RawStationName")
+    @XmlElement(name="raw-station-name")
     public String rawStationName;
-    @XmlElement(name = "FriendlyStationName")
+    @XmlElement(name = "friendly-station-name")
     public String friendlyStationName;
-    @XmlElement(name = "ShortStationName")
+    @XmlElement(name = "short-station-name")
     public String shortStationName;
-    @XmlElement(name = "JunctionName")
+    @XmlElement(name = "junction-name")
     public String junctionName;
-    @XmlElement(name = "Lat")
+    @XmlElement(name = "lat")
     public double lat;
-    @XmlElement(name = "Long")
+    @XmlElement(name = "long")
     public double longitude;
-    @XmlElement(name = "Invalid")
+    @XmlElement(name = "invalid")
     public Boolean is_invalid;
-    @XmlElement(name = "Verified")
+    @XmlElement(name = "verified")
     public String verified;
-    @XmlElement(name = "VerificationDate")
+    @XmlElement(name = "verification-date")
     public String verification_date;
-    @XmlElement(name = "GMapsLink")
+    @XmlElement(name = "gmaps-link")
     public String gmaps_links;
-    @XmlElement(name = "InfoComments")
+    @XmlElement(name = "info-comments")
     public String info_comments;
 
     public TransportStation(){
