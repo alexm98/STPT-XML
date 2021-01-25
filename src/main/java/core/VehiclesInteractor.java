@@ -41,6 +41,7 @@ public class VehiclesInteractor extends Interactor {
      *
      * This is achieved by using XPath for finding where to place the new vehicle element, and creating it based on the
      * passed parameters. After creation, we append the new Element to the parent.
+     *
      * @param new_id Integer: Id of the vehicle to be added. Example: 3306
      * @param vehicleName String: Name of the vehicle to be added. Example: M42
      * @param vehicleType String: Type of the vehicle to be added. Example: Bus
@@ -71,6 +72,7 @@ public class VehiclesInteractor extends Interactor {
 
     /**
      * Method for creating a new vehicle which is used by JAXB binding.
+     *
      * @param v Vehicle: Vehicle element representing the new element to be added.
      * @return Returns a Node element representing the newly added vehicle element.
      * @throws XPathExpressionException @see XPathExpressionException
@@ -135,6 +137,7 @@ public class VehiclesInteractor extends Interactor {
      * The querying to find the requested vehicle to be replaced will be done by using the existent
      * getVehicle(Integer id) method. If the vehicle is found, a new vehicle is created with the new requirements and
      * the parent will now replace the old vehicle with the new one.
+     *
      * @param id Integer: id for finding the requested vehicle.
      * @param vehicle Vehicle: Replacement for the old vehicle element.
      * @return Document: The XML document which has the requested vehicle replaced.
