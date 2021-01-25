@@ -16,9 +16,6 @@ public class STPTMain {
     }
 
     public static void main(String args[]) throws Exception {
-        ParserUtils putils = new ParserUtils("data/statii-ratt.xml");
-        Document doc = putils.parseJAXB();
-
         StationsInteractor s = new StationsInteractor("data/statii-ratt.xml");
         VehiclesInteractor v = new VehiclesInteractor("data/vehicles.xml");
 
@@ -28,8 +25,8 @@ public class STPTMain {
         s.prettyPrintNodeList(allStations);
         v.prettyPrintNodeList(allVehicles);
 
-        System.out.println(s.getStation(4680));
-        System.out.println(v.getVehicle(1106));
+        System.out.println(s.getStation(2810));
+        System.out.println(v.getVehicle(158));
 
 //        Main main = new Main();
 //        main.configure().addRoutesBuilder(new CamelREST());
