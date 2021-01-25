@@ -1,5 +1,6 @@
 package core;
 
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import javax.xml.bind.JAXBException;
@@ -18,7 +19,7 @@ public class StationsInteractor extends Interactor {
         return xputils.QueryXPath("/root/TransportStations/TransportStation");
     }
 
-    public NodeList getStation(Integer station_id) throws XPathExpressionException {
-        return xputils.QueryXPath(String.format("//TransportStation[@id=%s]", station_id));
+    public Node getStation(Integer station_id) throws XPathExpressionException {
+        return xputils.QueryXPath(String.format("//TransportStation[@id=%s]", station_id)).item(0);
     }
 }
