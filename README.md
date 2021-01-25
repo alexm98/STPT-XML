@@ -3,15 +3,14 @@
 ## Your project should follow some simple requirements:
 
 ~~* Firstly, it is necessary to define an XML information base (an XML document and its structure), on a subject at your choice. You’ll include in this information base at least three categories of information.~~
-* Once you have the information base (the XML document with its associated structure), it will be necessary to define some basic services. 
-  * These services have to implement, for example, basic abilities for XML document manipulation (such as create/delete/add/update nodes, as well as search and filtering of information).
-  * The use of XPath and XSLT for the implementation of these services is mandatory!
+~~* Once you have the information base (the XML document with its associated structure), it will be necessary to define some basic services.~~ 
+~~  * These services have to implement, for example, basic abilities for XML document manipulation (such as create/delete/add/update nodes, as well as search and filtering of information).~~
+~~  * The use of XPath and XSLT for the implementation of these services is mandatory!~~
 * However, your project is not limited to the manipulation of some XML documents! Your project should perform some “useful” tasks (computing).
   * Hint: you can start from the XML document from laboratories...
-* Next, you’ll have to identify at least 2 different APIs for your application. One of these could offer a REST API, another a WSDL-based (Web services) API, or maybe some ad-hoc APIs. 
+* Next, you’ll have to identify at least 2 different APIs for your application. One of these could offer a ~~REST API~~ (Camel REST), another a WSDL-based (Web services) API, or maybe some ad-hoc APIs. 
 It is supposed that your implementation from #2 does not depend on the used API, so you’ll use Apache Camel to expose some of these APIs.
   * Hint: you can use the Producer-Consumer model from Apache Camel (via akka)!
-  * Additional notice: there will be a penalty if you do not use Apache Camel (50% for this requirement)
 * Now you have to show that your basic services are accessible, by using some REST/WS testing frameworks (such as ~~SoapUI~~ Postman).
 * However, a fully implemented project will require a user interface for service invocation. This interface must be built on XForms, and must be able to consume/invoke at least one of the exposed APIs (REST/WS). Preferably both!
   * Hint: Orbeon, as an XForms player, is capable to invoke/consume both REST and WS/CXF endpoints. However, there will be a light penalty (at most 25% for this component) if your implementation is not using XForms, and you replace it with an AJAX solution.
