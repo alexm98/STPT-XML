@@ -16,12 +16,22 @@ import java.util.ArrayList;
 /* This class converts a JAXB content tree into a DOM tree
  so I can use XPath queries more appropriately
 */
+
+/**
+ * Class which implements the XPath operations needed for the application.
+ */
 public class XPathUtils {
     public Document doc;
 
+    /**
+     * Constructor of the XPathUtils clas.
+     *
+     * @param doc XML document, used for querying.
+     */
     public XPathUtils(Document doc){
         this.doc = doc;
     }
+
 
     public XPathUtils(Marshaller marshaller, StationsWrapper data) {
         DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
@@ -36,6 +46,14 @@ public class XPathUtils {
         }
     }
 
+    /**
+     * Method which, given a query in the form of a String object, generates a ArrayList<String> of responses using
+     * XPath.
+     *
+     * @param query Query which will be used for generating the ArrayList<String> results.
+     * @return ArrayList<String> Results of the given query.
+     * @throws XPathExpressionException @see XPathExpressionException
+     */
     public ArrayList<String> QueryXPathString(String query) throws XPathExpressionException {
         XPathFactory factory = XPathFactory.newInstance();
         XPathExpression xpath = factory.newXPath().compile(query);
@@ -62,6 +80,12 @@ public class XPathUtils {
         return null;
     }
 
+    /**
+     * Method which, given a query in the form of a String object, generates a NodeList of responses using XPath.
+     * @param query Query which will be used for generating the ArrayList<String> results.
+     * @return NodeList Results of the given query.
+     * @throws XPathExpressionException @see XPathExpressionException
+     */
     public NodeList QueryXPath(String query) throws XPathExpressionException {
         XPathFactory factory = XPathFactory.newInstance();
         XPathExpression xpath = factory.newXPath().compile(query);

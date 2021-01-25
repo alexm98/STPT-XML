@@ -10,6 +10,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
+/**
+ * Class which holds the implementation for interacting with a vehicle object.
+ */
 public class VehiclesInteractor extends Interactor {
 
     public VehiclesInteractor(String path_to_doc) throws JAXBException, ParserConfigurationException {
@@ -59,7 +62,6 @@ public class VehiclesInteractor extends Interactor {
     }
 
     public Document replaceVehicle(Integer id, Vehicle vehicle) throws XPathExpressionException {
-        System.out.println("Replacing: " + vehicle.toString());
         Node node_to_replace = this.getVehicle(id);
         Node new_au = this.createVehicle(vehicle.vehicleID, vehicle.vehicleName, vehicle.vehicleType);
         node_to_replace.getParentNode().replaceChild(new_au, node_to_replace);

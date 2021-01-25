@@ -15,13 +15,29 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
+/**
+ * Class which implements basic parsing methods over an XML document.
+ */
 public class ParserUtils {
     public String path_to_doc;
 
+    /**
+     * Constructor of the ParserUtil class.
+     * @param path_to_doc Location of the XML document to be used.
+     */
     public ParserUtils(String path_to_doc){
         this.path_to_doc = path_to_doc;
     }
 
+    /**
+     * Method which parses an XML document by using JAXB.
+     *
+     * This is achieved by specifying which classes are to be taken into consideration for JAXB binding, then
+     * unmarshalling the XML document into the classes and returning the marshalled document back.
+     * @return Marshalled XML document.
+     * @throws JAXBException @see JAXBException
+     * @throws ParserConfigurationException @see ParserConfigurationException
+     */
     public Document parseJAXB() throws JAXBException, ParserConfigurationException {
         File doc = new File(this.path_to_doc);
         JAXBContext jc = JAXBContext.newInstance(
@@ -52,6 +68,12 @@ public class ParserUtils {
         return document;
     }
 
+    /**
+     * Method which, given a document and a location, saves the document at the specific location.
+     * @param doc Document to be saved.
+     * @param location Location where the document will be saved.
+     * @throws TransformerException @see TransformerException
+     */
     public void SaveDoc(Document doc, String location) throws TransformerException {
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
