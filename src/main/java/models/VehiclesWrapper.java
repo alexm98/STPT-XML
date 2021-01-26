@@ -6,6 +6,20 @@ import java.util.List;
 
 /**
  * Class which holds the wrapper for the Vehicle object.
+ *
+ * The wrapper is represented by the following type of element in the XML document:
+ *
+ * {@code
+ * <vehicles>
+ *     <vehicle>
+ *         ...
+ *     </vehicle>
+ *     ...
+ *     <vehicle>
+ *  *         ...
+ *  *  </vehicle>
+ * </vehicles>
+ * }
  */
 @XmlRootElement(name="vehicles-root")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -16,6 +30,7 @@ public class VehiclesWrapper {
 
     /**
      * Constructor of the VehicleWrapper class.
+     *
      * Creates the vehicles list.
      */
     public VehiclesWrapper() {
@@ -23,8 +38,9 @@ public class VehiclesWrapper {
     }
 
     /**
-     * Method which returns all the vehicles which appear in the XML document.
-     * @return All found elements of type Vehicle.
+     * Method which returns all the objects of type vehicle which appear in the XML document.
+     *
+     * @return A list composed of Vehicle objects.
      */
     public List<Vehicle> getArticles() {
         return this.vehicles;

@@ -4,6 +4,18 @@ import javax.xml.bind.annotation.*;
 
 /**
  * Class which holds the implementation for a vehicle object.
+ *
+ * A vehicle is represented as follows in the XML document:
+ *
+ * {@code
+ *  <vehicle id="3306">
+ *      <vehicle-name>M41</vehicle-name>
+ *      <vehicle-type>Bus</vehicle-type>
+ *  </vehicle>
+ * }
+ *
+ * Operations of the type edit, add, delete and query involving the vehicle element will be done using the
+ * Vehicle Interactor class.
  */
 @XmlRootElement(name = "vehicle")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -20,6 +32,7 @@ public class Vehicle {
 
     /**
      * Constructor for the Vehicle class.
+     *
      * @param id Unique id for the vehicle object.
      * @param name Name of the vehicle.
      * @param type Type of the vehicle.
@@ -32,6 +45,7 @@ public class Vehicle {
 
     /**
      * Override of string form for a vehicle object.
+     *
      * @return Pretty printed format of a vehicle instance.
      */
     public String toString(){

@@ -99,7 +99,7 @@ public class StationsInteractor extends Interactor {
      * @param x double: Latitude of the station location.
      * @param y double: Longitude of the station location.
      * @param is_invalid Boolean: States whether the station is still in use.
-     * @param verif String: How the station is verified.
+     * @param verif String: Method of the station is verified.
      * @param verif_date String: Date of the last verification.
      * @param gmaps_links String: Link for google maps location.
      * @param info_comm String: More info.
