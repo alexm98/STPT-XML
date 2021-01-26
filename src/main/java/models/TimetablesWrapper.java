@@ -36,6 +36,7 @@ import java.util.List;
  *       ...
  *   </timetable>
  * <timetables>
+ * }
  */
 @XmlRootElement(name="timetables-root")
 @XmlAccessorType(XmlAccessType.FIELD)
