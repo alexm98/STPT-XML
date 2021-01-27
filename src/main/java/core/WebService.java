@@ -34,9 +34,10 @@ public class WebService {
 
     /**
      * Constructor of the WebService class.
-     * @param path_to_vehicles Location of the vehicles XML document to be used.
+     *
+     * @param path_to_vehicles   Location of the vehicles XML document to be used.
      * @param path_to_timetables Location of the timetables XML document to be used.
-     * @param path_to_stations Location of the stations XML document to be used.
+     * @param path_to_stations   Location of the stations XML document to be used.
      */
     public WebService(String path_to_vehicles, String path_to_timetables, String path_to_stations) throws JAXBException, ParserConfigurationException {
         this.stationsInteractor = new StationsInteractor(path_to_stations);
@@ -62,16 +63,15 @@ public class WebService {
      * @return Returns a NodeList representing the vehicles that arrive at station s.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public NodeList getAllVehiclesPassingWithDestination(TransportStation s){
+    public NodeList getAllVehiclesPassingWithDestination(TransportStation s) {
         return null;
     }
 
     /**
-     * Method for returning all arrivals in the form of (vehicleId, time) for a given station id.
+     * Method for returning all arrivals for a given station id.
      *
      * @param stationId String: id of the station for getting all arrivals.
-     * @return {@code ArrayList<VehicleArrival>}: All pairs of vehicle-id and time which are arriving at the given
-     *                                            station_id.
+     * @return Node: A XML Node containing populated with vehicle-id and arrival-times.
      * @throws XPathExpressionException @see XPathExpressionException
      */
     public Node getAllArrivals(String stationId) throws XPathExpressionException {
@@ -88,8 +88,8 @@ public class WebService {
             String vehichleId = currentTimetable.getAttribute("vehicle_id");
 
             Element arrivalDirection = this.getChildWith("way",
-                                                         "1",
-                                                          currentTimetable.getChildNodes());
+                    "1",
+                    currentTimetable.getChildNodes());
 
             if (arrivalDirection == null) {
                 continue;
@@ -97,12 +97,62 @@ public class WebService {
 
             ArrayList<Time> arrivalTimes = this.getAllArrivalsFrom(stationId, arrivalDirection.getChildNodes());
 
-            for(Time time: arrivalTimes) {
+            for (Time time : arrivalTimes) {
                 vehicleArrivals.add(new VehicleArrival(vehichleId, time));
             }
         }
 
-        return this.transformToXML(vehicleArrivals);
+        Node xmlResponse = this.transformToXML(vehicleArrivals,
+                "vehicle-arrivals",
+                "vehicle-arrival",
+                "vehicle_id",
+                "arrival-time"
+        );
+        return xmlResponse;
+    }
+
+    /**
+     * Method for returning all departures for a given station id.
+     *
+     * @param stationId String: id of the station for getting all departures.
+     * @return Node: A XML Node containing populated with vehicle-id and departure-times.
+     * @throws XPathExpressionException @see XPathExpressionException
+     */
+    public Node getAllDepartures(String stationId) throws XPathExpressionException {
+        NodeList timetables = timeTablesInteractor.getAllTimeTables();
+        ArrayList<VehicleArrival> vehicleArrivals = new ArrayList<>();
+
+        for (int i = 0; i < timetables.getLength(); i++) {
+            Node currentNode = timetables.item(i);
+
+            if (currentNode.getNodeType() != Node.ELEMENT_NODE)
+                continue;
+
+            Element currentTimetable = (Element) timetables.item(i);
+            String vehichleId = currentTimetable.getAttribute("vehicle_id");
+
+            Element arrivalDirection = this.getChildWith("way",
+                    "0",
+                    currentTimetable.getChildNodes());
+
+            if (arrivalDirection == null) {
+                continue;
+            }
+
+            ArrayList<Time> arrivalTimes = this.getAllArrivalsFrom(stationId, arrivalDirection.getChildNodes());
+
+            for (Time time : arrivalTimes) {
+                vehicleArrivals.add(new VehicleArrival(vehichleId, time));
+            }
+        }
+
+        Node xmlResponse = this.transformToXML(vehicleArrivals,
+                "vehicle-departures",
+                "vehicle-departure",
+                "vehicle_id",
+                "departure-time"
+                );
+        return xmlResponse;
     }
 
     private ArrayList<Time> getAllArrivalsFrom(String requestedStationId, NodeList nodeList) {
@@ -119,7 +169,7 @@ public class WebService {
             Element currentStation = (Element) currentArrival.getElementsByTagName("station").item(0);
             String currentStationId = currentStation.getAttribute("id");
 
-            if(currentStationId.equals(requestedStationId)) {
+            if (currentStationId.equals(requestedStationId)) {
                 String t = currentArrival.getElementsByTagName("time").item(0).getTextContent();
                 Time currentTime = new Time(t);
                 allArrivalTimes.add(currentTime);
@@ -158,10 +208,10 @@ public class WebService {
 
     /**
      * Method for retrieving the closest transport station element.
-     *
+     * <p>
      * As input we get the latitude and longitude given by the user in order to find the closest transport station.
      *
-     * @param currentLatitude double: Latitude of the current place.
+     * @param currentLatitude  double: Latitude of the current place.
      * @param currentLongitude double: Longitude of the current place.
      * @return Returns a Node element representing the closest transport station by currentLatitude and currentLongitude.
      * @throws XPathExpressionException @see XPathExpressionException
@@ -197,10 +247,22 @@ public class WebService {
     }
 
     private double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2) {
-        return Math.sqrt((latitude2-latitude1)*(latitude2-latitude1) + (longitude2-longitude1)*(longitude2-longitude1));
+        return Math.sqrt((latitude2 - latitude1) * (latitude2 - latitude1) + (longitude2 - longitude1) * (longitude2 - longitude1));
     }
 
-    public Node transformToXML(ArrayList<VehicleArrival> vehicleArrivals) {
+    /**
+     * Method for transforming an array list populated with objects of type VehicleArrival to XML form.
+     * <p>
+     * The conversion is needed as support for XML display for the web service.
+     *
+     * @param vehicleArrivals {@code ArrayList<VehicleArrival>}: An array list of VehicleArrival elements.
+     * @return Node: The list of vehicle arrivals transformed to XML format.
+     */
+    public Node transformToXML(ArrayList<VehicleArrival> vehicleArrivals,
+                               String rootName,
+                               String mainElementsName,
+                               String firstChildName,
+                               String lastChildName) {
 
         try {
 
@@ -208,18 +270,18 @@ public class WebService {
             DocumentBuilder build = dFact.newDocumentBuilder();
             Document doc = build.newDocument();
 
-            Element root = doc.createElement("vehicle-arrivals");
+            Element root = doc.createElement(rootName);
             doc.appendChild(root);
 
-            for(VehicleArrival va: vehicleArrivals) {
-                Element vaElement = doc.createElement("vehicle-arrival");
+            for (VehicleArrival va : vehicleArrivals) {
+                Element vaElement = doc.createElement(mainElementsName);
                 root.appendChild(vaElement);
 
-                Element vehicle_id = doc.createElement("vehicle_id");
+                Element vehicle_id = doc.createElement(firstChildName);
                 vehicle_id.appendChild(doc.createTextNode(va.vehicleId));
                 vaElement.appendChild(vehicle_id);
 
-                Element arrival_time = doc.createElement("arrival-time");
+                Element arrival_time = doc.createElement(lastChildName);
                 arrival_time.appendChild(doc.createTextNode(va.arrivalTime.toString()));
                 vaElement.appendChild(vehicle_id);
             }

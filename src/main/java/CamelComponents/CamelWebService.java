@@ -23,5 +23,9 @@ public class CamelWebService extends RouteBuilder {
         from("netty-http:http://0.0.0.0:8080/allArrivals/{station_id}")
                 .bean(webservice_methods, "getAllArrivals(${header.station_id})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
+
+        from("netty-http:http://0.0.0.0:8080/allDepartures/{station_id}")
+                .bean(webservice_methods, "getAllDepartures(${header.station_id})")
+                .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
     }
 }
