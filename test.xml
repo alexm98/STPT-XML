@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><vehicle-arrivals>
+    <vehicle-arrival>
+        <vehicle-id>1746</vehicle-id>
+        <arrival-time>**:**</arrival-time>
+    </vehicle-arrival>
+    <vehicle-arrival>
+        <vehicle-id>2006</vehicle-id>
+        <arrival-time>18:22</arrival-time>
+    </vehicle-arrival>
+    <vehicle-arrival>
+        <vehicle-id>2786</vehicle-id>
+        <arrival-time>16:12</arrival-time>
+    </vehicle-arrival>
+</vehicle-arrivals>
