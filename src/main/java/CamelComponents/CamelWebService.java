@@ -1,8 +1,8 @@
 package CamelComponents;
 
 import core.WebService;
+import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.model.rest.RestBindingMode;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
@@ -16,11 +16,8 @@ public class CamelWebService extends RouteBuilder {
 
     @Override
     public void configure(){
-        // ToDo: modify configuration here
-        // ToDo: Add routes with .from and .bean()
-        restConfiguration().component("netty-http")
-                .host("localhost")
-                .port("9092")
-                .bindingMode(RestBindingMode.auto);
+        from("netty-http:http://0.0.0.0:8080/{station}")
+                .bean(webservice_methods, "getLastVehicleForStation(${header.station})")
+                .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
     }
 }

@@ -1,7 +1,6 @@
 package core;
 
 import models.TransportStation;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -37,8 +36,8 @@ public class WebService {
      * @return Returns a Node element representing the time the last vehicle will be at station s.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public Node getLastVehicleForStation(TransportStation s) throws XPathExpressionException {
-        return null;
+    public Node getLastVehicleForStation(Integer id) throws XPathExpressionException {
+        return this.stationsInteractor.getStation(id);
     }
 
     /**
