@@ -12,10 +12,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPathExpressionException;
@@ -46,14 +43,77 @@ public class WebService {
     }
 
     /**
-     * Method for retrieving the time when the last vehicle departs from a station.
+     * Method for retrieving the last vehicle departing from the required station.
      *
-     * @param s TransportStation: Transport element representing station we want to query for.
-     * @return Returns a Node element representing the time the last vehicle will be at station s.
+     * @param stationId String: Id representing the station to be queried.
+     * @return Returns a Node element representing the time the last vehicle will leave from stationId.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public Node getLastVehicleForStation(Integer id) throws XPathExpressionException {
-        return this.stationsInteractor.getStation(id);
+    public Node getLastDepartureVehicle(String stationId) throws XPathExpressionException, TransformerConfigurationException, ParserConfigurationException {
+        NodeList departuresStation = this.getAllDepartures(stationId).getChildNodes();
+        Time furthestTime = new Time("05:00"); // We assume that the earliest possible for a bus to start is 05:00.
+        Node lastVehicle = null;
+
+        for (int i = 0; i < departuresStation.getLength(); i++) {
+            Node currentNode = departuresStation.item(i);
+
+            if (currentNode.getNodeType() != Node.ELEMENT_NODE)
+                continue;
+
+            Element departureStation = (Element) departuresStation.item(i);
+            String dsTimeStr = departureStation.getElementsByTagName("departure-time").item(0).getTextContent();
+            Time dsTime = new Time(dsTimeStr);
+
+            if(furthestTime.compareTime(dsTime.toString(), furthestTime.toString()) == 1) {
+                System.out.println("DT: " + dsTimeStr + "; FT: " + furthestTime.toString());
+                furthestTime = dsTime;
+
+                String vehicleId = departureStation.getElementsByTagName("vehicle-id").item(0).getTextContent();
+                lastVehicle = vehiclesInteractor.getVehicle(Integer.parseInt(vehicleId));
+                lastVehicle = this.appendNode(lastVehicle, "departure-time", dsTimeStr);
+            }
+        }
+
+        return lastVehicle;
+
+    }
+
+    /**
+     * Method for retrieving the last vehicle arriving from the required station.
+     *
+     * @param stationId String: Id representing the station to be queried.
+     * @return Returns a Node element representing the time the last vehicle will arrive at stationId.
+     * @throws XPathExpressionException @see XPathExpressionException
+     */
+    public Node getLastArrivalVehicle(String stationId) throws XPathExpressionException, TransformerConfigurationException, ParserConfigurationException {
+        NodeList arrivalsStation = this.getAllArrivals(stationId).getChildNodes();
+        Node lastVehicle = null;
+        Time closestTime = new Time("05:00"); // We assume that the latest possible for a bus to start is 05:00.
+
+        for (int i = 0; i < arrivalsStation.getLength(); i++) {
+            Node currentNode = arrivalsStation.item(i);
+
+            if (currentNode.getNodeType() != Node.ELEMENT_NODE)
+                continue;
+
+            Element arrivalStation = (Element) arrivalsStation.item(i);
+            String dsTimeStr = arrivalStation.getElementsByTagName("arrival-time").item(0).getTextContent();
+            Time dsTime = new Time(dsTimeStr);
+
+            if(closestTime.compareTime(dsTime.toString(), closestTime.toString()) == 1) {
+                System.out.println("before DT: " + dsTimeStr + "; FT: " + closestTime.toString());
+                closestTime = dsTime;
+
+                String vehicleId = arrivalStation.getElementsByTagName("vehicle-id").item(0).getTextContent();
+                lastVehicle = vehiclesInteractor.getVehicle(Integer.parseInt(vehicleId));
+                lastVehicle = this.appendNode(lastVehicle, "arrival-time", dsTimeStr);
+            }
+
+            System.out.println("DT: " + dsTimeStr + "; FT: " + closestTime.toString());
+        }
+
+        return lastVehicle;
+
     }
 
     /**
@@ -74,7 +134,7 @@ public class WebService {
      * @return Node: A XML Node containing populated with vehicle-id and arrival-times.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public Node getAllArrivals(String stationId) throws XPathExpressionException {
+    public Node getAllArrivals(String stationId) throws XPathExpressionException, TransformerConfigurationException {
         NodeList timetables = timeTablesInteractor.getAllTimeTables();
         ArrayList<VehicleArrival> vehicleArrivals = new ArrayList<>();
 
@@ -105,9 +165,10 @@ public class WebService {
         Node xmlResponse = this.transformToXML(vehicleArrivals,
                 "vehicle-arrivals",
                 "vehicle-arrival",
-                "vehicle_id",
+                "vehicle-id",
                 "arrival-time"
         );
+        this.writeToXML(xmlResponse);
         return xmlResponse;
     }
 
@@ -118,7 +179,7 @@ public class WebService {
      * @return Node: A XML Node containing populated with vehicle-id and departure-times.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public Node getAllDepartures(String stationId) throws XPathExpressionException {
+    public Node getAllDepartures(String stationId) throws XPathExpressionException, TransformerConfigurationException {
         NodeList timetables = timeTablesInteractor.getAllTimeTables();
         ArrayList<VehicleArrival> vehicleArrivals = new ArrayList<>();
 
@@ -149,9 +210,11 @@ public class WebService {
         Node xmlResponse = this.transformToXML(vehicleArrivals,
                 "vehicle-departures",
                 "vehicle-departure",
-                "vehicle_id",
+                "vehicle-id",
                 "departure-time"
                 );
+
+        this.writeToXML(xmlResponse);
         return xmlResponse;
     }
 
@@ -283,7 +346,7 @@ public class WebService {
 
                 Element arrival_time = doc.createElement(lastChildName);
                 arrival_time.appendChild(doc.createTextNode(va.arrivalTime.toString()));
-                vaElement.appendChild(vehicle_id);
+                vaElement.appendChild(arrival_time);
             }
 
             return root;
@@ -294,4 +357,42 @@ public class WebService {
 
         return null;
     }
+
+    public void writeToXML(Node root) throws TransformerConfigurationException {
+        // Save the document to the disk file
+        TransformerFactory tranFactory = TransformerFactory.newInstance();
+        Transformer aTransformer = tranFactory.newTransformer();
+
+        // format the XML nicely
+        aTransformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
+
+        aTransformer.setOutputProperty(
+                "{http://xml.apache.org/xslt}indent-amount", "4");
+        aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+
+        DOMSource source = new DOMSource(root);
+        try {
+            FileWriter fos = new FileWriter("test.xml");
+            StreamResult result = new StreamResult(fos);
+            aTransformer.transform(source, result);
+
+        } catch (IOException | TransformerException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+    public Node appendNode(Node parentNode,
+                           String elementName,
+                           String elementValue) throws ParserConfigurationException {
+        Document doc = parentNode.getOwnerDocument();
+
+        Element newElement = doc.createElement(elementName);
+        newElement.appendChild(doc.createTextNode(elementValue));
+        parentNode.appendChild(newElement);
+
+        return parentNode;
+    }
+
 }

@@ -15,7 +15,8 @@ public class STPTMain {
                 "data/timetables.xml",
                 "data/statii-ratt.xml"
         );
-
+        //ws.getLastDepartureVehicle("5841");
+        ws.getLastArrivalVehicle("5841");
         Main main = new Main();
         main.configure().addRoutesBuilder(new CamelREST());
         main.configure().addRoutesBuilder(new CamelWebService());
