@@ -53,6 +53,7 @@ public class WebService {
         NodeList departuresStation = this.getAllDepartures(stationId).getChildNodes();
         Time furthestTime = new Time("05:00"); // We assume that the earliest possible for a bus to start is 05:00.
         Node lastVehicle = null;
+        Node newNode = null;
 
         for (int i = 0; i < departuresStation.getLength(); i++) {
             Node currentNode = departuresStation.item(i);
@@ -65,16 +66,17 @@ public class WebService {
             Time dsTime = new Time(dsTimeStr);
 
             if(furthestTime.compareTime(dsTime.toString(), furthestTime.toString()) == 1) {
-                System.out.println("DT: " + dsTimeStr + "; FT: " + furthestTime.toString());
                 furthestTime = dsTime;
 
                 String vehicleId = departureStation.getElementsByTagName("vehicle-id").item(0).getTextContent();
                 lastVehicle = vehiclesInteractor.getVehicle(Integer.parseInt(vehicleId));
-                lastVehicle = this.appendNode(lastVehicle, "departure-time", dsTimeStr);
+                newNode = lastVehicle.cloneNode(true);
+                Node departureTimeNode = this.createNode(newNode, "departure-time", dsTimeStr);
+                newNode.appendChild(departureTimeNode);
             }
         }
 
-        return lastVehicle;
+        return newNode;
 
     }
 
@@ -88,6 +90,7 @@ public class WebService {
     public Node getLastArrivalVehicle(String stationId) throws XPathExpressionException, TransformerConfigurationException, ParserConfigurationException {
         NodeList arrivalsStation = this.getAllArrivals(stationId).getChildNodes();
         Node lastVehicle = null;
+        Node newNode = null;
         Time closestTime = new Time("05:00"); // We assume that the latest possible for a bus to start is 05:00.
 
         for (int i = 0; i < arrivalsStation.getLength(); i++) {
@@ -101,18 +104,17 @@ public class WebService {
             Time dsTime = new Time(dsTimeStr);
 
             if(closestTime.compareTime(dsTime.toString(), closestTime.toString()) == 1) {
-                System.out.println("before DT: " + dsTimeStr + "; FT: " + closestTime.toString());
                 closestTime = dsTime;
 
                 String vehicleId = arrivalStation.getElementsByTagName("vehicle-id").item(0).getTextContent();
                 lastVehicle = vehiclesInteractor.getVehicle(Integer.parseInt(vehicleId));
-                lastVehicle = this.appendNode(lastVehicle, "arrival-time", dsTimeStr);
+                newNode = lastVehicle.cloneNode(true);
+                Node departureTimeNode = this.createNode(newNode, "arrival-time", dsTimeStr);
+                newNode.appendChild(departureTimeNode);
             }
-
-            System.out.println("DT: " + dsTimeStr + "; FT: " + closestTime.toString());
         }
 
-        return lastVehicle;
+        return newNode;
 
     }
 
@@ -353,16 +355,15 @@ public class WebService {
         }
     }
 
-    public Node appendNode(Node parentNode,
+    public Node createNode(Node parentNode,
                            String elementName,
                            String elementValue) throws ParserConfigurationException {
         Document doc = parentNode.getOwnerDocument();
 
         Element newElement = doc.createElement(elementName);
         newElement.appendChild(doc.createTextNode(elementValue));
-        parentNode.appendChild(newElement);
 
-        return parentNode;
+        return newElement;
     }
 
 }
