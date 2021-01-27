@@ -1,11 +1,13 @@
 package core;
 
 import models.TransportStation;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 /**
  * Class which implements an ad-hoc API adhering all the interactors to
@@ -35,7 +37,7 @@ public class WebService {
      * @return Returns a Node element representing the time the last vehicle will be at station s.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public Node getLastVehicleForStation(TransportStation s){
+    public Node getLastVehicleForStation(TransportStation s) throws XPathExpressionException {
         return null;
     }
 
@@ -70,7 +72,25 @@ public class WebService {
      * @throws XPathExpressionException @see XPathExpressionException
      */
 
-    public Node getClosestStation(double x, double y){
-        return null;
+    public Node getClosestStation(double x, double y) throws XPathExpressionException {
+        NodeList allStations = stationsInteractor.getAllStations();
+        Node closestStation = allStations.item(0);
+//
+//        for (int i = 0; i < allStations.getLength(); i++) {
+//            if (allStations.item(i).getNodeType() == Node.ELEMENT_NODE) {
+//                Element el = (Element) allStations.item(i);
+//
+//                if (el.getNodeName().contains("transport-station")) {
+//                    String stationName = el.getElementsByTagName("short-station-name").item(0).getTextContent();
+//                    String stationLatitude = el.getElementsByTagName("lat").item(0).getTextContent();
+//                    String stationLongitude = el.getElementsByTagName("long").item(0).getTextContent();
+//                    String stationId = el.getAttribute("id");
+//
+//                    System.out.println(stationName + "(" + stationId + "): (" + stationLatitude + ", " + stationLatitude + ")");
+//                }
+//            }
+//        }
+
+        return closestStation;
     }
 }
