@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "acca805a-ca4b-47f1-ab5e-ebba7ce28156",
+		"_postman_id": "0c457fee-829a-4bd2-9644-0507e05e60d0",
 		"name": "xml-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -365,6 +365,136 @@
 						"api",
 						"timetable",
 						"1207"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClosestStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/closestStation/?latitude=45.748261&longitude=21.219212",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"closestStation",
+						""
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "45.748261"
+						},
+						{
+							"key": "longitude",
+							"value": "21.219212"
+						}
+					]
+				},
+				"description": "Get closest station based on given latitude and longitude.\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getLastArrivalForStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8080/lastArrival/5841",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"lastArrival",
+						"5841"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllArrivalsForStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8080/allArrivals/5841",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"allArrivals",
+						"5841"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllDeparturesForStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8080/allDepartures/5841",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"allDepartures",
+						"5841"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLastDepartureForStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8080/lastDeparture/5841",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"lastDeparture",
+						"5841"
 					]
 				}
 			},
