@@ -1,0 +1,61 @@
+\chapter{Overview of the project in regards to requirements}
+
+\section{Implementation of the requirements}
+
+What follows is a short description of how and where the various requirements for the project have been implemented.
+
+\subsection{XML database}
+
+The database models a public transport system, representing three main components: Vehicles, transport stations, and timetables. The timetables data was colleted with the help of a Python script using the BeautifulSoup and requests libraries from the STPT raidfleet web service\footnote{\url{http://86.125.113.218:61978/html/timpi/ratt.php}}.
+
+The XML database is split into three files: \textbf{vehicles.xml}, \textbf{timetables.xml}, respectively \textbf{statii-ratt.xml}. XSD schemas have been created for all three databases in files: \textbf{vehicles.xsd}, \textbf{timetables.xsd}, and \textbf{statii-ratt.xsd}.
+
+\subsection{Parsing}
+
+For the parsing of the documents we have used JAXB and created Java POJO's\footnote{Plain Old Java Objects} with JAXB bindings. This offers support later to be able to use Apache Camel's \textbf{.type()} with \textbf{.bindingMode(RestBindingMode.xml)} in order to automatically marshall a request's XML body into a POJO. The classes are available in the \textbf{main.java.models} subpackage of our project.
+
+\subsection{XPath support}
+
+Support for parsing and XPath can be found in the \textbf{main.java.core} subpackage, the result of the JAXB parsing is marshalled into a DOM document, for which, later on \textbf{javax.xml.xpath.XPathFactory} is used in order to perform XPath queries.
+
+\subsection{Basic services}
+
+For the basic services, CRUD\footnote{Create, Read, Upload, and Delete} operations we're implemented for all the three models on top of the parsing and XPath facilities.
+
+\subsection{REST API}
+
+The CRUD operations defined in the previous subsection have been exposed using Apache Camel's \textbf{.bean()} mechanism using \textbf{camel-rest} and \textbf{camel-netty} to be able to serve HTTP requests.
+
+\subsection{Web Service}
+
+The web service is also exposed through Apache Camel, implementing more useful computations baesd on the XPath support, for querying informations such as what vehicles will pass to a given station, which station is closest in terms of location, when the first/last vehicles depart from a given station.
+
+\subsection{Testing the REST API and web service}
+
+For testing the functionalities that the REST API and the web service expose through Camel, we have used Postman, which is a highly versatile platform for developing API's. It allows us to perform requests and test responses for both our various services.
+
+\subsection{Frontend}
+
+
+\section{Division of the tasks among project members}
+
+The following table shows how we split the tasks in order to develop the project.
+
+\begin{center}
+  \begin{tabular}{ll}
+    Task & Asignee \\
+    \hline
+    Project structuring, dependency management & Maria Vonica \\
+    Documentation using JavaDoc syntax & Maria Vonica \\
+    Data Gathering & Alexandru Munteanu \\
+    Frontend & Zouel Fikar Jahjah \\
+    Data cleaning, construction of the XML database & Alexandru Munteanu, Maria Vonica \\
+    Parsing using JAXB, creation of models & Alexandru Munteanu \\
+    XPath support & Maria Vonica, Alexandru Munteanu \\
+    CRUD operations & Alexandru Munteanu \\
+    REST application & Alexandru Munteanu \\
+    Web service & Maria Vonica, Zouel Fikar Jahjah \\
+    REST application testing & Maria Vonica, Zouel Fikar Jahjah \\
+    XSD schema definitions & Zouel Fikar Jahjah \\
+    \end{tabular}
+  \end{center}
