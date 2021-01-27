@@ -3,7 +3,9 @@ import CamelComponents.CamelWebService;
 import core.StationsInteractor;
 import core.TimeTablesInteractor;
 import core.VehiclesInteractor;
+import core.WebService;
 import org.apache.camel.main.Main;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class STPTMain {
@@ -39,7 +41,8 @@ public class STPTMain {
 //                "data/statii-ratt.xml"
 //        );
 //
-//        ws.getClosestStation(45.737211, 45.737211);
+//        Node closestStation = ws.getClosestStation(45.748261, 21.219212);
+//        stationsInteractor.prettyPrintNode(closestStation);
         Main main = new Main();
         main.configure().addRoutesBuilder(new CamelREST());
         main.configure().addRoutesBuilder(new CamelWebService());

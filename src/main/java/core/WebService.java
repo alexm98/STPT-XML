@@ -1,6 +1,7 @@
 package core;
 
 import models.TransportStation;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -71,25 +72,37 @@ public class WebService {
      * @throws XPathExpressionException @see XPathExpressionException
      */
 
-    public Node getClosestStation(double x, double y) throws XPathExpressionException {
+    public Node getClosestStation(double currentLatitude, double currentLongitude) throws XPathExpressionException {
         NodeList allStations = stationsInteractor.getAllStations();
-        Node closestStation = allStations.item(0);
-//
-//        for (int i = 0; i < allStations.getLength(); i++) {
-//            if (allStations.item(i).getNodeType() == Node.ELEMENT_NODE) {
-//                Element el = (Element) allStations.item(i);
-//
-//                if (el.getNodeName().contains("transport-station")) {
-//                    String stationName = el.getElementsByTagName("short-station-name").item(0).getTextContent();
-//                    String stationLatitude = el.getElementsByTagName("lat").item(0).getTextContent();
-//                    String stationLongitude = el.getElementsByTagName("long").item(0).getTextContent();
-//                    String stationId = el.getAttribute("id");
-//
-//                    System.out.println(stationName + "(" + stationId + "): (" + stationLatitude + ", " + stationLatitude + ")");
-//                }
-//            }
-//        }
+        Node closestStation = null;
+        double shortestDistance = Integer.MAX_VALUE;
+
+        for (int i = 0; i < allStations.getLength(); i++) {
+            if (allStations.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                Element currentElement = (Element) allStations.item(i);
+
+                if (currentElement.getNodeName().contains("transport-station")) {
+                    double stationLatitude =
+                            Double.parseDouble(currentElement.getElementsByTagName("lat").item(0).getTextContent());
+                    double stationLongitude =
+                            Double.parseDouble(currentElement.getElementsByTagName("long").item(0).getTextContent());
+
+                    double distance =
+                            this.calculateDistance(currentLatitude, currentLongitude, stationLatitude, stationLongitude);
+
+                    if (distance < shortestDistance) {
+                        shortestDistance = distance;
+                        closestStation = currentElement;
+                    }
+                }
+            }
+        }
 
         return closestStation;
+    }
+
+    private double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2) {
+//        System.out.println("current(" + latitude1 + ", " + longitude1 + ") VS station(" + latitude2 + ", " + longitude2 + ")");
+        return Math.sqrt((latitude2-latitude1)*(latitude2-latitude1) + (longitude2-longitude1)*(longitude2-longitude1));
     }
 }

@@ -19,5 +19,9 @@ public class CamelWebService extends RouteBuilder {
         from("netty-http:http://0.0.0.0:8080/{station}")
                 .bean(webservice_methods, "getLastVehicleForStation(${header.station})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
+
+        from("netty-http:http://0.0.0.0:8080/coordinates/?latitude={latitude}&longitude={longitude}")
+                .bean(webservice_methods, "getClosestStation(${header.latitude},${header.longitude})")
+                .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
     }
 }
