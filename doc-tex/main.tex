@@ -43,6 +43,7 @@
 \sloppy
 \addtocontents{toc}{\protect\markboth{Contents}{Contents}}
 \tableofcontents
+\input{intro}
 \chapter*{Class Hierarchy}{
 \thispagestyle{empty}
 \markboth{Class Hierarchy}{Class Hierarchy}
@@ -593,7 +594,7 @@ Method which is used for creating a new element of the type transport station. T
    \item{
 \texttt{is\_invalid} -- Boolean: States whether the station is still in use.}
    \item{
-\texttt{verif} -- String: How the station is verified.}
+\texttt{verif} -- String: Method of the station is verified.}
    \item{
 \texttt{verif\_date} -- String: Date of the last verification.}
    \item{
@@ -1363,19 +1364,20 @@ Document: The XML document which has the requested vehicle replaced.
 \hbox to \hsize{\textit{ Package Contents\hfil Page}}
 \vskip .13in
 \hbox{{\bf  Classes}}
-\entityintro{Arrival}{models.Arrival}{}
-\entityintro{Direction}{models.Direction}{}
-\entityintro{StationsWrapper}{models.StationsWrapper}{}
-\entityintro{Time}{models.Time}{}
-\entityintro{TimeTable}{models.TimeTable}{}
-\entityintro{TimetablesWrapper}{models.TimetablesWrapper}{}
-\entityintro{TransportStation}{models.TransportStation}{}
+\entityintro{Arrival}{models.Arrival}{Class which holds the implementation for an XML element of the type arrival.}
+\entityintro{Direction}{models.Direction}{Class which holds the implementation for an XML document of the type direction.}
+\entityintro{StationsWrapper}{models.StationsWrapper}{Class which holds the wrapper for objects of type TransportStation.}
+\entityintro{Time}{models.Time}{Class which holds the implementation for time handling.}
+\entityintro{TimeTable}{models.TimeTable}{Class which holds the implementation for an XML element of the type timetable.}
+\entityintro{TimetablesWrapper}{models.TimetablesWrapper}{Class which holds the wrapper for the Timetable object.}
+\entityintro{TransportStation}{models.TransportStation}{Class which holds the implementation for JAXB binding for a transport station XML element.}
 \entityintro{Vehicle}{models.Vehicle}{Class which holds the implementation for a vehicle object.}
 \entityintro{VehiclesWrapper}{models.VehiclesWrapper}{Class which holds the wrapper for the Vehicle object.}
 \vskip .1in
 \vskip .1in
 \section{\label{models.Arrival}Class Arrival}{
 \hypertarget{models.Arrival}{}\vskip .1in 
+Class which holds the implementation for an XML element of the type arrival. An arrival element represents the time when a transport vehicle arrives at a specific transport station, and it is represented as follows in the XML document: \texttt{\small Regele Carol 15:43  }\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Arrival
@@ -1389,7 +1391,7 @@ public class Arrival
 \subsection{Constructor summary}{
 \begin{verse}
 \hyperlink{models.Arrival()}{{\bf Arrival()}} \\
-\hyperlink{models.Arrival(models.TransportStation, models.Time)}{{\bf Arrival(TransportStation, Time)}} \\
+\hyperlink{models.Arrival(models.TransportStation, models.Time)}{{\bf Arrival(TransportStation, Time)}} Constructor for the Arrival class.\\
 \end{verse}
 }
 \subsection{Method summary}{
@@ -1425,6 +1427,22 @@ public Arrival()\end{lstlisting} %end signature
 \hypertarget{models.Arrival(models.TransportStation, models.Time)}{{\bf  Arrival}\\}
 \begin{lstlisting}[frame=none]
 public Arrival(TransportStation station,Time t)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor for the Arrival class.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{station} -- TransportStation: An object representing the transport-station where a vehicle arrives.}
+   \item{
+\texttt{t} -- Time: Time of arrival for that vehicle.}
+  \end{itemize}
+}%end item
+\end{itemize}
 }%end item
 \end{itemize}
 }
@@ -1442,6 +1460,7 @@ public java.lang.String toString()\end{lstlisting} %end signature
 }
 \section{\label{models.Direction}Class Direction}{
 \hypertarget{models.Direction}{}\vskip .1in 
+Class which holds the implementation for an XML document of the type direction. A direction element represents the direction in which a vehicle goes. 1 represents going to, 0 represents coming from. A direction element is represented as follows in the XML document: \texttt{\small ...  ...  ...   }\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Direction
@@ -1455,7 +1474,7 @@ public class Direction
 \subsection{Constructor summary}{
 \begin{verse}
 \hyperlink{models.Direction()}{{\bf Direction()}} \\
-\hyperlink{models.Direction(int, java.util.ArrayList)}{{\bf Direction(int, ArrayList)}} \\
+\hyperlink{models.Direction(int, java.util.ArrayList)}{{\bf Direction(int, ArrayList)}} Constructor for the Direction class.\\
 \end{verse}
 }
 \subsection{Fields}{
@@ -1486,12 +1505,29 @@ public Direction()\end{lstlisting} %end signature
 \hypertarget{models.Direction(int, java.util.ArrayList)}{{\bf  Direction}\\}
 \begin{lstlisting}[frame=none]
 public Direction(int way,java.util.ArrayList arrivals)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor for the Direction class.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{way} -- Integer: 0 represents coming, 1 represents going.}
+   \item{
+\texttt{arrivals} -- ArrayList of type Arrival: Elements of the type arrival.}
+  \end{itemize}
+}%end item
+\end{itemize}
 }%end item
 \end{itemize}
 }
 }
 \section{\label{models.StationsWrapper}Class StationsWrapper}{
 \hypertarget{models.StationsWrapper}{}\vskip .1in 
+Class which holds the wrapper for objects of type TransportStation. The wrapper is represented by the following type of element in the XML document: \texttt{\small ...  ...  * ... *   }\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class StationsWrapper
@@ -1503,13 +1539,13 @@ public class StationsWrapper
 }
 \subsection{Constructor summary}{
 \begin{verse}
-\hyperlink{models.StationsWrapper()}{{\bf StationsWrapper()}} \\
+\hyperlink{models.StationsWrapper()}{{\bf StationsWrapper()}} Constructor of the StationsWrapper class.\\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{models.StationsWrapper.getArticles()}{{\bf getArticles()}} \\
-\hyperlink{models.StationsWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} \\
+\hyperlink{models.StationsWrapper.getArticles()}{{\bf getArticles()}} Method which returns all the objects of type transport-station which appear in the XML document.\\
+\hyperlink{models.StationsWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} Set the TransportStation list with a given one.\\
 \end{verse}
 }
 \subsection{Fields}{
@@ -1529,6 +1565,13 @@ public class StationsWrapper
 \hypertarget{models.StationsWrapper()}{{\bf  StationsWrapper}\\}
 \begin{lstlisting}[frame=none]
 public StationsWrapper()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the StationsWrapper class.
+}
+\end{itemize}
 }%end item
 \end{itemize}
 }
@@ -1540,18 +1583,43 @@ public StationsWrapper()\end{lstlisting} %end signature
 \hypertarget{models.StationsWrapper.getArticles()}{{\bf  getArticles}\\}
 \begin{lstlisting}[frame=none]
 public java.util.List getArticles()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method which returns all the objects of type transport-station which appear in the XML document.
+}
+\item{{\bf  Returns} -- 
+A list composed of TransportStation objects. 
+}%end item
+\end{itemize}
 }%end item
 \item{ 
 \index{setArticles(List)}
 \hypertarget{models.StationsWrapper.setArticles(java.util.List)}{{\bf  setArticles}\\}
 \begin{lstlisting}[frame=none]
 public void setArticles(java.util.List transport_stations)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Set the TransportStation list with a given one.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{transport\_stations} -- A list of elements of the type TransportStation.}
+  \end{itemize}
+}%end item
+\end{itemize}
 }%end item
 \end{itemize}
 }
 }
 \section{\label{models.Time}Class Time}{
 \hypertarget{models.Time}{}\vskip .1in 
+Class which holds the implementation for time handling. Time is used by the timetable element, through the arrival element.\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Time
@@ -1612,6 +1680,7 @@ public java.lang.String toString()\end{lstlisting} %end signature
 }
 \section{\label{models.TimeTable}Class TimeTable}{
 \hypertarget{models.TimeTable}{}\vskip .1in 
+Class which holds the implementation for an XML element of the type timetable. A timetable element is responsible of holding information about the directions and arrival for a specific vehicle. It is represented as follows in the XML document: \texttt{\small ...  ...  ...     ...  ...  ...    }\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class TimeTable
@@ -1655,6 +1724,7 @@ public TimeTable()\end{lstlisting} %end signature
 }
 \section{\label{models.TimetablesWrapper}Class TimetablesWrapper}{
 \hypertarget{models.TimetablesWrapper}{}\vskip .1in 
+Class which holds the wrapper for the Timetable object. The wrapper is represented by the following type of element in the XML document: \texttt{\small ...  ...  ...     ...  ...  ...    ...  ...   }\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class TimetablesWrapper
@@ -1715,6 +1785,7 @@ public void setArticles(java.util.List timetables)\end{lstlisting} %end signatur
 }
 \section{\label{models.TransportStation}Class TransportStation}{
 \hypertarget{models.TransportStation}{}\vskip .1in 
+Class which holds the implementation for JAXB binding for a transport station XML element. A transport station element has the following structure in the XML document: \texttt{\small 2406 Tv9b Bv Sudului\_2 Bulevardul Sudului / Hotel Lido (AEM) Sudului Sudului 45.737211 21.250093 0 dup script 11.12.16. http://maps.google.com/maps?q=Bulevardul\%20Sudului\%20/\%20Hotel\%20Lido@45.737211,21.250093 0 } Using the StationsInteractor class we can perform the following operations such as delete, add, edit and query.\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class TransportStation
@@ -1740,13 +1811,13 @@ public class TransportStation
 \subsection{Constructor summary}{
 \begin{verse}
 \hyperlink{models.TransportStation()}{{\bf TransportStation()}} \\
-\hyperlink{models.TransportStation(int)}{{\bf TransportStation(int)}} \\
-\hyperlink{models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} \\
+\hyperlink{models.TransportStation(int)}{{\bf TransportStation(int)}} Constructor for the TransportStation class, using only a station id for creation.\\
+\hyperlink{models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}} Constructor for the TransportStation object.\\
 \end{verse}
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{models.TransportStation.toString()}{{\bf toString()}} \\
+\hyperlink{models.TransportStation.toString()}{{\bf toString()}} Override of string form for a TransportStation object.\\
 \end{verse}
 }
 \subsection{Fields}{
@@ -1837,12 +1908,66 @@ public TransportStation()\end{lstlisting} %end signature
 \hypertarget{models.TransportStation(int)}{{\bf  TransportStation}\\}
 \begin{lstlisting}[frame=none]
 public TransportStation(int station_id)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor for the TransportStation class, using only a station id for creation.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{station\_id} -- Id of the station.}
+  \end{itemize}
+}%end item
+\end{itemize}
 }%end item
 \item{ 
 \index{TransportStation(int, String, int, String, String, String, String, double, double, Boolean, String, String, String, String)}
 \hypertarget{models.TransportStation(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, double, java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf  TransportStation}\\}
 \begin{lstlisting}[frame=none]
 public TransportStation(int lineID,java.lang.String lineName,int stationID,java.lang.String rawStationName,java.lang.String friendlyStationName,java.lang.String shortStationName,java.lang.String junctionName,double lat,double longitude,java.lang.Boolean is_invalid,java.lang.String verified,java.lang.String verification_date,java.lang.String gmaps_links,java.lang.String info_comments)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor for the TransportStation object. All the necessary parameters for constructing a transport station element are set here.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{lineID} -- int: Id of the line for the transport station. Example: 1266.}
+   \item{
+\texttt{lineName} -- String: Name of the line. Example: Tv4.}
+   \item{
+\texttt{stationID} -- int: id of the station.}
+   \item{
+\texttt{rawStationName} -- String: Raw name for the station. Example: P-ta Crucii\_2.}
+   \item{
+\texttt{friendlyStationName} -- String: Friendlier version of the raw station name. Example: Piata Crucii (Torontalului)}
+   \item{
+\texttt{shortStationName} -- String: Shorter version for the station name. Example: P-ta Crucii.}
+   \item{
+\texttt{junctionName} -- String: Name of the junction. Example: P-ta Crucii.}
+   \item{
+\texttt{lat} -- double: Latitude of the station location.}
+   \item{
+\texttt{longitude} -- double: Longitude of the station location.}
+   \item{
+\texttt{is\_invalid} -- Boolean: States whether the station is still in use.}
+   \item{
+\texttt{verified} -- String: Method of the station is verified.}
+   \item{
+\texttt{verification\_date} -- String: Date of the last verification.}
+   \item{
+\texttt{gmaps\_links} -- String: Link for google maps location.}
+   \item{
+\texttt{info\_comments} -- String: More info.}
+  \end{itemize}
+}%end item
+\end{itemize}
 }%end item
 \end{itemize}
 }
@@ -1854,13 +1979,23 @@ public TransportStation(int lineID,java.lang.String lineName,int stationID,java.
 \hypertarget{models.TransportStation.toString()}{{\bf  toString}\\}
 \begin{lstlisting}[frame=none]
 public java.lang.String toString()\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Override of string form for a TransportStation object.
+}
+\item{{\bf  Returns} -- 
+Pretty printed format of a vehicle instance. 
+}%end item
+\end{itemize}
 }%end item
 \end{itemize}
 }
 }
 \section{\label{models.Vehicle}Class Vehicle}{
 \hypertarget{models.Vehicle}{}\vskip .1in 
-Class which holds the implementation for a vehicle object.\vskip .1in 
+Class which holds the implementation for a vehicle object. A vehicle is represented as follows in the XML document: \texttt{\small M41 Bus  }Operations of the type edit, add, delete and query involving the vehicle element will be done using the Vehicle Interactor class.\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class Vehicle
@@ -1961,7 +2096,7 @@ Pretty printed format of a vehicle instance.
 }
 \section{\label{models.VehiclesWrapper}Class VehiclesWrapper}{
 \hypertarget{models.VehiclesWrapper}{}\vskip .1in 
-Class which holds the wrapper for the Vehicle object.\vskip .1in 
+Class which holds the wrapper for the Vehicle object. The wrapper is represented by the following type of element in the XML document: \texttt{\small ...  ...  * ... *   }\vskip .1in 
 \subsection{Declaration}{
 \begin{lstlisting}[frame=none]
 public class VehiclesWrapper
@@ -1978,7 +2113,7 @@ public class VehiclesWrapper
 }
 \subsection{Method summary}{
 \begin{verse}
-\hyperlink{models.VehiclesWrapper.getArticles()}{{\bf getArticles()}} Method which returns all the vehicles which appear in the XML document.\\
+\hyperlink{models.VehiclesWrapper.getArticles()}{{\bf getArticles()}} Method which returns all the objects of type vehicle which appear in the XML document.\\
 \hyperlink{models.VehiclesWrapper.setArticles(java.util.List)}{{\bf setArticles(List)}} Set a list of vehicles.\\
 \end{verse}
 }
@@ -2021,10 +2156,10 @@ public java.util.List getArticles()\end{lstlisting} %end signature
 \item{
 {\bf  Description}
 
-Method which returns all the vehicles which appear in the XML document.
+Method which returns all the objects of type vehicle which appear in the XML document.
 }
 \item{{\bf  Returns} -- 
-All found elements of type Vehicle. 
+A list composed of Vehicle objects. 
 }%end item
 \end{itemize}
 }%end item
