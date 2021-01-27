@@ -143,93 +143,93 @@
             <direction way="1">
                 <arrival>
                     <station id="3105">P-ta R. Maria</station>
-                    <time>**:**</time>
+                    <time>16:02</time>
                 </arrival>
                 <arrival>
                     <station id="6841">P-ta 700</station>
-                    <time>**:**</time>
+                    <time>16:07</time>
                 </arrival>
                 <arrival>
                     <station id="6181">Circumvalatiunii</station>
-                    <time>**:**</time>
+                    <time>16:10</time>
                 </arrival>
                 <arrival>
                     <station>Mendeleev</station>
-                    <time>**:**</time>
+                    <time>16:14</time>
                 </arrival>
                 <arrival>
                     <station id="8760">Balta Verde</station>
-                    <time>**:**</time>
+                    <time>16:18</time>
                 </arrival>
                 <arrival>
                     <station>Zalau</station>
-                    <time>**:**</time>
+                    <time>16:21</time>
                 </arrival>
                 <arrival>
                     <station id="3589">Macilor</station>
-                    <time>**:**</time>
+                    <time>16:25</time>
                 </arrival>
                 <arrival>
                     <station id="10185">A. Lapusneanu</station>
-                    <time>**:**</time>
+                    <time>16:30</time>
                 </arrival>
                 <arrival>
                     <station id="8201">G. Alexandrescu</station>
-                    <time>**:**</time>
+                    <time>16:32</time>
                 </arrival>
                 <arrival>
                     <station id="7201">Madona</station>
-                    <time>**:**</time>
+                    <time>16:35</time>
                 </arrival>
                 <arrival>
                     <station id="3650">Razboieni</station>
-                    <time>**:**</time>
+                    <time>16:40</time>
                 </arrival>
             </direction>
             <direction way="0">
                 <arrival>
                     <station id="3650">Razboieni</station>
-                    <time>**:**</time>
+                    <time>16:10</time>
                 </arrival>
                 <arrival>
                     <station id="3648">A. Guttenbrun</station>
-                    <time>**:**</time>
+                    <time>16:12</time>
                 </arrival>
                 <arrival>
                     <station id="7201">Madona</station>
-                    <time>**:**</time>
+                    <time>16:15</time>
                 </arrival>
                 <arrival>
                     <station id="8201">G. Alexandrescu</station>
-                    <time>**:**</time>
+                    <time>16:17</time>
                 </arrival>
                 <arrival>
                     <station id="10185">A. Lapusneanu</station>
-                    <time>**:**</time>
+                    <time>16:20</time>
                 </arrival>
                 <arrival>
                     <station id="3589">Macilor</station>
-                    <time>**:**</time>
+                    <time>16:24</time>
                 </arrival>
                 <arrival>
                     <station>Zalau</station>
-                    <time>**:**</time>
+                    <time>16:30</time>
                 </arrival>
                 <arrival>
                     <station id="8760">Balta Verde</station>
-                    <time>**:**</time>
+                    <time>16:32</time>
                 </arrival>
                 <arrival>
                     <station>Mendeleev</station>
-                    <time>**:**</time>
+                    <time>16:37</time>
                 </arrival>
                 <arrival>
                     <station id="6181">Circumvalatiunii</station>
-                    <time>**:**</time>
+                    <time>16:40</time>
                 </arrival>
                 <arrival>
                     <station id="3105">P-ta R. Maria</station>
-                    <time>**:**</time>
+                    <time>16:42</time>
                 </arrival>
             </direction>
         </timetable>

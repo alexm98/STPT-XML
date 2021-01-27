@@ -47,7 +47,8 @@ public class CamelREST extends RouteBuilder {
         restConfiguration().component("netty-http")
                 .host("localhost")
                 .port("9091")
-                .bindingMode(RestBindingMode.auto);
+                .bindingMode(RestBindingMode.auto)
+                .enableCORS(true);
 
         rest("/api")
                 // Begin: Stations REST endpoints
