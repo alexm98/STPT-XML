@@ -59,35 +59,40 @@
             </div> &nbsp;
 
             <!-- Put buttons -->
-            <div style="display: flex; text-align: center;">
+            <!-- <div style="display: flex; text-align: center;">
                 <div>
                     <button class="btn btn-info mainButton" ng-click="showUpdateInput('station')"> Update a Station
                     </button>
                 </div>
                 &nbsp;
                 <div>
-                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('vehicle')"> Update a Vehicle </button>
+                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('vehicle')"> Update a Vehicle
+                    </button>
                 </div>
                 &nbsp;
                 <div>
-                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('table')"> Update a Time Table </button>
+                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('table')"> Update a Time Table
+                    </button>
                 </div>
                 &nbsp;
 
-            </div> &nbsp;
+            </div> &nbsp; -->
 
             <!-- Post & Delete buttons -->
-            <div style="display: flex; text-align: center;">
+            <!-- <div style="display: flex; text-align: center;">
                 <div>
-                    <button class="btn btn-success mainButton" ng-click="showAddInputs('station')"> Add a Station </button>
+                    <button class="btn btn-success mainButton" ng-click="showAddInputs('station')"> Add a Station
+                    </button>
                 </div>
                 &nbsp;
                 <div>
-                    <button class="btn btn-success mainButton" ng-click="showAddInputs('vehicle')"> Add a Vehicle </button>
+                    <button class="btn btn-success mainButton" ng-click="showAddInputs('vehicle')"> Add a Vehicle
+                    </button>
                 </div>
                 &nbsp;
                 <div>
-                    <button class="btn btn-success mainButton" ng-click="showAddInputs('table')"> Add a Time Table </button>
+                    <button class="btn btn-success mainButton" ng-click="showAddInputs('table')"> Add a Time Table
+                    </button>
                 </div>
                 &nbsp;
 
@@ -108,38 +113,39 @@
                 &nbsp;
 
 
-            </div> <br />
+            </div> <br /> -->
 
 
             <!-- clear  button -->
             <div>
                 <br />
-                <button class="btn btn-primary mainButton" ng-click="clear()"> clear </button>
+                <button id="click" class="btn btn-primary mainButton" ng-click="clear()"> clear </button>
             </div><br /><br />
             <hr />
 
 
             <!-- Search input fields -->
-            <div ng-show="enableStationInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputStaion"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getStationById()"> Search </button>
-            </div>
+            <div id="search">
+                <div ng-show="enableStationInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="inputStaion" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getStationById()"> Search </button>
+                </div>
 
-            <div ng-show="enableVehicleInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="inputVehicle" placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getVehicleByID()"> Search </button>
-            </div>
+                <div ng-show="enableVehicleInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="inputVehicle" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getVehicleByID()"> Search </button>
+                </div>
 
-            <div ng-show="enableTableInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputTable"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
+                <div ng-show="enableTableInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="inputTable" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
+                </div>
             </div>
-
             <!-- Delete input fields -->
-            <div ng-show="enableStationDeleteInput">
+            <!-- <div ng-show="enableStationDeleteInput">
                 <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
                     ng-model="deleteStationID" placeholder="Enter an ID">
                 <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteStaion()"> Delete </button>
@@ -155,58 +161,61 @@
                 <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
                     ng-model="deleteTableID" placeholder="Enter an ID">
                 <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteTable()"> Delete </button>
-            </div>
+            </div> -->
 
             <!-- Update/add inputs files -->
-            <div ng-show="enableStationUpdateInput || enableStationAddInput">
-            <div>
-                <input class=" input-field center" style="padding: 10px; width: 70%;" ng-show = "enableStationUpdateInput" type="text"
-                    ng-model="putReplaceStation" placeholder="Replace with Station ID">
+            <!-- <div ng-show="enableStationUpdateInput || enableStationAddInput">
+                <div>
+                    <input class=" input-field center" style="padding: 10px; width: 70%;"
+                        ng-show="enableStationUpdateInput" type="text" ng-model="putReplaceStation"
+                        placeholder="Replace with Station ID">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putStationID" placeholder="Enter an ID">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putStationID" placeholder="Enter an ID">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putLineID" placeholder="Enter line ID">    
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putLineID" placeholder="Enter line ID">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putLineName" placeholder="Enter line name">    
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putLineName" placeholder="Enter line name">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putRowName" placeholder="Enter raw station name">    
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putRowName" placeholder="Enter raw station name">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putFriendlyName" placeholder="Enter friendly station name">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putFriendlyName" placeholder="Enter friendly station name">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putshortName" placeholder="Enter short station name">   
-                 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putLat" placeholder="Enter lat">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putshortName" placeholder="Enter short station name">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putLong" placeholder="Enter long">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="putLat"
+                        placeholder="Enter lat">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putInvalid" placeholder="Enter invalid">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="putLong"
+                        placeholder="Enter long">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putVerified" placeholder="Enter invalid">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putInvalid" placeholder="Enter invalid">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putVerficationData" placeholder="Enter verification date">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putVerified" placeholder="Enter invalid">
 
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putGmaps" placeholder="Enter gmaps">   
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putVerficationData" placeholder="Enter verification date">
 
-                <input class="input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="putInfoComments" placeholder="Enter info comments">    
-                <br /><br />
-                <button class="btn btn-primary input-button" ng-show = "enableStationUpdateInput" ng-click="updateStation()"> Update </button>    
-                <button class="btn btn-primary input-button" ng-show = "enableStationAddInput" ng-click="addStation()"> Update </button>    
-            </div>
-            </div>
-            
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putGmaps" placeholder="Enter gmaps">
+
+                    <input class="input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="putInfoComments" placeholder="Enter info comments">
+                    <br /><br />
+                    <button class="btn btn-primary input-button" ng-show="enableStationUpdateInput"
+                        ng-click="updateStation()"> Update </button>
+                    <button class="btn btn-primary input-button" ng-show="enableStationAddInput"
+                        ng-click="addStation()"> Update </button>
+                </div>
+            </div> -->
+
 
 
 
@@ -216,7 +225,7 @@
 
 
             <!-- result -->
-            <div>
+            <div id="result">
                 <div ng-if="stationsResult">
                     <div class="input-icons">
                         <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
@@ -426,6 +435,16 @@
 
 
     <br /><br /><br /><br />
+
+
+    <!-- <script>
+        $(function () {
+            $('#click').click(function () {
+                document.getElementById('result').innerHTML = "";
+                document.getElementById('search').innerHTML = "";
+            });
+        });
+    </script> -->
 </body>
 
 </html>

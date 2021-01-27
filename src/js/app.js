@@ -49,6 +49,8 @@ app.controller("xmlCtrl", function ($scope, $http) {
         $scope.putVerficationData = null;
         $scope.putGmaps = null;
         $scope.putInfoComments = null;
+
+        
     }
 
     $scope.showSearchInput = function (type) {
@@ -320,7 +322,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
 
         var xmlBodyRequet = x2js.json2xml_str(params);
 
-        put(basedUrl, xmlBodyRequet).then(
+        post(basedUrl, xmlBodyRequet).then(
             function (success) {
                 $scope.getStations();
                 
