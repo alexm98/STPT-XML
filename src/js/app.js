@@ -11,17 +11,44 @@ app.controller("xmlCtrl", function ($scope, $http) {
 
     $scope.clear = function () {
         $scope.stationsResult = null;
-        $scope.stationByIdResult = null;
         $scope.vehiclesResult = null;
-        $scope.vehicleByIdResult = null;
-        $scope.tablesResult = null;
         $scope.tableByIdResult = null;
+
+        $scope.stationByIdResult = null;
+        $scope.vehicleByIdResult = null;
+        $scope.tableByIdResult = null;
+
         $scope.enableVehicleInput = null;
         $scope.enableStationInput = null;
         $scope.enableTableInput = null;
+
         $scope.enableStationDeleteInput = null;
         $scope.enableVehicleDeleteInput = null;
         $scope.enableTableDeleteInput = null;
+
+
+        $scope.enableTableUpdateInput = null;
+        $scope.enableVehicleUpdateInput = null;
+        $scope.enableStationUpdateInput = null;
+
+        $scope.enableStationAddInput = null;
+        $scope.enableVehicleAddInput = null;
+        $scope.enableTableAddInput = null;
+        
+
+
+        $scope.putStationID = null;
+        $scope.putLineID = null;
+        $scope.putLineName = null;
+        $scope.putRowName = null;
+        $scope.putFriendlyName = null;
+        $scope.putshortName = null;
+        $scope.putLat = null;
+        $scope.putLong = null;
+        $scope.putInvalid = null;
+        $scope.putVerficationData = null;
+        $scope.putGmaps = null;
+        $scope.putInfoComments = null;
     }
 
     $scope.showSearchInput = function (type) {
@@ -35,6 +62,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
         }
 
     }
+    
     $scope.showDeleteInput = function (type) {
         $scope.clear();
         if (type == 'station') {
@@ -43,6 +71,31 @@ app.controller("xmlCtrl", function ($scope, $http) {
             $scope.enableVehicleDeleteInput = true;
         } else if (type == 'table') {
             $scope.enableTableDeleteInput = true;
+        }
+
+    }
+
+    $scope.showUpdateInput = function (type) {
+        $scope.clear();
+        if (type == 'station') {
+            $scope.enableStationUpdateInput = true;
+        } else if (type == 'vehicle') {
+            $scope.enableVehicleUpdateInput = true;
+        } else if (type == 'table') {
+            $scope.enableTableUpdateInput = true;
+        }
+
+    }
+
+
+    $scope.showAddInputs = function (type) {
+        $scope.clear();
+        if (type == 'station') {
+            $scope.enableStationAddInput = true;
+        } else if (type == 'vehicle') {
+            $scope.enableVehicleAddInput = true;
+        } else if (type == 'table') {
+            $scope.enableTableAddInput = true;
         }
 
     }
@@ -194,7 +247,90 @@ app.controller("xmlCtrl", function ($scope, $http) {
 
 
 
+    $scope.addStation = function () { 
+        $scope.clear();
+        basedUrl = 'http://localhost:9091/api/station';
+        
 
+        var params = {}
+        params['transport-station'] = {}
+
+        params['transport-station']['_id'] = $scope.putStationID
+        params['transport-station']['line-id'] = $scope.putLineID
+        params['transport-station']['line-name'] = $scope.putLineName
+
+        params['transport-station']['raw-station-name'] = $scope.putRowName
+        params['transport-station']['friendly-station-name'] = $scope.putFriendlyName
+        params['transport-station']['short-station-name'] = $scope.putshortName
+        
+        params['transport-station']['lat'] = $scope.putLat
+        params['transport-station']['long'] = $scope.putLong
+        params['transport-station']['invalid'] = $scope.putInvalid
+
+        params['transport-station']['verified'] = $scope.putVerified
+        params['transport-station']['verification-date'] = $scope.putVerficationData
+        params['transport-station']['gmaps-link'] = $scope.putGmaps
+        params['transport-station']['info-comments'] = $scope.putInfoComments
+
+
+
+        var xmlBodyRequet = x2js.json2xml_str(params);
+
+        put(basedUrl, xmlBodyRequet).then(
+            function (success) {
+                $scope.getStations();
+                
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+
+    }
+
+
+
+
+    $scope.updateStation = function () { 
+        $scope.clear();
+        basedUrl = 'http://localhost:9091/api/station/' + $scope.putReplaceStation;
+        
+
+        var params = {}
+        params['transport-station'] = {}
+
+        params['transport-station']['_id'] = $scope.putStationID
+        params['transport-station']['line-id'] = $scope.putLineID
+        params['transport-station']['line-name'] = $scope.putLineName
+
+        params['transport-station']['raw-station-name'] = $scope.putRowName
+        params['transport-station']['friendly-station-name'] = $scope.putFriendlyName
+        params['transport-station']['short-station-name'] = $scope.putshortName
+        
+        params['transport-station']['lat'] = $scope.putLat
+        params['transport-station']['long'] = $scope.putLong
+        params['transport-station']['invalid'] = $scope.putInvalid
+
+        params['transport-station']['verified'] = $scope.putVerified
+        params['transport-station']['verification-date'] = $scope.putVerficationData
+        params['transport-station']['gmaps-link'] = $scope.putGmaps
+        params['transport-station']['info-comments'] = $scope.putInfoComments
+
+
+
+        var xmlBodyRequet = x2js.json2xml_str(params);
+
+        put(basedUrl, xmlBodyRequet).then(
+            function (success) {
+                $scope.getStations();
+                
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+
+    }
 
 
 
@@ -231,7 +367,11 @@ app.controller("xmlCtrl", function ($scope, $http) {
     }
 
     function post(url, params) {
-        return $http.post(url, JSON.stringify(params));
+        return $http.post(url, params);
+        // return $http.post(url, JSON.stringify(params));
+    }
+    function put(url, params) {
+        return $http.put(url, params);
     }
 
 

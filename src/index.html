@@ -15,276 +15,284 @@
 </head>
 
 <body ng-app="xml" ng-controller="xmlCtrl">
-    <img src="js/picture/cover.jpg" style="width: 100%; height: 60%">&nbsp;
-    <div style="padding-left:10px ;">
-        <!-- Get & Put buttons -->
+    <div>
+        <img src="js/picture/cover.jpg" style="width: 100%; height: 60%">&nbsp;
+        <div style="padding-left:10px ;">
+            <!-- Get buttons -->
 
-        <div style="display: flex; text-align: center;">
-            <div>
-                <button class="btn btn-primary mainButton" ng-click="getStations()"> Stations </button>
-            </div>
-            &nbsp;
-
-            <div>
-                <button class="btn btn-primary mainButton" ng-click="getVehicles()"> Vehicles </button>
-            </div>
-            &nbsp;
-
-
-            <div>
-                <button class="btn btn-primary mainButton" ng-click="getTimeTables()"> Time Tables </button>
-            </div>
-            &nbsp;
-
-            <div>
-                <button class="btn btn-primary mainButton" ng-click="showSearchInput('station')"> Get Station </button>
-            </div>
-            &nbsp;
-
-            <div>
-                <button class="btn btn-primary mainButton" ng-click="showSearchInput('vehicle')"> Get Vehicle </button>
-            </div>
-            &nbsp;
-
-            <div>
-                <button class="btn btn-primary mainButton" ng-click="showSearchInput('table')"> Get time Table </button>
-            </div>
-            &nbsp;
-
-            <div>
-                <button class="btn btn-info mainButton" ng-click="showDeleteInput('station')"> Update a Station </button>
-            </div>
-            &nbsp;
-            <div>
-                <button class="btn btn-info mainButton" ng-click=""> Update a Vehicle </button>
-            </div>
-            &nbsp;
-            <div>
-                <button class="btn btn-info mainButton" ng-click=""> Update a Time Table </button>
-            </div>
-            &nbsp;
-
-        </div> &nbsp;
-
-        
-
-
-
-        <!-- Post & Delete buttons -->
-        <div style="display: flex; text-align: center;">
-            <div>
-                <button class="btn btn-success mainButton" ng-click=""> Add a Station </button>
-            </div>
-            &nbsp;
-            <div>
-                <button class="btn btn-success mainButton" ng-click=""> Add a Vehicle </button>
-            </div>
-            &nbsp;
-            <div>
-                <button class="btn btn-success mainButton" ng-click=""> Add a Time Table </button>
-            </div>
-            &nbsp;
-
-            <div>
-                <button class="btn btn-danger mainButton" ng-click="showDeleteInput('station')"> Delete a Station </button>
-            </div>
-            &nbsp;
-            <div>
-                <button class="btn btn-danger mainButton" ng-click="showDeleteInput('vehicle')"> Delete a Vehicle </button>
-            </div>
-            &nbsp;
-            <div>
-                <button class="btn btn-danger mainButton" ng-click="showDeleteInput('table')"> Delete a Time Table </button>
-            </div>
-            &nbsp;
-
-           
-        </div> <br />
-
-
-
-
-        <!-- clear  button -->
-        <div>
-            <br />
-            <button class="btn btn-primary mainButton" ng-click="clear()"> clear </button>
-        </div><br /><br /><hr />
-        
-
-        <!-- Search input fields -->
-        <div ng-show="enableStationInput">
-            <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputStaion"
-                placeholder="Enter an ID">
-            <button class="btn btn-primary" style="padding: 12px;" ng-click="getStationById()"> Search </button>
-        </div>
-
-        <div ng-show="enableVehicleInput">
-            <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputVehicle"
-                placeholder="Enter an ID">
-            <button class="btn btn-primary" style="padding: 12px;" ng-click="getVehicleByID()"> Search </button>
-        </div>
-
-        <div ng-show="enableTableInput">
-            <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputTable"
-                placeholder="Enter an ID">
-            <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
-        </div>
-
-        <!-- Delete input fields -->
-        <div ng-show="enableStationDeleteInput">
-            <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="deleteStationID"
-                placeholder="Enter an ID">
-            <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteStaion()"> Delete </button>
-        </div>
-
-        <div ng-show="enableVehicleDeleteInput">
-            <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="deleteVehicleID"
-                placeholder="Enter an ID">
-            <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteVehicle()"> Delete </button>
-        </div>
-
-        <div ng-show="enableTableDeleteInput">
-            <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="deleteTableID"
-                placeholder="Enter an ID">
-            <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteTable()"> Delete </button>
-        </div>
-
-        <!-- result -->
-        <div>
-            <div ng-if="stationsResult">
-                <div class="input-icons">
-                    <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
-                    </i>
-
-                    <input class=" input-field center" style="padding: 10px; width: 100%;" type="text" ng-model="search"
-                        placeholder="Search for..">
-                </div>
-
-                &nbsp;
-                <div class="center" ng-repeat="x in stationsResult | filter:search">
-                    <button class="btn-info"> {{x.transport_station.friendly_station_name}}</button>
-                    </br></br>
-                </div>
-            </div>
-
-            <div ng-if="vehiclesResult">
-                <div class="input-icons">
-                    <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
-                    </i>
-
-                    <input class=" input-field center" style="padding: 10px; width: 100%;" type="text" ng-model="search"
-                        placeholder="Search for..">
+            <div style="display: flex; text-align: center;">
+                <div>
+                    <button class="btn btn-primary mainButton" ng-click="getStations()"> Stations </button>
                 </div>
                 &nbsp;
-                <table class="customer table table-bordered">
-                    <thead>
-                        <tr>
-                            <td>vehicle_name</td>
-                            <td>vehicle_type</td>
-                            <td>id</td>
-                        </tr>
-                    </thead>
-                    <tbody ng-repeat="x in vehiclesResult | filter: search">
-                        <tr>
-                            <td>{{x.vehicle.vehicle_name}}</td>
-                            <td>{{x.vehicle.vehicle_type}}</td>
-                            <td>{{x.vehicle._id}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <div ng-if="tablesResult">
-                <div class="input-icons">
-                    <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
-                    </i>
-
-                    <input class=" input-field center" style="padding: 10px; width: 100%;" type="text" ng-model="search"
-                        placeholder="Search for..">
+                <div>
+                    <button class="btn btn-primary mainButton" ng-click="getVehicles()"> Vehicles </button>
                 </div>
-
                 &nbsp;
 
-                <table class="customer table table-bordered">
-                    <thead>
-                        <tr>
-                            <td>vehicle ID</td>
-                            <td>arrival</td>
-                            <td>leaving</td>
-                        </tr>
-                    </thead>
-                    <tbody ng-repeat="x in tablesResult | filter: search">
 
-                        <tr>
-                            <td>{{x.timetable._vehicle_id}}</td>
-                            <td>
+                <div>
+                    <button class="btn btn-primary mainButton" ng-click="getTimeTables()"> Time Tables </button>
+                </div>
+                &nbsp;
 
-                                <table class="customer table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <td>station ID</td>
-                                            <td>arrival time</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody ng-repeat="y in x.timetable.direction[0].arrival">
-                                        <tr>
-                                            <td>{{y.station._id}}</td>
-                                            <td>{{y.time}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <div>
+                    <button class="btn btn-primary mainButton" ng-click="showSearchInput('station')"> Get Station
+                    </button>
+                </div>
+                &nbsp;
 
-                            </td>
-                            <td>
-                                <table class="customer table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <td>station ID</td>
-                                            <td>arrival time</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody ng-repeat="y in x.timetable.direction[1].arrival">
-                                        <tr>
-                                            <td>{{y.station._id}}</td>
-                                            <td>{{y.time}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
+                <div>
+                    <button class="btn btn-primary mainButton" ng-click="showSearchInput('vehicle')"> Get Vehicle
+                    </button>
+                </div>
+                &nbsp;
 
-                </table>
+                <div>
+                    <button class="btn btn-primary mainButton" ng-click="showSearchInput('table')"> Get time Table
+                    </button>
+                </div>
+                &nbsp;
+
+
+            </div> &nbsp;
+
+            <!-- Put buttons -->
+            <div style="display: flex; text-align: center;">
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('station')"> Update a Station
+                    </button>
+                </div>
+                &nbsp;
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('vehicle')"> Update a Vehicle </button>
+                </div>
+                &nbsp;
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="showUpdateInput('table')"> Update a Time Table </button>
+                </div>
+                &nbsp;
+
+            </div> &nbsp;
+
+            <!-- Post & Delete buttons -->
+            <div style="display: flex; text-align: center;">
+                <div>
+                    <button class="btn btn-success mainButton" ng-click="showAddInputs('station')"> Add a Station </button>
+                </div>
+                &nbsp;
+                <div>
+                    <button class="btn btn-success mainButton" ng-click="showAddInputs('vehicle')"> Add a Vehicle </button>
+                </div>
+                &nbsp;
+                <div>
+                    <button class="btn btn-success mainButton" ng-click="showAddInputs('table')"> Add a Time Table </button>
+                </div>
+                &nbsp;
+
+                <div>
+                    <button class="btn btn-danger mainButton" ng-click="showDeleteInput('station')"> Delete a Station
+                    </button>
+                </div>
+                &nbsp;
+                <div>
+                    <button class="btn btn-danger mainButton" ng-click="showDeleteInput('vehicle')"> Delete a Vehicle
+                    </button>
+                </div>
+                &nbsp;
+                <div>
+                    <button class="btn btn-danger mainButton" ng-click="showDeleteInput('table')"> Delete a Time Table
+                    </button>
+                </div>
+                &nbsp;
+
+
+            </div> <br />
+
+
+            <!-- clear  button -->
+            <div>
+                <br />
+                <button class="btn btn-primary mainButton" ng-click="clear()"> clear </button>
+            </div><br /><br />
+            <hr />
+
+
+            <!-- Search input fields -->
+            <div ng-show="enableStationInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputStaion"
+                    placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getStationById()"> Search </button>
             </div>
 
-            <div ng-if="stationByIdResult">
-                <br />
-                <table class="customer table table-bordered">
-                    <tbody ng-repeat="(key, value) in stationByIdResult">
-                        <tr>
-                            <td>{{key}}</td>
-                            <td>{{value}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div ng-show="enableVehicleInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="inputVehicle" placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getVehicleByID()"> Search </button>
             </div>
 
-            <div ng-if="vehicleByIdResult">
-                <br />
-                <table class="customer table table-bordered">
-                    <tbody ng-repeat="(key, value) in vehicleByIdResult">
-                        <tr>
-                            <td>{{key}}</td>
-                            <td>{{value}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div ng-show="enableTableInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputTable"
+                    placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
             </div>
 
-            <div ng-if="tableByIdResult">
-                <br />
-                <table class="customer table table-bordered">
-                    <tbody>
+            <!-- Delete input fields -->
+            <div ng-show="enableStationDeleteInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="deleteStationID" placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteStaion()"> Delete </button>
+            </div>
+
+            <div ng-show="enableVehicleDeleteInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="deleteVehicleID" placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteVehicle()"> Delete </button>
+            </div>
+
+            <div ng-show="enableTableDeleteInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="deleteTableID" placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="deleteTable()"> Delete </button>
+            </div>
+
+            <!-- Update/add inputs files -->
+            <div ng-show="enableStationUpdateInput || enableStationAddInput">
+            <div>
+                <input class=" input-field center" style="padding: 10px; width: 70%;" ng-show = "enableStationUpdateInput" type="text"
+                    ng-model="putReplaceStation" placeholder="Replace with Station ID">
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putStationID" placeholder="Enter an ID">
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putLineID" placeholder="Enter line ID">    
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putLineName" placeholder="Enter line name">    
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putRowName" placeholder="Enter raw station name">    
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putFriendlyName" placeholder="Enter friendly station name">   
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putshortName" placeholder="Enter short station name">   
+                 
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putLat" placeholder="Enter lat">   
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putLong" placeholder="Enter long">   
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putInvalid" placeholder="Enter invalid">   
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putVerified" placeholder="Enter invalid">   
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putVerficationData" placeholder="Enter verification date">   
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putGmaps" placeholder="Enter gmaps">   
+
+                <input class="input-field center" style="padding: 10px; width: 70%;" type="text"
+                    ng-model="putInfoComments" placeholder="Enter info comments">    
+                <br /><br />
+                <button class="btn btn-primary input-button" ng-show = "enableStationUpdateInput" ng-click="updateStation()"> Update </button>    
+                <button class="btn btn-primary input-button" ng-show = "enableStationAddInput" ng-click="addStation()"> Update </button>    
+            </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+            <!-- result -->
+            <div>
+                <div ng-if="stationsResult">
+                    <div class="input-icons">
+                        <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
+                        </i>
+
+                        <input class=" input-field center" style="padding: 10px; width: 100%;" type="text"
+                            ng-model="search" placeholder="Search for..">
+                    </div>
+
+                    &nbsp;
+                    <table class="customer table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>Station ID</td>
+                                <td>Line ID</td>
+                                <td>Line Name</td>
+                                <td>Station Name</td>
+                                <td>Short Name</td>
+                                <td>Gmaps Link</td>
+                                <td>Verification Date</td>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="x in stationsResult | filter:search">
+                            <tr>
+                                <td>{{x.transport_station._id}}</td>
+                                <td>{{x.transport_station.line_id}}</td>
+                                <td>{{x.transport_station.line_name}}</td>
+                                <td>{{x.transport_station.friendly_station_name}}</td>
+                                <td>{{x.transport_station.short_station_name}}</td>
+                                <td>{{x.transport_station.gmaps_link}}</td>
+                                <td>{{x.transport_station.verification_date}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div ng-if="vehiclesResult">
+                    <div class="input-icons">
+                        <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
+                        </i>
+
+                        <input class=" input-field center" style="padding: 10px; width: 100%;" type="text"
+                            ng-model="search" placeholder="Search for..">
+                    </div>
+                    &nbsp;
+                    <table class="customer table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>vehicle_name</td>
+                                <td>vehicle_type</td>
+                                <td>id</td>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="x in vehiclesResult | filter: search">
+                            <tr>
+                                <td>{{x.vehicle.vehicle_name}}</td>
+                                <td>{{x.vehicle.vehicle_type}}</td>
+                                <td>{{x.vehicle._id}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div ng-if="tablesResult">
+                    <div class="input-icons">
+                        <i style="padding-left:6px; padding-top: 6px;" class="fa fa-search fa-2x">
+                        </i>
+
+                        <input class=" input-field center" style="padding: 10px; width: 100%;" type="text"
+                            ng-model="search" placeholder="Search for..">
+                    </div>
+
+                    &nbsp;
+
+                    <table class="customer table table-bordered">
                         <thead>
                             <tr>
                                 <td>vehicle ID</td>
@@ -292,50 +300,132 @@
                                 <td>leaving</td>
                             </tr>
                         </thead>
+                        <tbody ng-repeat="x in tablesResult | filter: search">
 
-                        <tr>
-                            <td>{{tableByIdResult._vehicle_id}}</td>
-                            <td>
-                                <table class="customer table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <td>station ID</td>
-                                            <td>arrival time</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody ng-repeat="y in tableByIdResult.direction[0].arrival">
-                                        <tr>
-                                            <td>{{y.station._id}}</td>
-                                            <td>{{y.time}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <table class="customer table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <td>station ID</td>
-                                            <td>arrival time</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody ng-repeat="y in tableByIdResult.direction[1].arrival">
-                                        <tr>
-                                            <td>{{y.station._id}}</td>
-                                            <td>{{y.time}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <td>{{x.timetable._vehicle_id}}</td>
+                                <td>
+
+                                    <table class="customer table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>station ID</td>
+                                                <td>arrival time</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="y in x.timetable.direction[0].arrival">
+                                            <tr>
+                                                <td>{{y.station._id}}</td>
+                                                <td>{{y.time}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td>
+                                    <table class="customer table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>station ID</td>
+                                                <td>arrival time</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="y in x.timetable.direction[1].arrival">
+                                            <tr>
+                                                <td>{{y.station._id}}</td>
+                                                <td>{{y.time}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div ng-if="stationByIdResult">
+                    <br />
+                    <table class="customer table table-bordered">
+                        <tbody ng-repeat="(key, value) in stationByIdResult">
+                            <tr>
+                                <td>{{key}}</td>
+                                <td>{{value}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div ng-if="vehicleByIdResult">
+                    <br />
+                    <table class="customer table table-bordered">
+                        <tbody ng-repeat="(key, value) in vehicleByIdResult">
+                            <tr>
+                                <td>{{key}}</td>
+                                <td>{{value}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div ng-if="tableByIdResult">
+                    <br />
+                    <table class="customer table table-bordered">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <td>vehicle ID</td>
+                                    <td>arrival</td>
+                                    <td>leaving</td>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td>{{tableByIdResult._vehicle_id}}</td>
+                                <td>
+                                    <table class="customer table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>station ID</td>
+                                                <td>arrival time</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="y in tableByIdResult.direction[0].arrival">
+                                            <tr>
+                                                <td>{{y.station._id}}</td>
+                                                <td>{{y.time}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table class="customer table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>station ID</td>
+                                                <td>arrival time</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="y in tableByIdResult.direction[1].arrival">
+                                            <tr>
+                                                <td>{{y.station._id}}</td>
+                                                <td>{{y.time}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
-
         </div>
+
     </div>
 
 
+    <br /><br /><br /><br />
 </body>
 
 </html>
