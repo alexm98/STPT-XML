@@ -55,6 +55,7 @@
 \hspace{2.0cm} $\bullet$ core.StationsInteractor {\tiny \refdefined{core.StationsInteractor}} \\
 \hspace{2.0cm} $\bullet$ core.TimeTablesInteractor {\tiny \refdefined{core.TimeTablesInteractor}} \\
 \hspace{2.0cm} $\bullet$ core.VehiclesInteractor {\tiny \refdefined{core.VehiclesInteractor}} \\
+\hspace{1.0cm} $\bullet$ core.WebService {\tiny \refdefined{core.WebService}} \\
 \hspace{1.0cm} $\bullet$ models.Arrival {\tiny \refdefined{models.Arrival}} \\
 \hspace{1.0cm} $\bullet$ models.Direction {\tiny \refdefined{models.Direction}} \\
 \hspace{1.0cm} $\bullet$ models.StationsWrapper {\tiny \refdefined{models.StationsWrapper}} \\
@@ -63,6 +64,7 @@
 \hspace{1.0cm} $\bullet$ models.TimetablesWrapper {\tiny \refdefined{models.TimetablesWrapper}} \\
 \hspace{1.0cm} $\bullet$ models.TransportStation {\tiny \refdefined{models.TransportStation}} \\
 \hspace{1.0cm} $\bullet$ models.Vehicle {\tiny \refdefined{models.Vehicle}} \\
+\hspace{1.0cm} $\bullet$ models.VehicleArrival {\tiny \refdefined{models.VehicleArrival}} \\
 \hspace{1.0cm} $\bullet$ models.VehiclesWrapper {\tiny \refdefined{models.VehiclesWrapper}} \\
 \hspace{1.0cm} $\bullet$ parsers.ParserUtils {\tiny \refdefined{parsers.ParserUtils}} \\
 \hspace{1.0cm} $\bullet$ parsers.XPathUtils {\tiny \refdefined{parsers.XPathUtils}} \\
@@ -97,6 +99,7 @@ public class ParserUtils
 }
 \subsection{Method summary}{
 \begin{verse}
+\hyperlink{parsers.ParserUtils.addSchema(java.lang.String)}{{\bf addSchema(String)}} Method add an XSD schema definition for the document that is to be parsed.\\
 \hyperlink{parsers.ParserUtils.parseJAXB()}{{\bf parseJAXB()}} Method which parses an XML document by using JAXB.\\
 \hyperlink{parsers.ParserUtils.SaveDoc(org.w3c.dom.Document, java.lang.String)}{{\bf SaveDoc(Document, String)}} Method which, given a document and a location, saves the document at the specific location.\\
 \end{verse}
@@ -138,6 +141,31 @@ Constructor of the ParserUtil class.
 \subsection{Methods}{
 \vskip -2em
 \begin{itemize}
+\item{ 
+\index{addSchema(String)}
+\hypertarget{parsers.ParserUtils.addSchema(java.lang.String)}{{\bf  addSchema}\\}
+\begin{lstlisting}[frame=none]
+public void addSchema(java.lang.String path_to_schema) throws org.xml.sax.SAXException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method add an XSD schema definition for the document that is to be parsed.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_schema} -- String location of the XSD file.}
+  \end{itemize}
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{org.xml.sax.SAXException} -- @see SAXException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
 \item{ 
 \index{parseJAXB()}
 \hypertarget{parsers.ParserUtils.parseJAXB()}{{\bf  parseJAXB}\\}
@@ -334,6 +362,7 @@ ArrayList Results of the given query.
 \entityintro{StationsInteractor}{core.StationsInteractor}{Class which holds the implementation for interacting with a transport-station object.}
 \entityintro{TimeTablesInteractor}{core.TimeTablesInteractor}{Class which holds the implementation for interacting with a timetable object.}
 \entityintro{VehiclesInteractor}{core.VehiclesInteractor}{Class which holds the implementation for interacting with a vehicle object.}
+\entityintro{WebService}{core.WebService}{Class which implements an ad-hoc API adhering all the interactors to provide more useful computations.}
 \vskip .1in
 \vskip .1in
 \section{\label{core.Interactor}Class Interactor}{
@@ -1357,6 +1386,274 @@ Document: The XML document which has the requested vehicle replaced.
 \end{itemize}
 }
 }
+\section{\label{core.WebService}Class WebService}{
+\hypertarget{core.WebService}{}\vskip .1in 
+Class which implements an ad-hoc API adhering all the interactors to provide more useful computations.\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class WebService
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{core.WebService.stationsInteractor}{{\bf stationsInteractor}} \\
+\hyperlink{core.WebService.timeTablesInteractor}{{\bf timeTablesInteractor}} \\
+\hyperlink{core.WebService.vehiclesInteractor}{{\bf vehiclesInteractor}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{core.WebService(java.lang.String, java.lang.String, java.lang.String)}{{\bf WebService(String, String, String)}} Constructor of the WebService class.\\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{core.WebService.calculateDistance(double, double, double, double)}{{\bf calculateDistance(double, double, double, double)}} \\
+\hyperlink{core.WebService.createNode(org.w3c.dom.Node, java.lang.String, java.lang.String)}{{\bf createNode(Node, String, String)}} \\
+\hyperlink{core.WebService.getAllArrivals(java.lang.String)}{{\bf getAllArrivals(String)}} Method for returning all arrivals for a given station id.\\
+\hyperlink{core.WebService.getAllArrivalsFrom(java.lang.String, org.w3c.dom.NodeList)}{{\bf getAllArrivalsFrom(String, NodeList)}} \\
+\hyperlink{core.WebService.getAllDepartures(java.lang.String)}{{\bf getAllDepartures(String)}} Method for returning all departures for a given station id.\\
+\hyperlink{core.WebService.getChildWith(java.lang.String, java.lang.String, org.w3c.dom.NodeList)}{{\bf getChildWith(String, String, NodeList)}} \\
+\hyperlink{core.WebService.getClosestStation(double, double)}{{\bf getClosestStation(double, double)}} Method for retrieving the closest transport station element.\\
+\hyperlink{core.WebService.getLastArrivalVehicle(java.lang.String)}{{\bf getLastArrivalVehicle(String)}} Method for retrieving the last vehicle arriving from the required station.\\
+\hyperlink{core.WebService.getLastDepartureVehicle(java.lang.String)}{{\bf getLastDepartureVehicle(String)}} Method for retrieving the last vehicle departing from the required station.\\
+\hyperlink{core.WebService.transformToXML(java.util.ArrayList, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf transformToXML(ArrayList, String, String, String, String)}} \\
+\hyperlink{core.WebService.writeToXML(org.w3c.dom.Node)}{{\bf writeToXML(Node)}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{stationsInteractor}
+\label{core.WebService.stationsInteractor}\hypertarget{core.WebService.stationsInteractor}{\texttt{private StationsInteractor\ {\bf  stationsInteractor}}
+}
+}
+\item{
+\index{timeTablesInteractor}
+\label{core.WebService.timeTablesInteractor}\hypertarget{core.WebService.timeTablesInteractor}{\texttt{private TimeTablesInteractor\ {\bf  timeTablesInteractor}}
+}
+}
+\item{
+\index{vehiclesInteractor}
+\label{core.WebService.vehiclesInteractor}\hypertarget{core.WebService.vehiclesInteractor}{\texttt{private VehiclesInteractor\ {\bf  vehiclesInteractor}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{WebService(String, String, String)}
+\hypertarget{core.WebService(java.lang.String, java.lang.String, java.lang.String)}{{\bf  WebService}\\}
+\begin{lstlisting}[frame=none]
+public WebService(java.lang.String path_to_vehicles,java.lang.String path_to_timetables,java.lang.String path_to_stations) throws javax.xml.bind.JAXBException, javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Constructor of the WebService class.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{path\_to\_vehicles} -- Location of the vehicles XML document to be used.}
+   \item{
+\texttt{path\_to\_timetables} -- Location of the timetables XML document to be used.}
+   \item{
+\texttt{path\_to\_stations} -- Location of the stations XML document to be used.}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{calculateDistance(double, double, double, double)}
+\hypertarget{core.WebService.calculateDistance(double, double, double, double)}{{\bf  calculateDistance}\\}
+\begin{lstlisting}[frame=none]
+private double calculateDistance(double latitude1,double longitude1,double latitude2,double longitude2)\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{createNode(Node, String, String)}
+\hypertarget{core.WebService.createNode(org.w3c.dom.Node, java.lang.String, java.lang.String)}{{\bf  createNode}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node createNode(org.w3c.dom.Node parentNode,java.lang.String elementName,java.lang.String elementValue) throws javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{getAllArrivals(String)}
+\hypertarget{core.WebService.getAllArrivals(java.lang.String)}{{\bf  getAllArrivals}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getAllArrivals(java.lang.String stationId) throws javax.xml.xpath.XPathExpressionException, javax.xml.transform.TransformerConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for returning all arrivals for a given station id.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{stationId} -- String: id of the station for getting all arrivals.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Node: A XML Node containing populated with vehicle-id and arrival-times. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getAllArrivalsFrom(String, NodeList)}
+\hypertarget{core.WebService.getAllArrivalsFrom(java.lang.String, org.w3c.dom.NodeList)}{{\bf  getAllArrivalsFrom}\\}
+\begin{lstlisting}[frame=none]
+private java.util.ArrayList getAllArrivalsFrom(java.lang.String requestedStationId,org.w3c.dom.NodeList nodeList)\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{getAllDepartures(String)}
+\hypertarget{core.WebService.getAllDepartures(java.lang.String)}{{\bf  getAllDepartures}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getAllDepartures(java.lang.String stationId) throws javax.xml.xpath.XPathExpressionException, javax.xml.transform.TransformerConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for returning all departures for a given station id.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{stationId} -- String: id of the station for getting all departures.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Node: A XML Node containing populated with vehicle-id and departure-times. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getChildWith(String, String, NodeList)}
+\hypertarget{core.WebService.getChildWith(java.lang.String, java.lang.String, org.w3c.dom.NodeList)}{{\bf  getChildWith}\\}
+\begin{lstlisting}[frame=none]
+private org.w3c.dom.Element getChildWith(java.lang.String attribute,java.lang.String requestedValue,org.w3c.dom.NodeList nodeList)\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{getClosestStation(double, double)}
+\hypertarget{core.WebService.getClosestStation(double, double)}{{\bf  getClosestStation}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getClosestStation(double currentLatitude,double currentLongitude) throws javax.xml.xpath.XPathExpressionException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for retrieving the closest transport station element.
+
+As input we get the latitude and longitude given by the user in order to find the closest transport station.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{currentLatitude} -- double: Latitude of the current place.}
+   \item{
+\texttt{currentLongitude} -- double: Longitude of the current place.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node element representing the closest transport station by currentLatitude and currentLongitude. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getLastArrivalVehicle(String)}
+\hypertarget{core.WebService.getLastArrivalVehicle(java.lang.String)}{{\bf  getLastArrivalVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getLastArrivalVehicle(java.lang.String stationId) throws javax.xml.xpath.XPathExpressionException, javax.xml.transform.TransformerConfigurationException, javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for retrieving the last vehicle arriving from the required station.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{stationId} -- String: Id representing the station to be queried.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node element representing the time the last vehicle will arrive at stationId. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{getLastDepartureVehicle(String)}
+\hypertarget{core.WebService.getLastDepartureVehicle(java.lang.String)}{{\bf  getLastDepartureVehicle}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node getLastDepartureVehicle(java.lang.String stationId) throws javax.xml.xpath.XPathExpressionException, javax.xml.transform.TransformerConfigurationException, javax.xml.parsers.ParserConfigurationException\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for retrieving the last vehicle departing from the required station.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{stationId} -- String: Id representing the station to be queried.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+Returns a Node element representing the time the last vehicle will leave from stationId. 
+}%end item
+\item{{\bf  Throws}
+  \begin{itemize}
+   \item{\vskip -.6ex \texttt{javax.xml.xpath.XPathExpressionException} -- @see XPathExpressionException}
+  \end{itemize}
+}%end item
+\end{itemize}
+}%end item
+\item{ 
+\index{transformToXML(ArrayList, String, String, String, String)}
+\hypertarget{core.WebService.transformToXML(java.util.ArrayList, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}{{\bf  transformToXML}\\}
+\begin{lstlisting}[frame=none]
+public org.w3c.dom.Node transformToXML(java.util.ArrayList vehicleArrivals,java.lang.String rootName,java.lang.String mainElementsName,java.lang.String firstChildName,java.lang.String lastChildName)\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{writeToXML(Node)}
+\hypertarget{core.WebService.writeToXML(org.w3c.dom.Node)}{{\bf  writeToXML}\\}
+\begin{lstlisting}[frame=none]
+public void writeToXML(org.w3c.dom.Node root) throws javax.xml.transform.TransformerConfigurationException\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+}
 }
 \chapter{Package models}{
 \label{models}\hypertarget{models}{}
@@ -1372,6 +1669,7 @@ Document: The XML document which has the requested vehicle replaced.
 \entityintro{TimetablesWrapper}{models.TimetablesWrapper}{Class which holds the wrapper for the Timetable object.}
 \entityintro{TransportStation}{models.TransportStation}{Class which holds the implementation for JAXB binding for a transport station XML element.}
 \entityintro{Vehicle}{models.Vehicle}{Class which holds the implementation for a vehicle object.}
+\entityintro{VehicleArrival}{models.VehicleArrival}{}
 \entityintro{VehiclesWrapper}{models.VehiclesWrapper}{Class which holds the wrapper for the Vehicle object.}
 \vskip .1in
 \vskip .1in
@@ -1637,7 +1935,9 @@ public class Time
 }
 \subsection{Method summary}{
 \begin{verse}
+\hyperlink{models.Time.compareTime(java.lang.String, java.lang.String)}{{\bf compareTime(String, String)}} Method for comparing two objects of the type Time.\\
 \hyperlink{models.Time.toString()}{{\bf toString()}} \\
+\hyperlink{models.Time.validateTime(java.lang.String)}{{\bf validateTime(String)}} \\
 \end{verse}
 }
 \subsection{Fields}{
@@ -1670,10 +1970,41 @@ public Time(java.lang.String time)\end{lstlisting} %end signature
 \vskip -2em
 \begin{itemize}
 \item{ 
+\index{compareTime(String, String)}
+\hypertarget{models.Time.compareTime(java.lang.String, java.lang.String)}{{\bf  compareTime}\\}
+\begin{lstlisting}[frame=none]
+public int compareTime(java.lang.String time1,java.lang.String time2)\end{lstlisting} %end signature
+\begin{itemize}
+\item{
+{\bf  Description}
+
+Method for comparing two objects of the type Time.
+}
+\item{
+{\bf  Parameters}
+  \begin{itemize}
+   \item{
+\texttt{time1} -- Time: A Time object of the form: hh:mm.}
+   \item{
+\texttt{time2} -- Time: A Time object of the form: hh:mm.}
+  \end{itemize}
+}%end item
+\item{{\bf  Returns} -- 
+int: 0 if equality, 1 if time1 bigger time2 -1 if time1 smaller time2 
+}%end item
+\end{itemize}
+}%end item
+\item{ 
 \index{toString()}
 \hypertarget{models.Time.toString()}{{\bf  toString}\\}
 \begin{lstlisting}[frame=none]
 public java.lang.String toString()\end{lstlisting} %end signature
+}%end item
+\item{ 
+\index{validateTime(String)}
+\hypertarget{models.Time.validateTime(java.lang.String)}{{\bf  validateTime}\\}
+\begin{lstlisting}[frame=none]
+private boolean validateTime(java.lang.String time)\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
@@ -2090,6 +2421,65 @@ Override of string form for a vehicle object.
 Pretty printed format of a vehicle instance. 
 }%end item
 \end{itemize}
+}%end item
+\end{itemize}
+}
+}
+\section{\label{models.VehicleArrival}Class VehicleArrival}{
+\hypertarget{models.VehicleArrival}{}\vskip .1in 
+\subsection{Declaration}{
+\begin{lstlisting}[frame=none]
+public class VehicleArrival
+ extends java.lang.Object\end{lstlisting}
+\subsection{Field summary}{
+\begin{verse}
+\hyperlink{models.VehicleArrival.arrivalTime}{{\bf arrivalTime}} \\
+\hyperlink{models.VehicleArrival.vehicleId}{{\bf vehicleId}} \\
+\end{verse}
+}
+\subsection{Constructor summary}{
+\begin{verse}
+\hyperlink{models.VehicleArrival(java.lang.String, models.Time)}{{\bf VehicleArrival(String, Time)}} \\
+\end{verse}
+}
+\subsection{Method summary}{
+\begin{verse}
+\hyperlink{models.VehicleArrival.toString()}{{\bf toString()}} \\
+\end{verse}
+}
+\subsection{Fields}{
+\begin{itemize}
+\item{
+\index{vehicleId}
+\label{models.VehicleArrival.vehicleId}\hypertarget{models.VehicleArrival.vehicleId}{\texttt{public final java.lang.String\ {\bf  vehicleId}}
+}
+}
+\item{
+\index{arrivalTime}
+\label{models.VehicleArrival.arrivalTime}\hypertarget{models.VehicleArrival.arrivalTime}{\texttt{public final Time\ {\bf  arrivalTime}}
+}
+}
+\end{itemize}
+}
+\subsection{Constructors}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{VehicleArrival(String, Time)}
+\hypertarget{models.VehicleArrival(java.lang.String, models.Time)}{{\bf  VehicleArrival}\\}
+\begin{lstlisting}[frame=none]
+public VehicleArrival(java.lang.String vehicleId,Time arrivalTime)\end{lstlisting} %end signature
+}%end item
+\end{itemize}
+}
+\subsection{Methods}{
+\vskip -2em
+\begin{itemize}
+\item{ 
+\index{toString()}
+\hypertarget{models.VehicleArrival.toString()}{{\bf  toString}\\}
+\begin{lstlisting}[frame=none]
+public java.lang.String toString()\end{lstlisting} %end signature
 }%end item
 \end{itemize}
 }
