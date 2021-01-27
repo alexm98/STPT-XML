@@ -20,8 +20,8 @@ public class Time {
      * @param time1 Time: A Time object of the form: hh:mm.
      * @param time2 Time: A Time object of the form: hh:mm.
      * @return int: 0 if equality,
-     *              1 if time1 > time2
-     *              -1 if time1 < time2
+     *              1 if time1 bigger time2
+     *              -1 if time1 smaller time2
      */
     public int compareTime(String time1, String time2) {
         String[] splitTime1 = time1.split(":");

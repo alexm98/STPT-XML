@@ -117,17 +117,6 @@ public class WebService {
     }
 
     /**
-     * Method for retrieving all the vehicles which at a moment will arrive at station s.
-     *
-     * @param s TransportStation: Transport element representing station we want to query for.
-     * @return Returns a NodeList representing the vehicles that arrive at station s.
-     * @throws XPathExpressionException @see XPathExpressionException
-     */
-    public NodeList getAllVehiclesPassingWithDestination(TransportStation s) {
-        return null;
-    }
-
-    /**
      * Method for returning all arrivals for a given station id.
      *
      * @param stationId String: id of the station for getting all arrivals.
@@ -259,17 +248,6 @@ public class WebService {
     }
 
     /**
-     * Method for retrieving the time when the first vehicle departs from a station.
-     *
-     * @param s TransportStation: Transport element representing station we want to query for.
-     * @return Returns a Node element representing the time the first vehicle will be at station s.
-     * @throws XPathExpressionException @see XPathExpressionException
-     */
-    public Node getNextVehicleByTime(String stationId) throws XPathExpressionException {
-        return null;
-    }
-
-    /**
      * Method for retrieving the closest transport station element.
      * <p>
      * As input we get the latitude and longitude given by the user in order to find the closest transport station.
@@ -313,14 +291,6 @@ public class WebService {
         return Math.sqrt((latitude2 - latitude1) * (latitude2 - latitude1) + (longitude2 - longitude1) * (longitude2 - longitude1));
     }
 
-    /**
-     * Method for transforming an array list populated with objects of type VehicleArrival to XML form.
-     * <p>
-     * The conversion is needed as support for XML display for the web service.
-     *
-     * @param vehicleArrivals {@code ArrayList<VehicleArrival>}: An array list of VehicleArrival elements.
-     * @return Node: The list of vehicle arrivals transformed to XML format.
-     */
     public Node transformToXML(ArrayList<VehicleArrival> vehicleArrivals,
                                String rootName,
                                String mainElementsName,
