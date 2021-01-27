@@ -3,13 +3,24 @@ package core;
 import models.Time;
 import models.TransportStation;
 import models.VehicleArrival;
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPathExpressionException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -63,7 +74,7 @@ public class WebService {
      *                                            station_id.
      * @throws XPathExpressionException @see XPathExpressionException
      */
-    public ArrayList<VehicleArrival> getAllArrivals(String stationId) throws XPathExpressionException {
+    public Node getAllArrivals(String stationId) throws XPathExpressionException {
         NodeList timetables = timeTablesInteractor.getAllTimeTables();
         ArrayList<VehicleArrival> vehicleArrivals = new ArrayList<>();
 
@@ -90,8 +101,8 @@ public class WebService {
                 vehicleArrivals.add(new VehicleArrival(vehichleId, time));
             }
         }
-        System.out.println("Done");
-        return vehicleArrivals;
+
+        return this.transformToXML(vehicleArrivals);
     }
 
     private ArrayList<Time> getAllArrivalsFrom(String requestedStationId, NodeList nodeList) {
@@ -187,5 +198,38 @@ public class WebService {
 
     private double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2) {
         return Math.sqrt((latitude2-latitude1)*(latitude2-latitude1) + (longitude2-longitude1)*(longitude2-longitude1));
+    }
+
+    public Node transformToXML(ArrayList<VehicleArrival> vehicleArrivals) {
+
+        try {
+
+            DocumentBuilderFactory dFact = DocumentBuilderFactory.newInstance();
+            DocumentBuilder build = dFact.newDocumentBuilder();
+            Document doc = build.newDocument();
+
+            Element root = doc.createElement("vehicle-arrivals");
+            doc.appendChild(root);
+
+            for(VehicleArrival va: vehicleArrivals) {
+                Element vaElement = doc.createElement("vehicle-arrival");
+                root.appendChild(vaElement);
+
+                Element vehicle_id = doc.createElement("vehicle_id");
+                vehicle_id.appendChild(doc.createTextNode(va.vehicleId));
+                vaElement.appendChild(vehicle_id);
+
+                Element arrival_time = doc.createElement("arrival-time");
+                arrival_time.appendChild(doc.createTextNode(va.arrivalTime.toString()));
+                vaElement.appendChild(vehicle_id);
+            }
+
+            return root;
+
+        } catch (ParserConfigurationException ex) {
+            System.out.println("Error building document");
+        }
+
+        return null;
     }
 }

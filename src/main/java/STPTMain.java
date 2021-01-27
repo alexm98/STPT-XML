@@ -41,8 +41,6 @@ public class STPTMain {
                 "data/statii-ratt.xml"
         );
 
-        System.out.println(ws.getAllArrivals("5841"));
-//        stationsInteractor.prettyPrintNode(closestStation);
         Main main = new Main();
         main.configure().addRoutesBuilder(new CamelREST());
         main.configure().addRoutesBuilder(new CamelWebService());
