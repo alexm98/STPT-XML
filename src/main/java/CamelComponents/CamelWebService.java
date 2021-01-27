@@ -16,7 +16,7 @@ public class CamelWebService extends RouteBuilder {
 
     @Override
     public void configure(){
-        from("netty-http:http://0.0.0.0:8080/coordinates/?latitude={latitude}&longitude={longitude}")
+        from("netty-http:http://0.0.0.0:8080/closestStation/?latitude={latitude}&longitude={longitude}")
                 .bean(webservice_methods, "getClosestStation(${header.latitude},${header.longitude})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
 
