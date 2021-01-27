@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <timetables-root>
     <timetables>
-        <timetable vehicle_id="1207">
+        <timedtable vehicle_id="1207">
             <direction way="1">
                 <arrival>
                     <station id="4483">Gara de Nord</station>
@@ -138,7 +138,7 @@
                     <time>16:05</time>
                 </arrival>
             </direction>
-        </timetable>
+        </timedtable>
         <timetable vehicle_id="2426">
             <direction way="1">
                 <arrival>

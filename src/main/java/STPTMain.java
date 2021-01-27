@@ -3,7 +3,9 @@ import CamelComponents.CamelWebService;
 import core.StationsInteractor;
 import core.TimeTablesInteractor;
 import core.VehiclesInteractor;
+import core.WebService;
 import org.apache.camel.main.Main;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class STPTMain {
@@ -33,13 +35,14 @@ public class STPTMain {
 
 //        Node foundVehicle = vehiclesInteractor.getVehicle(158);
 //        vehiclesInteractor.prettyPrintNode(foundVehicle);
-//        WebService ws = new WebService(
-//                "data/vehicles.xml",
-//                "data/timetables.xml",
-//                "data/statii-ratt.xml"
-//        );
-//
-//        ws.getClosestStation(45.737211, 45.737211);
+        WebService ws = new WebService(
+                "data/vehicles.xml",
+                "data/timetables.xml",
+                "data/statii-ratt.xml"
+        );
+
+        System.out.println(ws.getAllArrivals("5841"));
+//        stationsInteractor.prettyPrintNode(closestStation);
         Main main = new Main();
         main.configure().addRoutesBuilder(new CamelREST());
         main.configure().addRoutesBuilder(new CamelWebService());
