@@ -2,7 +2,9 @@ package parsers;
 
 import models.*;
 import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
+import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -13,6 +15,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
 import java.io.File;
 
 /**
@@ -27,6 +31,16 @@ public class ParserUtils {
      */
     public ParserUtils(String path_to_doc){
         this.path_to_doc = path_to_doc;
+    }
+
+    /**
+     * Method add an XSD schema definition for the document that is to be parsed.
+     * @param path_to_schema String location of the XSD file.
+     * @throws SAXException @see SAXException
+     */
+    public void addSchema(String path_to_schema) throws SAXException {
+        SchemaFactory f = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = f.newSchema(new File(path_to_schema));
     }
 
     /**
@@ -50,9 +64,6 @@ public class ParserUtils {
                 Arrival.class,
                 TimeTable.class,
                 Time.class);
-
-//        SchemaFactory f = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-//        Schema schema = f.newSchema(new File("schema.xsd"));
 
         Unmarshaller unmarshaller = jc.createUnmarshaller();
 //        unmarshaller.setSchema(schema);
