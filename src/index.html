@@ -20,7 +20,7 @@
         <div style="padding-left:10px ;">
             <!-- Get buttons -->
 
-            <div style="display: flex; text-align: center;">
+            <div style=" margin-left: 8%; display: flex; text-align: center;">
                 <div>
                     <button class="btn btn-primary mainButton" ng-click="getStations()"> Stations </button>
                 </div>
@@ -58,14 +58,53 @@
 
             </div> &nbsp;
 
+            <div style="  margin-left: 7.5%; display: flex; text-align: center;">
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="enableClosestStationInputs()"> Get Closest Station 
+                    </button>
+                </div>
+                &nbsp;
+
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="enableLastArrivalInputs()"> Get Last Arrival 
+                    </button>
+                </div>
+                &nbsp;
+
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="enableLastDepartureInputs()"> Get Last Departure
+                    </button>
+                </div>
+                &nbsp;
+
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="enableAllArrivalsInputs()"> Get All Arrivals
+                    </button>
+                </div>
+                &nbsp;
+
+                <div>
+                    <button class="btn btn-info mainButton" ng-click="enableAllDepaturesInputs()"> Get All Departures
+                    </button>
+                </div>
+                &nbsp;
+
+
+
+                
+
+
+            </div> &nbsp;
+
+
 
             <!-- clear  button -->
             <div>
                 <br />
-                <button class="btn btn-primary mainButton" ng-click="clear()"> clear </button>
+                <button class="btn btn-warning mainButton"  style=" margin-left: 42%;" ng-click="clear()"> clear </button>
             </div><br /><br />
             <hr />
-
+        <div style=" margin-left: 15%;">
 
             <!-- Search input fields -->
             <div ng-show="enableStationInput">
@@ -85,6 +124,44 @@
                     placeholder="Enter an ID">
                 <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
             </div>
+
+
+
+            <div ng-show="latitudeLongitudeInputs">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="latitude"
+                    placeholder="Enter Latitude">
+
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="longitude"
+                placeholder="Enter Longitude">
+
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getClosest()"> Search </button>
+            </div>
+
+
+            <div ng-show="lastArrivalInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="lastArrivalID"
+                    placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getLastArrival()"> Search </button>
+            </div>
+
+            <div ng-show="lastDepartureInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="lastDepartureID"
+                    placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getLastDeparture()"> Search </button>
+            </div>
+
+            <div ng-show="allArrivalsInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="allArrivalsID"
+                    placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getAllArrivals()"> Search </button>
+            </div>
+
+            <div ng-show="allDeparturesInput">
+                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="allDepaturesID"
+                    placeholder="Enter an ID">
+                <button class="btn btn-primary" style="padding: 12px;" ng-click="getAllDepartures()"> Search </button>
+            </div>
+</div>
 
 
             <!-- result -->
@@ -291,13 +368,57 @@
                     </table>
                 </div>
 
+
+                <div ng-if="allArrivalsResult">
+                    <br />
+                    <table class="customer table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>Vehicle ID</td>
+                                <td>Arrival Time</td>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="(key, value) in allArrivalsResult">
+                            <tr>
+                                <td>{{value.vehicle_id}}</td>
+                                <td>{{value.arrival_time}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+                <div ng-if="allDeparturesResult">
+                    <br />
+                    <table class="customer table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>Vehicle ID</td>
+                                <td>Departure Time</td>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="(key, value) in allDeparturesResult">
+                            <tr>
+                                <td>{{value.vehicle_id}}</td>
+                                <td>{{value.departure_time}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
             </div>
         </div>
 
     </div>
 
 
-    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    
+    
 </body>
 
 </html>

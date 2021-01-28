@@ -12,6 +12,8 @@ app.controller("xmlCtrl", function ($scope, $http) {
         $scope.stationsResult = null;
         $scope.vehiclesResult = null;
         $scope.tablesResult = null;
+        $scope.allArrivalsResult = null;
+        $scope.allDeparturesResult = null;
 
         $scope.stationByIdResult = null;
         $scope.vehicleByIdResult = null;
@@ -20,6 +22,12 @@ app.controller("xmlCtrl", function ($scope, $http) {
         $scope.enableVehicleInput = null;
         $scope.enableStationInput = null;
         $scope.enableTableInput = null;
+
+        $scope.latitudeLongitudeInputs = null;
+        $scope.lastArrivalInput = null;
+        $scope.lastDepartureInput = null;
+        $scope.allArrivalsInput = null;
+        $scope.allDeparturesInput = null;
 
     }
 
@@ -91,8 +99,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
         get(basedUrl).then(
             function (success) {
                 node = x2js.xml_str2json(success.data);
-                obj = node['transport-station'];
-                $scope.stationByIdResult = node['transport-station'];
+                $scope.stationByIdResult = node ? node['transport-station'] : null;
             },
             function (error) {
                 console.log("error: ", error);
@@ -108,7 +115,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
         get(basedUrl).then(
             function (success) {
                 node = x2js.xml_str2json(success.data);
-                $scope.vehicleByIdResult = node['vehicle'];
+                $scope.vehicleByIdResult = node ? node['vehicle'] : null;
             },
             function (error) {
                 console.log("error: ", error);
@@ -131,6 +138,109 @@ app.controller("xmlCtrl", function ($scope, $http) {
             }
         );
 
+    }
+
+
+
+
+
+
+    $scope.getClosest = function () { 
+        $scope.clear();
+        basedUrl = 'http://localhost:8080/closestStation/?latitude=' + $scope.latitude + '&longitude=' + $scope.longitude;
+        get(basedUrl).then(
+            function (success) {
+                node = x2js.xml_str2json(success.data);
+                $scope.stationByIdResult = node ? node['transport-station'] : null;
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+    }
+    $scope.getLastArrival = function () { 
+        $scope.clear();
+        basedUrl = 'http://localhost:8080/lastArrival/' + $scope.lastArrivalID;
+        get(basedUrl).then(
+            function (success) {
+                node = x2js.xml_str2json(success.data);
+                $scope.vehicleByIdResult = node ? node['vehicle'] : null;
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+    }
+    $scope.getLastDeparture = function () { 
+        $scope.clear();
+        basedUrl = 'http://localhost:8080/lastDeparture/' + $scope.lastDepartureID;
+        get(basedUrl).then(
+            function (success) {
+                node = x2js.xml_str2json(success.data);
+                $scope.vehicleByIdResult = node ? node['vehicle'] : null;
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+    }
+    $scope.getAllArrivals = function () { 
+        $scope.clear();
+        basedUrl = 'http://localhost:8080/allArrivals/' + $scope.allArrivalsID;
+        get(basedUrl).then(
+            function (success) {
+                response = success.data.replaceAll("-", "_");
+                node = x2js.xml_str2json(response);
+                
+                $scope.allArrivalsResult = node ? node['vehicle_departures']['vehicle_departure'] : null;
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+    }
+
+    $scope.getAllDepartures = function () { 
+        $scope.clear();
+        $scope.allDepaturesID = '5841'
+        basedUrl = 'http://localhost:8080/allDepartures/' + $scope.allDepaturesID;
+        get(basedUrl).then(
+            function (success) {
+                response = success.data.replaceAll("-", "_");
+                node = x2js.xml_str2json(response);
+                
+                $scope.allDeparturesResult = node ? node['vehicle_departures']['vehicle_departure'] : null;
+            },
+            function (error) {
+                console.log("error: ", error);
+            }
+        );
+    }
+
+
+
+    $scope.enableClosestStationInputs = function () { 
+        $scope.clear();
+        $scope.latitudeLongitudeInputs = true;
+    }
+
+    $scope.enableLastArrivalInputs = function () { 
+        $scope.clear();
+        $scope.lastArrivalInput = true;
+    }
+
+    $scope.enableLastDepartureInputs = function () { 
+        $scope.clear();
+        $scope.lastDepartureInput = true;
+    }
+
+    $scope.enableAllArrivalsInputs = function () { 
+        $scope.clear();
+        $scope.allArrivalsInput = true;
+    }
+    $scope.enableAllDepaturesInputs = function () { 
+        $scope.clear();
+        $scope.allDeparturesInput = true;
     }
 
 
