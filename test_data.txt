@@ -1,4 +1,4 @@
-stationId's:
+StationID's:
 
 8661 (doesn't have departures, so for getAllDeparturesForStation it will return an empty XML response and for getLastDepartureForStation the same."
 7121
@@ -7,3 +7,10 @@ stationId's:
 3648
 10185
 5841
+
+Vehicle ID's:
+2706
+2426
+2446
+2006
+3306
