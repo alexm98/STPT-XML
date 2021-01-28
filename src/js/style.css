@@ -1,0 +1,96 @@
+.mainButton {
+    padding: 15px 60px;
+    /* padding-right: 30px; */
+    text-align: center;
+    
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* .button{
+background-color: none;    
+} */
+
+
+.result{
+border: solid;
+}
+
+.row {
+display: flex; 
+}
+
+
+.center {
+    margin: auto;
+    width: 50%;
+    text-align-last: center; 
+    
+    
+    
+}
+
+
+
+
+.input-icons i { 
+    position: absolute; 
+} 
+  
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+
+.input-field { 
+    width: 100%; 
+    padding: 10px; 
+    text-align: center; 
+} 
+
+
+
+.input-button {
+    padding: 12px;
+    margin: auto;
+    width: 50%;
+    text-align-last: center;
+    position:relative; 
+}
+
+
+#container div {
+    width: 20px;
+    height: 20px;
+    
+    background-color:tomato;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+/* main-container  for parent div, column for each column */
+.main-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+.column {
+flex: 0 0 50%;
+padding: 10px;
+border: solid;
+border-style: inset;
+}
+
+* {
+margin: 0;
+box-sizing: border-box;
+}

@@ -2,14 +2,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="js/lib/angular.min.js"></script>
-    <script type="text/javascript" src="js/lib/xml2json.js"></script>
+    <script type="text/javascript" src="js/libraries/angular.min.js"></script>
+    <script type="text/javascript" src="js/libraries/xml2json.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="js/lib/style.css">
+    <link rel="stylesheet" href="js/style.css">
 
     <title>RATT Public Transport</title>
 </head>
@@ -18,9 +18,9 @@
     <div>
         <img src="js/picture/cover.jpg" style="width: 100%; height: 60%">&nbsp;
         <div style="padding-left:10px ;">
+            
             <!-- Get buttons -->
-
-            <div style=" margin-left: 8%; display: flex; text-align: center;">
+            <div style=" margin-left: 18%; display: flex; ">
                 <div>
                     <button class="btn btn-primary mainButton" ng-click="getStations()"> Stations </button>
                 </div>
@@ -30,7 +30,6 @@
                     <button class="btn btn-primary mainButton" ng-click="getVehicles()"> Vehicles </button>
                 </div>
                 &nbsp;
-
 
                 <div>
                     <button class="btn btn-primary mainButton" ng-click="getTimeTables()"> Time Tables </button>
@@ -54,19 +53,18 @@
                     </button>
                 </div>
                 &nbsp;
-
-
             </div> &nbsp;
 
-            <div style="  margin-left: 7.5%; display: flex; text-align: center;">
+            <!-- <div class="center" > -->
+            <div style=" margin-left: 17.5%; display: flex;">
                 <div>
-                    <button class="btn btn-info mainButton" ng-click="enableClosestStationInputs()"> Get Closest Station 
+                    <button class="btn btn-info mainButton" ng-click="enableClosestStationInputs()"> Get Closest Station
                     </button>
                 </div>
                 &nbsp;
 
                 <div>
-                    <button class="btn btn-info mainButton" ng-click="enableLastArrivalInputs()"> Get Last Arrival 
+                    <button class="btn btn-info mainButton" ng-click="enableLastArrivalInputs()"> Get Last Arrival
                     </button>
                 </div>
                 &nbsp;
@@ -88,80 +86,73 @@
                     </button>
                 </div>
                 &nbsp;
-
-
-
-                
-
-
             </div> &nbsp;
-
-
 
             <!-- clear  button -->
             <div>
                 <br />
-                <button class="btn btn-warning mainButton"  style=" margin-left: 42%;" ng-click="clear()"> clear </button>
+                <button class="btn btn-warning mainButton" style=" margin-left: 42%;" ng-click="clear()"> clear
+                </button>
             </div><br /><br />
             <hr />
-        <div style=" margin-left: 15%;">
 
-            <!-- Search input fields -->
-            <div ng-show="enableStationInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputStaion"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getStationById()"> Search </button>
+            <div style=" margin-left: 15%;">
+
+                <!-- Search input fields -->
+                <div ng-show="enableStationInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="inputStaion" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getStationById()"> Search </button>
+                </div>
+
+                <div ng-show="enableVehicleInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="inputVehicle" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getVehicleByID()"> Search </button>
+                </div>
+
+                <div ng-show="enableTableInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="inputTable" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
+                </div>
+
+                <div ng-show="latitudeLongitudeInputs">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="latitude" placeholder="Enter Latitude">
+
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="longitude" placeholder="Enter Longitude">
+
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getClosest()"> Search </button>
+                </div>
+
+                <div ng-show="lastArrivalInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="lastArrivalID" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getLastArrival()"> Search </button>
+                </div>
+
+                <div ng-show="lastDepartureInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="lastDepartureID" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getLastDeparture()"> Search
+                    </button>
+                </div>
+
+                <div ng-show="allArrivalsInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="allArrivalsID" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getAllArrivals()"> Search </button>
+                </div>
+
+                <div ng-show="allDeparturesInput">
+                    <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
+                        ng-model="allDepaturesID" placeholder="Enter an ID">
+                    <button class="btn btn-primary" style="padding: 12px;" ng-click="getAllDepartures()"> Search
+                    </button>
+                </div>
             </div>
-
-            <div ng-show="enableVehicleInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text"
-                    ng-model="inputVehicle" placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getVehicleByID()"> Search </button>
-            </div>
-
-            <div ng-show="enableTableInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="inputTable"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getTableByID()"> Search </button>
-            </div>
-
-
-
-            <div ng-show="latitudeLongitudeInputs">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="latitude"
-                    placeholder="Enter Latitude">
-
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="longitude"
-                placeholder="Enter Longitude">
-
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getClosest()"> Search </button>
-            </div>
-
-
-            <div ng-show="lastArrivalInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="lastArrivalID"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getLastArrival()"> Search </button>
-            </div>
-
-            <div ng-show="lastDepartureInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="lastDepartureID"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getLastDeparture()"> Search </button>
-            </div>
-
-            <div ng-show="allArrivalsInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="allArrivalsID"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getAllArrivals()"> Search </button>
-            </div>
-
-            <div ng-show="allDeparturesInput">
-                <input class=" input-field center" style="padding: 10px; width: 70%;" type="text" ng-model="allDepaturesID"
-                    placeholder="Enter an ID">
-                <button class="btn btn-primary" style="padding: 12px;" ng-click="getAllDepartures()"> Search </button>
-            </div>
-</div>
 
 
             <!-- result -->
@@ -174,7 +165,6 @@
                         <input class=" input-field center" style="padding: 10px; width: 100%;" type="text"
                             ng-model="search" placeholder="Search for..">
                     </div>
-
                     &nbsp;
                     <table class="customer table table-bordered">
                         <thead>
@@ -200,7 +190,6 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </div>
 
                 <div ng-if="vehiclesResult">
@@ -417,8 +406,8 @@
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    
-    
+
+
 </body>
 
 </html>

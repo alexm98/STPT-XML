@@ -43,9 +43,30 @@ app.controller("xmlCtrl", function ($scope, $http) {
 
     }
     
+    $scope.enableClosestStationInputs = function () { 
+        $scope.clear();
+        $scope.latitudeLongitudeInputs = true;
+    }
 
+    $scope.enableLastArrivalInputs = function () { 
+        $scope.clear();
+        $scope.lastArrivalInput = true;
+    }
 
+    $scope.enableLastDepartureInputs = function () { 
+        $scope.clear();
+        $scope.lastDepartureInput = true;
+    }
 
+    $scope.enableAllArrivalsInputs = function () { 
+        $scope.clear();
+        $scope.allArrivalsInput = true;
+    }
+
+    $scope.enableAllDepaturesInputs = function () { 
+        $scope.clear();
+        $scope.allDeparturesInput = true;
+    }
 
     $scope.getStations = function () {
         $scope.clear();
@@ -131,7 +152,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
         get(basedUrl).then(
             function (success) {
                 node = x2js.xml_str2json(success.data);
-                $scope.tableByIdResult = node['timetable'];
+                $scope.tableByIdResult = node ? node['timetable'] : null;
             },
             function (error) {
                 console.log("error: ", error);
@@ -139,11 +160,6 @@ app.controller("xmlCtrl", function ($scope, $http) {
         );
 
     }
-
-
-
-
-
 
     $scope.getClosest = function () { 
         $scope.clear();
@@ -158,6 +174,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
             }
         );
     }
+
     $scope.getLastArrival = function () { 
         $scope.clear();
         basedUrl = 'http://localhost:8080/lastArrival/' + $scope.lastArrivalID;
@@ -171,6 +188,7 @@ app.controller("xmlCtrl", function ($scope, $http) {
             }
         );
     }
+
     $scope.getLastDeparture = function () { 
         $scope.clear();
         basedUrl = 'http://localhost:8080/lastDeparture/' + $scope.lastDepartureID;
@@ -184,15 +202,17 @@ app.controller("xmlCtrl", function ($scope, $http) {
             }
         );
     }
+
     $scope.getAllArrivals = function () { 
         $scope.clear();
         basedUrl = 'http://localhost:8080/allArrivals/' + $scope.allArrivalsID;
+        console.log(basedUrl);
         get(basedUrl).then(
             function (success) {
                 response = success.data.replaceAll("-", "_");
                 node = x2js.xml_str2json(response);
                 
-                $scope.allArrivalsResult = node ? node['vehicle_departures']['vehicle_departure'] : null;
+                $scope.allArrivalsResult = node ? node['vehicle_arrivals']['vehicle_arrival'] : null;
             },
             function (error) {
                 console.log("error: ", error);
@@ -217,34 +237,6 @@ app.controller("xmlCtrl", function ($scope, $http) {
         );
     }
 
-
-
-    $scope.enableClosestStationInputs = function () { 
-        $scope.clear();
-        $scope.latitudeLongitudeInputs = true;
-    }
-
-    $scope.enableLastArrivalInputs = function () { 
-        $scope.clear();
-        $scope.lastArrivalInput = true;
-    }
-
-    $scope.enableLastDepartureInputs = function () { 
-        $scope.clear();
-        $scope.lastDepartureInput = true;
-    }
-
-    $scope.enableAllArrivalsInputs = function () { 
-        $scope.clear();
-        $scope.allArrivalsInput = true;
-    }
-    $scope.enableAllDepaturesInputs = function () { 
-        $scope.clear();
-        $scope.allDeparturesInput = true;
-    }
-
-
-
     function xmlToJson(xml, element) {
         var xmlArr = xml.split(element);
         var node = {}
@@ -254,28 +246,12 @@ app.controller("xmlCtrl", function ($scope, $http) {
             if (node) { 
                 result.push(node)
             }
-            
-            // break;
         }
         return result
-
     }
-
-
-
-
-
-
 
     function get(url) {
         return $http.get(url);
     }
   
-
-
-
-
-
-
-
 });
