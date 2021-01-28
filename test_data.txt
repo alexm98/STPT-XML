@@ -1,0 +1,9 @@
+stationId's:
+
+8661 (doesn't have departures, so for getAllDeparturesForStation it will return an empty XML response and for getLastDepartureForStation the same."
+7121
+8640
+3650
+3648
+10185
+5841

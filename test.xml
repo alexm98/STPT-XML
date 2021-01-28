@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?><vehicle-arrivals>
     <vehicle-arrival>
-        <vehicle-id>1746</vehicle-id>
-        <arrival-time>**:**</arrival-time>
+        <vehicle-id>2426</vehicle-id>
+        <arrival-time>16:10</arrival-time>
     </vehicle-arrival>
     <vehicle-arrival>
-        <vehicle-id>2006</vehicle-id>
-        <arrival-time>18:22</arrival-time>
+        <vehicle-id>2446</vehicle-id>
+        <arrival-time>15:38</arrival-time>
     </vehicle-arrival>
     <vehicle-arrival>
-        <vehicle-id>2786</vehicle-id>
-        <arrival-time>16:12</arrival-time>
+        <vehicle-id>1066</vehicle-id>
+        <arrival-time>3 min.</arrival-time>
+    </vehicle-arrival>
+    <vehicle-arrival>
+        <vehicle-id>1550</vehicle-id>
+        <arrival-time>3 min.</arrival-time>
+    </vehicle-arrival>
+    <vehicle-arrival>
+        <vehicle-id>2646</vehicle-id>
+        <arrival-time>16:11</arrival-time>
+    </vehicle-arrival>
+    <vehicle-arrival>
+        <vehicle-id>1266</vehicle-id>
+        <arrival-time>5 min.</arrival-time>
+    </vehicle-arrival>
+    <vehicle-arrival>
+        <vehicle-id>2846</vehicle-id>
+        <arrival-time>9 min.</arrival-time>
     </vehicle-arrival>
 </vehicle-arrivals>
