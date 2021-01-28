@@ -17,22 +17,27 @@ public class CamelWebService extends RouteBuilder {
     @Override
     public void configure(){
         from("netty-http:http://0.0.0.0:8080/closestStation/?latitude={latitude}&longitude={longitude}")
+                .setHeader("Access-Control-Allow-Origin",  constant("http://localhost:8000"))
                 .bean(webservice_methods, "getClosestStation(${header.latitude},${header.longitude})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
 
         from("netty-http:http://0.0.0.0:8080/allArrivals/{station_id}")
+                .setHeader("Access-Control-Allow-Origin",  constant("http://localhost:8000"))
                 .bean(webservice_methods, "getAllArrivals(${header.station_id})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
 
         from("netty-http:http://0.0.0.0:8080/allDepartures/{station_id}")
+                .setHeader("Access-Control-Allow-Origin",  constant("http://localhost:8000"))
                 .bean(webservice_methods, "getAllDepartures(${header.station_id})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
 
         from("netty-http:http://0.0.0.0:8080/lastDeparture/{station_id}")
+                .setHeader("Access-Control-Allow-Origin",  constant("http://localhost:8000"))
                 .bean(webservice_methods, "getLastDepartureVehicle(${header.station_id})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
 
         from("netty-http:http://0.0.0.0:8080/lastArrival/{station_id}")
+                .setHeader("Access-Control-Allow-Origin",  constant("http://localhost:8000"))
                 .bean(webservice_methods, "getLastArrivalVehicle(${header.station_id})")
                 .setHeader(Exchange.CONTENT_TYPE, simple("application/xml"));
     }
